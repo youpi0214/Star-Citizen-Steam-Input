@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import copy
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -27,7 +26,6 @@ def render(template_path: Path, mappings_path: Path, output_path: Path, mode: st
     tree = ET.parse(template_path)
     root = tree.getroot()
 
-    # Allow one template to render different modes by rewriting data-bind prefixes.
     for element in root.iter():
         binding = element.attrib.get("data-bind")
         if not binding:
@@ -37,35 +35,46 @@ def render(template_path: Path, mappings_path: Path, output_path: Path, mode: st
         try:
             value = get_by_path(mappings, effective_binding)
         except KeyError:
-            # Keep the template text visible when a field does not exist yet.
+            # Keep fallback template text visible while a binding is unresolved.
             continue
 
         element.text = str(value)
 
-    # Update mode label if present.
     for element in root.iter():
         if element.attrib.get("id") == "mode_name":
             try:
-                element.text = str(get_by_path(mappings, f"modes.{mode}.name"))
+                element.text = str(get_by_path(mappings, f"modes.{mode}.name")).upper()
             except KeyError:
-                element.text = mode.title()
+                element.text = mode.upper()
             break
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     tree.write(output_path, encoding="utf-8", xml_declaration=True)
 
 
+def resolve_template(mode: str, explicit_template: Path | None) -> Path:
+    if explicit_template is not None:
+        return explicit_template
+
+    mode_template = Path(f"templates/steam-controller-2026-{mode}.svg")
+    if mode_template.exists():
+        return mode_template
+
+    return Path("templates/steam-controller-2026.svg")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Render Star Citizen controller mapping SVG from YAML data.")
     parser.add_argument("--mode", choices=("fps", "flight"), required=True)
     parser.add_argument("--data", type=Path, default=Path("data/mappings.yaml"))
-    parser.add_argument("--template", type=Path, default=Path("templates/steam-controller-2026.svg"))
+    parser.add_argument("--template", type=Path)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
+    template = resolve_template(args.mode, args.template)
     output = args.output or Path(f"output/{args.mode}.svg")
-    render(args.template, args.data, output, args.mode)
-    print(f"Rendered {output}")
+    render(template, args.data, output, args.mode)
+    print(f"Rendered {output} from {template}")
 
 
 if __name__ == "__main__":
