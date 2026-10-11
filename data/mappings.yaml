@@ -139,6 +139,10 @@ modes:
             regular:
               action: Camera view
               output: F4
+          dpad_left:
+            regular:
+              action: Toggle chat
+              output: F12
           dpad_down:
             regular:
               action: Helmet on/off
@@ -296,6 +300,10 @@ modes:
             regular:
               action: Camera view
               output: F4
+          dpad_left:
+            regular:
+              action: Toggle chat
+              output: F12
           dpad_down:
             regular:
               action: Request landing
