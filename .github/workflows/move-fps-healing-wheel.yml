@@ -62,3 +62,5 @@ jobs:
           git add data/mappings.yaml README.md templates/steam-controller-2026-fps.svg
           git commit -m "Move FPS healing wheel to M1+LB"
           git push origin HEAD:feature/flight-visual-mapping
+
+# retrigger
