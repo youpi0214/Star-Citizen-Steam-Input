@@ -1,7 +1,7 @@
 "controller_mappings"
 {
 	"version"		"3"
-	"revision"		"168"
+	"revision"		"169"
 	"title"		"Star Citizen Steam Controller 2 v1"
 	"description"		"#SettingsController_AutosaveDescription"
 	"creator"		"76561199072057355"
@@ -591,6 +591,22 @@
 		"description"		""
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_DOWN, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
 			"touch"
 			{
 				"activators"
@@ -801,6 +817,54 @@
 				{
 				}
 			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press 4, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press 5, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press 7, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
 		}
 		"settings"
 		{
@@ -879,6 +943,23 @@
 				{
 				}
 			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_ALT, , "
+							"binding"		"key_press K, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
 		}
 		"settings"
 		{
@@ -902,6 +983,13 @@
 						"bindings"
 						{
 							"binding"		"key_press B, , "
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT, , "
 						}
 					}
 				}
@@ -1714,7 +1802,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action empty_binding, , "
+							"binding"		"mouse_button RIGHT, , "
 						}
 					}
 					"Double_Press"

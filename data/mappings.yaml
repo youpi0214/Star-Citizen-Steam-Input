@@ -189,8 +189,8 @@ modes:
           output: Left Mouse
       lb:
         regular:
-          action: TODO — Zoom / precision
-          output: TODO
+          action: Precision targeting / hold max zoom
+          output: Right Mouse
         double_press:
           action: Gimbal mode toggle
           output: G
@@ -200,15 +200,15 @@ modes:
           output: Left Shift
       r3:
         regular:
-          action: TODO — Cycle weapons
-          output: TODO
+          action: Next weapon preset
+          output: Mouse Wheel Down
       a:
         regular:
           action: NAV / Combat toggle
           output: B
         long_press:
-          action: TODO — Engage Quantum Travel
-          output: TODO
+          action: Engage Quantum Drive
+          output: Left Mouse
       b:
         regular:
           action: Spacebrake
@@ -235,8 +235,8 @@ modes:
           action: Landing gear
           output: N
         long_press:
-          action: TODO — Autoland
-          output: TODO
+          action: Autoland
+          output: N (hold)
       right_trackpad:
         up:
           action: Target in view
@@ -245,14 +245,14 @@ modes:
           action: Unlock target
           output: Left Alt + T
         left:
-          action: TODO — Previous target
-          output: TODO
+          action: Cycle attackers
+          output: 4
         right:
-          action: TODO — Next target
-          output: TODO
+          action: Cycle hostiles
+          output: 5
         center:
-          action: TODO — Nearest / lock target
-          output: TODO
+          action: Cycle all / closest
+          output: 7
       left_trackpad:
         up:
           action: Power
@@ -267,8 +267,8 @@ modes:
           action: Weapons
           output: P
         center:
-          action: TODO — Doors
-          output: TODO
+          action: Toggle ship ports / doors
+          output: Right Alt + K
 
     modifiers:
       l4:
