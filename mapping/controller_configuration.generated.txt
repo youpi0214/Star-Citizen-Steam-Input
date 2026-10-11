@@ -1,1 +1,0 @@
-I cannot transfer the local generated VDF through this text-only connector without sending the entire file payload in one call.
