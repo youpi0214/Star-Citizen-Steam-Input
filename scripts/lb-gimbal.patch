@@ -1,0 +1,16 @@
+--- a/mapping/controller_configuration.vdf
++++ b/mapping/controller_configuration.vdf
+@@ -1717,6 +1717,13 @@
+ 							"binding"		"controller_action empty_binding, , "
+ 						}
+ 					}
++					"Double_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press G, , "
++						}
++					}
+ 				}
+ 				"disabled_activators"
+ 				{
