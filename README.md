@@ -86,6 +86,7 @@ FPS Mode keeps conventional shooter movement on the sticks while using the rear 
 | M1 + R3 | Regular | Customize weapon | `J` |
 | M1 + R3 | `[H]` | Inspect item / weapon | `O`* |
 | M1 + D-pad Up | Regular | Camera view | `F4` |
+| M1 + D-pad Left | Regular | Toggle chat | `F12` |
 | M1 + D-pad Down | Regular | Helmet on/off | `Left Alt + H` |
 | M1 + BACK | Regular | Accept invite | `[` |
 | M1 + START | Regular | Decline invite | `]` |
@@ -154,6 +155,7 @@ Flight Mode moves translational and rotational control onto the sticks/triggers 
 | M1 + R3 | Regular | Freelook | `Z` |
 | M1 + Right Stick Touch | `[2]` | LAMP | `Right Alt + L` |
 | M1 + D-pad Up | Regular | Camera view | `F4` |
+| M1 + D-pad Left | Regular | Toggle chat | `F12` |
 | M1 + D-pad Down | Regular | Request landing | `Left Alt + N` |
 | M1 + BACK | Regular | Accept invite | `[` |
 | M1 + START | Regular | Decline invite | `]` |

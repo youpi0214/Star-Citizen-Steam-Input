@@ -1,7 +1,7 @@
 "controller_mappings"
 {
 	"version"		"3"
-	"revision"		"169"
+	"revision"		"170"
 	"title"		"Star Citizen Steam Controller 2 v1"
 	"description"		"#SettingsController_AutosaveDescription"
 	"creator"		"76561199072057355"
@@ -1232,6 +1232,22 @@
 				{
 				}
 			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press F12, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
 		}
 		"settings"
 		{
@@ -1272,6 +1288,22 @@
 						{
 							"binding"		"key_press LEFT_ALT, , "
 							"binding"		"key_press N, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press F12, , "
 						}
 					}
 				}

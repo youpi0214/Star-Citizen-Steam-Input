@@ -73,7 +73,7 @@
 
     <g id="flight-dpad-left-label">
       <text x="430" y="584" class="label" text-anchor="end">D-PAD ←</text>
-      <text x="430" y="610" class="meta" text-anchor="end">Unassigned</text>
+      <text x="430" y="610" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.dpad_left.regular.action">Toggle chat</tspan></text>
     </g>
 
     <g id="flight-dpad-down-label">
