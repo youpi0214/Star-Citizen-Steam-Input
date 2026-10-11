@@ -16,21 +16,14 @@
       .small{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:600;fill:#4b5563}
     </style>
   </defs>
-
   <g id="layer-background"/>
-
   <g id="layer-header">
-    <text x="70" y="72" class="title">STAR CITIZEN · STEAM CONTROLLER 2026</text>
-    <text x="70" y="108" class="subtitle">Player quick-reference · FPS Mode · complete Steam Input mapping</text>
-    <text x="2390" y="72" class="mode" text-anchor="end" id="mode_name">FPS MODE</text>
+    <text x="70" y="72" class="title" style="white-space: pre;">STAR CITIZEN · STEAM CONTROLLER 2026</text>
+    <text x="70" y="108" class="subtitle" style="white-space: pre;">Player quick-reference · FPS Mode · complete Steam Input mapping</text>
+    <text x="2390" y="72" class="mode" text-anchor="end" id="mode_name" style="white-space: pre;">FPS MODE</text>
   </g>
-
-  <g id="layer-controller">
-    <image id="controller-front" x="525.41364" y="282.6506" width="1455.3413" height="905.91565" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png"/>
-  </g>
-
-  <!-- User-arranged leader lines: preserved exactly -->
-  <g id="layer-leaders">
+  <image id="controller-front" x="525.414" y="318.651" width="1455.34" height="905.916" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png"/>
+  <g id="layer-leaders" transform="matrix(1, 0, 0, 1, 0, 36.000013)">
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1746.147 512.861 L 1968.455 626.794 L 2094.892 629.573"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1668.339 433.664 L 2093.503 437.832"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1593.31 500.356 L 1629.435 373.919 L 2089.334 276.659"/>
@@ -39,8 +32,6 @@
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1509.945 840.765 L 1857.301 1233.972 L 2122.681 1239.529"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1483.546 414.212 L 1479.378 232.198"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1022.258 408.654 C 1022.258 408.654 1022.258 414.212 1022.258 408.654 C 1022.258 403.096 1027.815 233.587 1027.815 233.587"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1255.681 501.746 L 1255.681 494.799 L 1252.902 159.948"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1250.123 844.933 L 1248.733 1093.64"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 985.993 832.848 L 665.078 1250.038 L 415.222 1254.623"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 845.019 576.116 L 739.576 722.82 L 447.314 734.282"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 767.083 505.057 L 698.315 596.747 L 447.314 595.601"/>
@@ -52,139 +43,105 @@
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 866.796 340.015 L 764.791 268.955 L 448.46 177.265"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 949.317 333.138 L 835.85 199.041"/>
   </g>
-
-  <g id="layer-labels">
-    <!-- Left side -->
+  <g id="layer-labels" transform="matrix(1, 0, 0, 1, 0, 37.000013)">
     <g id="fps-lb-label">
-      <text x="430" y="145" class="label" text-anchor="end">LB</text>
-      <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.fps.controls.lb.regular.action">Lean left</text>
-      <text x="430" y="197" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Unassigned</tspan></text>
+      <text x="430" y="145" class="label" text-anchor="end" style="white-space: pre;">LB</text>
+      <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.fps.controls.lb.regular.action" style="white-space: pre;">Lean left</text>
+      <text x="430" y="197" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Unassigned</tspan></text>
     </g>
-
     <g id="fps-lt-label">
-      <text x="835" y="145" class="label" text-anchor="middle">LT</text>
-      <text x="835" y="171" class="body" text-anchor="middle" data-bind="modes.fps.controls.lt.regular.action">ADS</text>
+      <text x="835" y="145" class="label" text-anchor="middle" style="white-space: pre;">LT</text>
+      <text x="835" y="171" class="body" text-anchor="middle" data-bind="modes.fps.controls.lt.regular.action" style="white-space: pre;">ADS</text>
     </g>
-
     <g id="fps-back-label">
-      <text x="1028" y="191" class="label" text-anchor="middle">BACK</text>
-      <text x="1028" y="214" class="body" text-anchor="middle" data-bind="global.back.regular.action">mobiGlas</text>
-      <text x="1028" y="237" class="meta" text-anchor="middle">[H] <tspan data-bind="global.back.long_press.action">Map</tspan></text>
-      <text x="1028" y="260" class="mod" text-anchor="middle">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.back.regular.action">Accept invite</tspan></text>
+      <text x="1028" y="191" class="label" text-anchor="middle" style="white-space: pre;">BACK</text>
+      <text x="1028" y="214" class="body" text-anchor="middle" data-bind="global.back.regular.action" style="white-space: pre;">mobiGlas</text>
+      <text x="1028" y="237" class="meta" text-anchor="middle" style="white-space: pre;">[H] <tspan data-bind="global.back.long_press.action">Map</tspan></text>
+      <text x="1028" y="260" class="mod" text-anchor="middle" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.back.regular.action">Accept invite</tspan></text>
     </g>
-
     <g id="fps-dpad-right-label">
-      <text x="424" y="266" class="label" text-anchor="end">D-PAD →</text>
-      <text x="424" y="292" class="body" text-anchor="end" data-bind="modes.fps.controls.dpad_right.regular.action">Inventory</text>
+      <text x="424" y="266" class="label" text-anchor="end" style="white-space: pre;">D-PAD →</text>
+      <text x="424" y="292" class="body" text-anchor="end" data-bind="modes.fps.controls.dpad_right.regular.action" style="white-space: pre;">Inventory</text>
     </g>
-
     <g id="fps-dpad-up-label">
-      <text x="440" y="420" class="label" text-anchor="end">D-PAD ↑</text>
-      <text x="440" y="446" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_up.regular.action">Camera view</tspan></text>
+      <text x="440" y="420" class="label" text-anchor="end" style="white-space: pre;">D-PAD ↑</text>
+      <text x="440" y="446" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_up.regular.action">Camera view</tspan></text>
     </g>
-
     <g id="fps-dpad-left-label">
-      <text x="430" y="584" class="label" text-anchor="end">D-PAD ←</text>
-      <text x="430" y="610" class="meta" text-anchor="end">Unassigned</text>
+      <text x="430" y="584" class="label" text-anchor="end" style="white-space: pre;">D-PAD ←</text>
+      <text x="430" y="610" class="meta" text-anchor="end" style="white-space: pre;">Unassigned</text>
     </g>
-
     <g id="fps-dpad-down-label">
-      <text x="430" y="722" class="label" text-anchor="end">D-PAD ↓</text>
-      <text x="430" y="748" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_down.regular.action">Helmet on/off</tspan></text>
+      <text x="430" y="722" class="label" text-anchor="end" style="white-space: pre;">D-PAD ↓</text>
+      <text x="430" y="748" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_down.regular.action">Helmet on/off</tspan></text>
     </g>
-
     <g id="fps-left-stick-label">
-      <text x="430" y="915" class="label" text-anchor="end">LEFT STICK</text>
-      <text x="430" y="941" class="body" text-anchor="end" data-bind="modes.fps.controls.left_stick.action">Move</text>
-      <text x="430" y="967" class="meta" text-anchor="end">L3: <tspan data-bind="modes.fps.controls.l3.regular.action">Sprint toggle</tspan></text>
+      <text x="430" y="915" class="label" text-anchor="end" style="white-space: pre;">LEFT STICK</text>
+      <text x="430" y="941" class="body" text-anchor="end" data-bind="modes.fps.controls.left_stick.action" style="white-space: pre;">Move</text>
+      <text x="430" y="967" class="meta" text-anchor="end" style="white-space: pre;">L3: <tspan data-bind="modes.fps.controls.l3.regular.action">Sprint toggle</tspan></text>
     </g>
-
     <g id="fps-left-trackpad-label">
-      <text x="398" y="1238" class="label" text-anchor="end">LEFT TRACKPAD</text>
-      <text x="398" y="1264" class="meta" text-anchor="end" data-bind="modes.fps.controls.left_trackpad.action">Unassigned</text>
+      <text x="398" y="1238" class="label" text-anchor="end" style="white-space: pre;">LEFT TRACKPAD</text>
+      <text x="398" y="1264" class="meta" text-anchor="end" data-bind="modes.fps.controls.left_trackpad.action" style="white-space: pre;">Unassigned</text>
     </g>
-
-    <!-- Top / center -->
-    <g id="fps-steam-label">
-      <text x="1253" y="118" class="label" text-anchor="middle">STEAM</text>
-      <text x="1253" y="143" class="meta" text-anchor="middle">Unassigned</text>
-    </g>
-
     <g id="fps-start-label">
-      <text x="1479" y="190" class="label" text-anchor="middle">START</text>
-      <text x="1479" y="214" class="body" text-anchor="middle" data-bind="global.start.regular.action">Menu</text>
-      <text x="1479" y="238" class="mod" text-anchor="middle">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.start.regular.action">Decline invite</tspan></text>
+      <text x="1479" y="190" class="label" text-anchor="middle" style="white-space: pre;">START</text>
+      <text x="1479" y="214" class="body" text-anchor="middle" data-bind="global.start.regular.action" style="white-space: pre;">Menu</text>
+      <text x="1479" y="238" class="mod" text-anchor="middle" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.start.regular.action">Decline invite</tspan></text>
     </g>
-
-    <g id="fps-ellipsis-label">
-      <text x="1249" y="1128" class="label" text-anchor="middle">… BUTTON</text>
-      <text x="1249" y="1154" class="meta" text-anchor="middle">Unassigned</text>
-    </g>
-
-    <!-- Right side -->
     <g id="fps-rb-label">
-      <text x="2110" y="127" class="label">RB</text>
-      <text x="2110" y="153" class="body" data-bind="modes.fps.controls.rb.regular.action">Lean right</text>
-      <text x="2110" y="179" class="mod">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.rb.regular.action">Throwables radial</tspan></text>
+      <text x="2110" y="127" class="label" style="white-space: pre;">RB</text>
+      <text x="2110" y="153" class="body" data-bind="modes.fps.controls.rb.regular.action" style="white-space: pre;">Lean right</text>
+      <text x="2110" y="179" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.rb.regular.action">Throwables radial</tspan></text>
     </g>
-
     <g id="fps-rt-label">
-      <text x="1637" y="135" class="label" text-anchor="middle">RT</text>
-      <text x="1637" y="161" class="body" text-anchor="middle" data-bind="modes.fps.controls.rt.regular.action">Fire / Use</text>
+      <text x="1637" y="135" class="label" text-anchor="middle" style="white-space: pre;">RT</text>
+      <text x="1637" y="161" class="body" text-anchor="middle" data-bind="modes.fps.controls.rt.regular.action" style="white-space: pre;">Fire / Use</text>
     </g>
-
     <g id="fps-x-label">
-      <text x="2110" y="252" class="label">X</text>
-      <text x="2110" y="278" class="body" data-bind="modes.fps.controls.x.regular.action">Reload / Holster</text>
-      <text x="2110" y="304" class="mod">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.x.regular.action">Ammo backpack refill</tspan></text>
+      <text x="2110" y="252" class="label" style="white-space: pre;">X</text>
+      <text x="2110" y="278" class="body" data-bind="modes.fps.controls.x.regular.action" style="white-space: pre;">Reload / Holster</text>
+      <text x="2110" y="304" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.x.regular.action">Ammo backpack refill</tspan></text>
     </g>
-
     <g id="fps-y-label">
-      <text x="2110" y="414" class="label">Y</text>
-      <text x="2110" y="440" class="body" data-bind="modes.fps.controls.y.regular.action">Interact</text>
-      <text x="2110" y="466" class="meta">[2] <tspan data-bind="modes.fps.controls.y.double_press.action">Hold interaction</tspan></text>
+      <text x="2110" y="414" class="label" style="white-space: pre;">Y</text>
+      <text x="2110" y="440" class="body" data-bind="modes.fps.controls.y.regular.action" style="white-space: pre;">Interact</text>
+      <text x="2110" y="466" class="meta" style="white-space: pre;">[2] <tspan data-bind="modes.fps.controls.y.double_press.action">Hold interaction</tspan></text>
     </g>
-
     <g id="fps-b-label">
-      <text x="2110" y="606" class="label">B</text>
-      <text x="2110" y="632" class="body" data-bind="modes.fps.controls.b.regular.action">Crouch</text>
-      <text x="2110" y="658" class="meta">[H] <tspan data-bind="modes.fps.controls.b.long_press.action">Prone</tspan></text>
-      <text x="2110" y="684" class="mod">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.b.regular.action">Unassigned</tspan></text>
+      <text x="2110" y="606" class="label" style="white-space: pre;">B</text>
+      <text x="2110" y="632" class="body" data-bind="modes.fps.controls.b.regular.action" style="white-space: pre;">Crouch</text>
+      <text x="2110" y="658" class="meta" style="white-space: pre;">[H] <tspan data-bind="modes.fps.controls.b.long_press.action">Prone</tspan></text>
+      <text x="2110" y="684" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.b.regular.action">Unassigned</tspan></text>
     </g>
-
     <g id="fps-a-label">
-      <text x="2110" y="811" class="label">A</text>
-      <text x="2110" y="837" class="body" data-bind="modes.fps.controls.a.regular.action">Jump</text>
-      <text x="2110" y="863" class="mod">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.a.regular.action">Key B</tspan></text>
+      <text x="2110" y="811" class="label" style="white-space: pre;">A</text>
+      <text x="2110" y="837" class="body" data-bind="modes.fps.controls.a.regular.action" style="white-space: pre;">Jump</text>
+      <text x="2110" y="863" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.a.regular.action">Key B</tspan></text>
     </g>
-
     <g id="fps-right-stick-label">
-      <text x="2130" y="984" class="label">RIGHT STICK / R3</text>
-      <text x="2130" y="1010" class="body" data-bind="modes.fps.controls.right_stick.action">Aim / Look</text>
-      <text x="2130" y="1036" class="meta">Touch: Gyro To Mouse (<tspan data-bind="modes.fps.gyro.action">Precision aim</tspan>)</text>
-      <text x="2130" y="1062" class="meta">[2] Touch: <tspan data-bind="modes.fps.controls.right_stick_touch.double_press.action">Flashlight</tspan></text>
-      <text x="2130" y="1088" class="meta">R3: <tspan data-bind="modes.fps.controls.r3.regular.action">Melee</tspan></text>
-      <text x="2130" y="1114" class="mod">M1 R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Next weapon</tspan></text>
+      <text x="2130" y="984" class="label" style="white-space: pre;">RIGHT STICK / R3</text>
+      <text x="2130" y="1010" class="body" data-bind="modes.fps.controls.right_stick.action" style="white-space: pre;">Aim / Look</text>
+      <text x="2130" y="1036" class="meta" style="white-space: pre;">Touch: Gyro To Mouse (<tspan data-bind="modes.fps.gyro.action">Precision aim</tspan>)</text>
+      <text x="2130" y="1062" class="meta" style="white-space: pre;">[2] Touch: <tspan data-bind="modes.fps.controls.right_stick_touch.double_press.action">Flashlight</tspan></text>
+      <text x="2130" y="1088" class="meta" style="white-space: pre;">R3: <tspan data-bind="modes.fps.controls.r3.regular.action">Melee</tspan></text>
+      <text x="2130" y="1114" class="mod" style="white-space: pre;">M1 R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Next weapon</tspan></text>
     </g>
-
     <g id="fps-right-trackpad-label">
-      <text x="2140" y="1224" class="label">RIGHT TRACKPAD</text>
-      <text x="2140" y="1250" class="body">↑ <tspan data-bind="modes.fps.controls.right_trackpad.up.action">Scroll up</tspan></text>
-      <text x="2140" y="1276" class="body">↓ <tspan data-bind="modes.fps.controls.right_trackpad.down.action">Scroll down</tspan></text>
+      <text x="2140" y="1224" class="label" style="white-space: pre;">RIGHT TRACKPAD</text>
+      <text x="2140" y="1250" class="body" style="white-space: pre;">↑ <tspan data-bind="modes.fps.controls.right_trackpad.up.action">Scroll up</tspan></text>
+      <text x="2140" y="1276" class="body" style="white-space: pre;">↓ <tspan data-bind="modes.fps.controls.right_trackpad.down.action">Scroll down</tspan></text>
     </g>
   </g>
-
-  <!-- Rear/global controls have no visible front-face anchor -->
-  <g id="fps-rear-global" transform="translate(620 1220)">
-    <text x="0" y="0" class="label">REAR / GLOBAL</text>
-    <text x="0" y="28" class="mod">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
-    <text x="0" y="54" class="body">Left rear lower: <tspan data-bind="modes.fps.controls.left_rear_lower.regular.action">Key 1</tspan></text>
-    <text x="0" y="80" class="meta">RG [H]: <tspan data-bind="global.rg.long_press.action">Switch FPS / Flight mode</tspan></text>
+  <g id="fps-rear-global" transform="matrix(1, 0, 0, 1, 1109.409579, 1193.311803)">
+    <text x="0" y="0" class="label" style="white-space: pre;">REAR / GLOBAL</text>
+    <text x="0" y="28" class="mod" style="white-space: pre;">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
+    <text x="0" y="54" class="body" style="white-space: pre;">Left rear lower: <tspan data-bind="modes.fps.controls.left_rear_lower.regular.action">Key 1</tspan></text>
+    <text x="0" y="80" class="meta" style="white-space: pre;">RG [H]: <tspan data-bind="global.rg.long_press.action">Switch FPS / Flight mode</tspan></text>
   </g>
-
-  <g id="fps-legend">
-    <text x="950" y="1340" class="legend"><tspan class="legendKey">[H]</tspan> Hold</text>
-    <text x="1090" y="1340" class="legend"><tspan class="legendKey">[2]</tspan> Double Press</text>
-    <text x="1275" y="1340" class="legend"><tspan class="legendMod">M1</tspan> L4 Modifier</text>
+  <g id="fps-legend" transform="matrix(1, 0, 0, 1, 64.887987, 52.49695)">
+    <text x="950" y="1340" class="legend" style="white-space: pre;"><tspan class="legendKey">[H]</tspan> Hold</text>
+    <text x="1090" y="1340" class="legend" style="white-space: pre;"><tspan class="legendKey">[2]</tspan> Double Press</text>
+    <text x="1275" y="1340" class="legend" style="white-space: pre;"><tspan class="legendMod">M1</tspan> L4 Modifier</text>
   </g>
 </svg>
