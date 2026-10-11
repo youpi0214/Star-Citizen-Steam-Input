@@ -1,0 +1,140 @@
+name: Add chat toggle mapping
+
+on:
+  push:
+    branches:
+      - feature/chat-toggle-validation
+    paths:
+      - .github/workflows/add-chat-toggle.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/chat-toggle-validation
+          fetch-depth: 0
+
+      - name: 1. Update VDF
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('mapping/controller_configuration.vdf')
+          s = p.read_text()
+
+          def add_west_binding(text, group_id):
+              marker = f'\t\t"id"\t\t"{group_id}"'
+              pos = text.index(marker)
+              gs = text.rfind('\t"group"\n\t{', 0, pos)
+              ge = text.find('\n\t"group"', pos)
+              if gs < 0 or ge < 0:
+                  raise SystemExit(f'Could not isolate group {group_id}')
+              g = text[gs:ge]
+              if '"dpad_west"' in g:
+                  if 'key_press F12' in g:
+                      return text
+                  raise SystemExit(f'group {group_id} already has dpad_west with another binding')
+              settings = '\t\t"settings"\n'
+              ins = g.index(settings)
+              block = '''\t\t\t"dpad_west"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press F12, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n'''
+              g = g[:ins] + block + g[ins:]
+              return text[:gs] + g + text[ge:]
+
+          s = add_west_binding(s, '39')  # FPS L4 D-pad layer
+          s = add_west_binding(s, '41')  # Flight L4 D-pad layer
+
+          # bump revision once
+          s = s.replace('\t"revision"\t\t"169"', '\t"revision"\t\t"170"', 1)
+          p.write_text(s)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mapping/controller_configuration.vdf
+          git commit -m "Bind M1+D-pad Left to chat toggle in VDF"
+
+      - name: 2. Update mapping data
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('data/mappings.yaml')
+          s = p.read_text()
+
+          fps_anchor = '''          dpad_up:\n            regular:\n              action: Camera view\n              output: F4\n'''
+          fps_add = fps_anchor + '''          dpad_left:\n            regular:\n              action: Toggle chat\n              output: F12\n'''
+          if 'modes.fps.modifiers.l4.controls.dpad_left' not in s and 'action: Toggle chat\n              output: F12' not in s:
+              if fps_anchor not in s:
+                  raise SystemExit('FPS dpad_up anchor not found')
+              s = s.replace(fps_anchor, fps_add, 1)
+
+          # target second occurrence under flight by splitting at flight section
+          flight_idx = s.index('  flight:\n')
+          before, after = s[:flight_idx], s[flight_idx:]
+          flight_anchor = '''          dpad_up:\n            regular:\n              action: Camera view\n              output: F4\n'''
+          flight_add = flight_anchor + '''          dpad_left:\n            regular:\n              action: Toggle chat\n              output: F12\n'''
+          if flight_anchor not in after:
+              raise SystemExit('Flight dpad_up anchor not found')
+          if 'dpad_left:\n            regular:\n              action: Toggle chat\n              output: F12' not in after:
+              after = after.replace(flight_anchor, flight_add, 1)
+          p.write_text(before + after)
+          PY
+          git add data/mappings.yaml
+          git commit -m "Document chat toggle mapping data"
+
+      - name: 3. Update SVG reference sheets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('templates/steam-controller-2026-fps.svg')
+          s = p.read_text()
+          old = '<text x="430" y="610" class="meta" text-anchor="end" style="white-space: pre;">Unassigned</text>'
+          new = '<text x="430" y="610" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_left.regular.action">Toggle chat</tspan></text>'
+          if old not in s:
+              raise SystemExit('FPS D-pad left SVG label not found')
+          p.write_text(s.replace(old, new, 1))
+
+          p = Path('templates/steam-controller-2026-flight.svg')
+          s = p.read_text()
+          old = '<text x="430" y="610" class="meta" text-anchor="end">Unassigned</text>'
+          new = '<text x="430" y="610" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.dpad_left.regular.action">Toggle chat</tspan></text>'
+          if old not in s:
+              raise SystemExit('Flight D-pad left SVG label not found')
+          p.write_text(s.replace(old, new, 1))
+          PY
+          git add templates/steam-controller-2026-fps.svg templates/steam-controller-2026-flight.svg
+          git commit -m "Add chat toggle to FPS and Flight SVGs"
+
+      - name: 4. Update README last
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          s = p.read_text()
+
+          fps_row = '| M1 + D-pad Up | Regular | Camera view | `F4` |\n'
+          fps_new = fps_row + '| M1 + D-pad Left | Regular | Toggle chat | `F12` |\n'
+          if '| M1 + D-pad Left | Regular | Toggle chat | `F12` |' not in s:
+              if fps_row not in s:
+                  raise SystemExit('FPS README anchor not found')
+              s = s.replace(fps_row, fps_new, 1)
+
+          flight_idx = s.index('## Flight — L4 modifier (`M1`)')
+          before, after = s[:flight_idx], s[flight_idx:]
+          flight_row = '| M1 + D-pad Up | Regular | Camera view | `F4` |\n'
+          flight_new = flight_row + '| M1 + D-pad Left | Regular | Toggle chat | `F12` |\n'
+          if '| M1 + D-pad Left | Regular | Toggle chat | `F12` |' not in after:
+              if flight_row not in after:
+                  raise SystemExit('Flight README anchor not found')
+              after = after.replace(flight_row, flight_new, 1)
+          p.write_text(before + after)
+          PY
+          git add README.md
+          git commit -m "Add chat toggle to README"
+
+      - name: Push ordered commits
+        run: git push origin HEAD:feature/chat-toggle-validation
