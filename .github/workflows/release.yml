@@ -1,0 +1,79 @@
+name: Release controller mapping
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Version increment
+        required: true
+        default: minor
+        type: choice
+        options:
+          - minor
+          - major
+
+permissions:
+  contents: write
+
+# Serialize releases across branches so two runs cannot allocate the same version.
+concurrency:
+  group: controller-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install export dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes librsvg2-bin fonts-dejavu-core fonts-liberation2
+          python -m pip install Pillow
+
+      - name: Test version calculation
+        run: python -m unittest discover -s tests -v
+
+      - name: Update VDF release version
+        id: version
+        env:
+          BUMP: ${{ inputs.bump }}
+        run: python scripts/release_version.py "$BUMP" --github-output "$GITHUB_OUTPUT"
+
+      - name: Render FPS and flight sheets
+        run: |
+          python scripts/render.py --mode fps --output output/fps.png
+          python scripts/render.py --mode flight --output output/flight.png
+          python scripts/render.py --mode fps --output output/fps.jpeg
+          python scripts/render.py --mode flight --output output/flight.jpeg
+
+      - name: Commit version and push release tag
+        env:
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+          RELEASE_BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mapping/controller_configuration.vdf
+          git commit -m "Release $RELEASE_TAG"
+          git tag -a "$RELEASE_TAG" -m "Release $RELEASE_TAG"
+          git push --atomic origin "HEAD:refs/heads/$RELEASE_BRANCH" "refs/tags/$RELEASE_TAG"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" --verify-tag --title "$RELEASE_TAG" --generate-notes \
+            output/fps.png output/flight.png output/fps.jpeg output/flight.jpeg \
+            mapping/controller_configuration.vdf
