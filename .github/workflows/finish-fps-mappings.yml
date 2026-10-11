@@ -1,0 +1,118 @@
+name: Finish FPS mappings
+
+on:
+  push:
+    branches:
+      - feature/flight-visual-mapping
+    paths:
+      - .github/workflows/finish-fps-mappings.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/flight-visual-mapping
+          fetch-depth: 0
+
+      - name: Finish FPS mappings
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def group_slice(text, gid):
+              marker = f'\t\t"id"\t\t"{gid}"'
+              p = text.index(marker)
+              s = text.rfind('\t"group"\n\t{', 0, p)
+              e = text.find('\n\t"group"', p)
+              if s < 0 or e < 0:
+                  raise SystemExit(f'Could not isolate group {gid}')
+              return s, e, text[s:e]
+
+          # --- VDF ---
+          p = Path('mapping/controller_configuration.vdf')
+          text = p.read_text()
+
+          # FPS right stick group 47: R3 double press = B (Change Fire Mode).
+          s,e,g = group_slice(text, '47')
+          click_start = g.index('\t\t\t"click"')
+          touch_start = g.index('\t\t\t"touch"', click_start)
+          click = g[click_start:touch_start]
+          if '"Double_Press"' not in click:
+              needle = '\t\t\t\t}\n\t\t\t\t"disabled_activators"'
+              addition = '''\t\t\t\t\t"Double_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press B, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n'''
+              if needle not in click:
+                  raise SystemExit('R3 insertion point not found')
+              click = click.replace(needle, addition + needle, 1)
+              g = g[:click_start] + click + g[touch_start:]
+              text = text[:s] + g + text[e:]
+
+          # FPS L4 switches group 28: LB = 4 (Consumable Select Radial), RB = G (Throwable Select Radial).
+          s,e,g = group_slice(text, '28')
+          lb_start = g.index('\t\t\t"left_bumper"')
+          rb_start = g.index('\t\t\t"right_bumper"', lb_start)
+          lb = g[lb_start:rb_start]
+          lb = lb.replace('"binding"\t\t"controller_action empty_binding, , "', '"binding"\t\t"key_press 4, , "', 1)
+          rb = g[rb_start:]
+          rb = rb.replace('"binding"\t\t"key_press 4, , "', '"binding"\t\t"key_press G, , "', 1)
+          g = g[:lb_start] + lb + rb
+          text = text[:s] + g + text[e:]
+
+          # FPS L4 right stick group 63: J = Customize Weapon; long press O = Inspect Item (custom in-game bind).
+          s,e,g = group_slice(text, '63')
+          click_start = g.index('\t\t\t"click"')
+          click = g[click_start:]
+          if '"Long_Press"' not in click:
+              needle = '\t\t\t\t}\n\t\t\t\t"disabled_activators"'
+              addition = '''\t\t\t\t\t"Long_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press O, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n'''
+              if needle not in click:
+                  raise SystemExit('M1+R3 long insertion point not found')
+              click = click.replace(needle, addition + needle, 1)
+              g = g[:click_start] + click
+              text = text[:s] + g + text[e:]
+
+          p.write_text(text)
+
+          # --- YAML ---
+          p = Path('data/mappings.yaml')
+          y = p.read_text()
+          y = y.replace('''        double_press:\n          action: Fire mode toggle\n          output: TODO''', '''        double_press:\n          action: Fire mode toggle\n          output: B''', 1)
+          y = y.replace('''          lb:\n            regular:\n              action: Healing / Weapon wheel\n              output: TODO''', '''          lb:\n            regular:\n              action: Consumable / healing wheel\n              output: 4''', 1)
+          y = y.replace('''          rb:\n            regular:\n              action: Throwables radial\n              output: 4''', '''          rb:\n            regular:\n              action: Throwables radial\n              output: G''', 1)
+          y = y.replace('''          r3:\n            regular:\n              action: Next weapon\n              output: J\n            long_press:\n              action: Inspect weapon\n              output: TODO''', '''          r3:\n            regular:\n              action: Customize weapon\n              output: J\n            long_press:\n              action: Inspect item / weapon\n              output: O (custom Star Citizen bind)''', 1)
+          p.write_text(y)
+
+          # --- README ---
+          p = Path('README.md')
+          r = p.read_text()
+          r = r.replace('| R3 | `[2]` | Fire mode toggle | TODO |', '| R3 | `[2]` | Fire mode toggle | `B` |', 1)
+          r = r.replace('| M1 + LB | Regular | Healing / Weapon wheel | TODO |', '| M1 + LB | Regular | Consumable / healing wheel | `4` |', 1)
+          r = r.replace('| M1 + RB | Regular | Throwables radial | `4` |', '| M1 + RB | Regular | Throwables radial | `G` |', 1)
+          r = r.replace('| M1 + R3 | Regular | Next weapon | `J` |', '| M1 + R3 | Regular | Customize weapon | `J` |', 1)
+          r = r.replace('| M1 + R3 | `[H]` | Inspect weapon | TODO |', '| M1 + R3 | `[H]` | Inspect item / weapon | `O`* |', 1)
+          marker = '> A Steam Input Regular Press mapped to a keyboard key remains held while the physical control remains held. This is used where Star Citizen itself distinguishes between tapping and holding the same key.\n'
+          note = '\n> **Custom bind required:** Star Citizen Alpha 4.10 has no default keyboard binding for **Inspect Item**. Bind **Inspect Item** to `O` in Star Citizen → Options → Keybindings → Advanced Controls Customization → On Foot - All. The Steam layout then exposes it as **M1 + R3 [H]**.\n'
+          if note.strip() not in r:
+              r = r.replace(marker, marker + note, 1)
+          p.write_text(r)
+
+          # --- FPS SVG ---
+          p = Path('templates/steam-controller-2026-fps.svg')
+          svg = p.read_text()
+          svg = svg.replace('data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Healing / Weapon wheel</tspan>', 'data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Consumable / healing wheel</tspan>', 1)
+          svg = svg.replace('data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Next weapon</tspan>', 'data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Customize weapon</tspan>', 1)
+          svg = svg.replace('data-bind="modes.fps.modifiers.l4.controls.r3.long_press.action">Inspect weapon</tspan>', 'data-bind="modes.fps.modifiers.l4.controls.r3.long_press.action">Inspect item / weapon</tspan>', 1)
+          p.write_text(svg)
+          PY
+
+      - name: Commit completed FPS mappings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mapping/controller_configuration.vdf data/mappings.yaml README.md templates/steam-controller-2026-fps.svg
+          git commit -m "Finish FPS mappings"
+          git push origin HEAD:feature/flight-visual-mapping
