@@ -1,0 +1,314 @@
+version: 1
+controller:
+  name: Steam Controller 2026
+
+global:
+  start:
+    regular:
+      action: Menu
+      output: Esc
+  back:
+    regular:
+      action: mobiGlas
+      output: F1
+    long_press:
+      action: Map
+      output: F2
+  l4:
+    regular:
+      action: Hold L4 Modifier layer
+      output: Hold Action Set Layer
+  rg:
+    long_press:
+      action: Switch FPS / Flight mode
+      output: Change Action Set
+
+modes:
+  fps:
+    name: FPS Mode
+    controls:
+      left_stick:
+        action: Move
+        output: WASD
+      l3:
+        regular:
+          action: Sprint toggle
+          output: Left Shift
+      right_stick:
+        action: Aim / Look
+        output: Mouse
+      r3:
+        regular:
+          action: Melee
+          output: Middle Mouse
+        double_press:
+          action: Fire mode toggle
+          output: TODO
+      gyro:
+        action: Precision aim
+        output: Gyro To Mouse
+        activation: Right Stick Touch
+      right_stick_touch:
+        double_press:
+          action: Flashlight
+          output: T
+      rt:
+        regular:
+          action: Fire / Use
+          output: Left Mouse
+      lt:
+        regular:
+          action: ADS
+          output: Right Mouse
+      a:
+        regular:
+          action: Jump
+          output: Space
+      b:
+        regular:
+          action: Crouch
+          output: C
+        long_press:
+          action: Prone
+          output: Left Ctrl
+      x:
+        regular:
+          action: Reload / Holster
+          output: R
+      y:
+        regular:
+          action: Interact
+          output: F
+        double_press:
+          action: Hold interaction
+          output: F (toggle)
+      lb:
+        regular:
+          action: Lean left
+          output: Q (press/release)
+      rb:
+        regular:
+          action: Lean right
+          output: E (press/release)
+      dpad_right:
+        regular:
+          action: Inventory
+          output: I
+      left_trackpad:
+        action: Unassigned
+        output: None
+      right_trackpad:
+        up:
+          action: Scroll up
+          output: Mouse Wheel Up
+        down:
+          action: Scroll down
+          output: Mouse Wheel Down
+      left_rear_lower:
+        regular:
+          action: Key 1
+          output: 1
+
+    modifiers:
+      l4:
+        controls:
+          a:
+            regular:
+              action: Key B
+              output: B
+          b:
+            regular:
+              action: Healing / Weapon wheel
+              output: TODO
+          x:
+            regular:
+              action: Ammo backpack refill
+              output: Left Alt + 1
+          lb:
+            regular:
+              action: Unassigned
+              output: Empty binding
+          rb:
+            regular:
+              action: Throwables radial
+              output: 4
+          r3:
+            regular:
+              action: Next weapon
+              output: J
+            long_press:
+              action: Inspect weapon
+              output: TODO
+          dpad_up:
+            regular:
+              action: Camera view
+              output: F4
+          dpad_down:
+            regular:
+              action: Helmet on/off
+              output: Left Alt + H
+          back:
+            regular:
+              action: Accept invite
+              output: "["
+          start:
+            regular:
+              action: Decline invite
+              output: "]"
+
+  flight:
+    name: Flight Mode
+    controls:
+      right_stick:
+        action: Pitch / Yaw
+        output: Mouse X/Y
+      right_stick_touch:
+        regular:
+          action: Precision aim
+          output: Gyro To Mouse
+        double_press:
+          action: Lights
+          output: L
+      rt:
+        regular:
+          action: Forward thrust
+          output: W
+      lt:
+        regular:
+          action: Reverse thrust
+          output: S
+      left_stick_y:
+        action: Strafe up / down
+        output: Space / Left Ctrl
+      left_stick_x:
+        action: Roll left / right
+        output: Q / E
+      rb:
+        regular:
+          action: Fire
+          output: Left Mouse
+      lb:
+        regular:
+          action: Zoom / precision
+          output: TODO
+        double_press:
+          action: Gimbal mode toggle
+          output: G
+      l3:
+        regular:
+          action: Boost
+          output: Left Shift
+      r3:
+        regular:
+          action: Cycle weapons
+          output: TODO
+      a:
+        regular:
+          action: NAV / Combat toggle
+          output: B
+        long_press:
+          action: Engage Quantum Travel
+          output: TODO
+      b:
+        regular:
+          action: Spacebrake
+          output: X
+      x:
+        regular:
+          action: Cycle operator mode
+          output: Middle Mouse
+        double_press:
+          action: Ping
+          output: Tab
+      y:
+        regular:
+          action: VTOL
+          output: K
+        double_press:
+          action: Hold interaction
+          output: F (toggle/hold equivalent)
+        long_press:
+          action: Exit seat
+          output: Y
+      dpad_down:
+        regular:
+          action: Landing gear
+          output: N
+        long_press:
+          action: Autoland
+          output: TODO
+      right_trackpad:
+        up:
+          action: Target in view
+          output: T
+        down:
+          action: Unlock target
+          output: Left Alt + T
+        left:
+          action: Previous target
+          output: TODO
+        right:
+          action: Next target
+          output: TODO
+        center:
+          action: Nearest / lock target
+          output: TODO
+      left_trackpad:
+        up:
+          action: Power
+          output: U
+        down:
+          action: Engines
+          output: I
+        left:
+          action: Shields
+          output: O
+        right:
+          action: Weapons
+          output: P
+        center:
+          action: Doors
+          output: TODO
+
+    modifiers:
+      l4:
+        controls:
+          left_stick_x:
+            action: Strafe left / right
+            output: A / D
+          a:
+            regular:
+              action: Decoupled toggle
+              output: C
+          lb:
+            regular:
+              action: Decoy
+              output: H
+          rb:
+            regular:
+              action: Noise
+              output: J
+          r3:
+            regular:
+              action: Freelook
+              output: Z
+          right_stick_touch:
+            double_press:
+              action: LAMP
+              output: Right Alt + L
+          dpad_up:
+            regular:
+              action: Camera view
+              output: F4
+          dpad_down:
+            regular:
+              action: Request landing
+              output: Left Alt + N
+          back:
+            regular:
+              action: Accept invite
+              output: "["
+          start:
+            regular:
+              action: Decline invite
+              output: "]"
