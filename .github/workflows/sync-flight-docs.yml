@@ -1,0 +1,70 @@
+name: Sync Flight documentation
+
+on:
+  push:
+    branches:
+      - feature/flight-visual-mapping
+    paths:
+      - .github/workflows/sync-flight-docs.yml
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/flight-visual-mapping
+          fetch-depth: 0
+
+      - name: Mark unresolved Flight mappings as pending
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          yaml_path = Path('data/mappings.yaml')
+          text = yaml_path.read_text()
+          replacements = {
+              'action: Zoom / precision\n          output: TODO': 'action: TODO — Zoom / precision\n          output: TODO',
+              'action: Cycle weapons\n          output: TODO': 'action: TODO — Cycle weapons\n          output: TODO',
+              'action: Engage Quantum Travel\n          output: TODO': 'action: TODO — Engage Quantum Travel\n          output: TODO',
+              'action: Autoland\n          output: TODO': 'action: TODO — Autoland\n          output: TODO',
+              'action: Previous target\n          output: TODO': 'action: TODO — Previous target\n          output: TODO',
+              'action: Next target\n          output: TODO': 'action: TODO — Next target\n          output: TODO',
+              'action: Nearest / lock target\n          output: TODO': 'action: TODO — Nearest / lock target\n          output: TODO',
+              'action: Doors\n          output: TODO': 'action: TODO — Doors\n          output: TODO',
+          }
+          for old, new in replacements.items():
+              if old not in text:
+                  raise SystemExit(f'Missing expected YAML text: {old!r}')
+              text = text.replace(old, new, 1)
+          yaml_path.write_text(text)
+
+          svg_path = Path('templates/steam-controller-2026-flight.svg')
+          svg = svg_path.read_text()
+          svg_replacements = {
+              '>Zoom / precision</tspan>': '>TODO — Zoom / precision</tspan>',
+              '>Cycle weapons</tspan>': '>TODO — Cycle weapons</tspan>',
+              '>Engage Quantum Travel</tspan>': '>TODO — Engage Quantum Travel</tspan>',
+              '>Autoland</tspan>': '>TODO — Autoland</tspan>',
+              '>Previous target</tspan>': '>TODO — Previous target</tspan>',
+              '>Next target</tspan>': '>TODO — Next target</tspan>',
+              '>Nearest / lock target</tspan>': '>TODO — Nearest / lock target</tspan>',
+              '>Doors</tspan>': '>TODO — Doors</tspan>',
+          }
+          for old, new in svg_replacements.items():
+              if old not in svg:
+                  raise SystemExit(f'Missing expected SVG text: {old!r}')
+              svg = svg.replace(old, new, 1)
+          svg_path.write_text(svg)
+          PY
+
+      - name: Commit synchronized documentation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/mappings.yaml templates/steam-controller-2026-flight.svg
+          git commit -m "Sync Flight docs with implemented VDF mappings"
+          git push origin HEAD:feature/flight-visual-mapping
