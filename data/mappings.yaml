@@ -189,7 +189,7 @@ modes:
           output: Left Mouse
       lb:
         regular:
-          action: Zoom / precision
+          action: TODO — Zoom / precision
           output: TODO
         double_press:
           action: Gimbal mode toggle
@@ -200,14 +200,14 @@ modes:
           output: Left Shift
       r3:
         regular:
-          action: Cycle weapons
+          action: TODO — Cycle weapons
           output: TODO
       a:
         regular:
           action: NAV / Combat toggle
           output: B
         long_press:
-          action: Engage Quantum Travel
+          action: TODO — Engage Quantum Travel
           output: TODO
       b:
         regular:
@@ -235,7 +235,7 @@ modes:
           action: Landing gear
           output: N
         long_press:
-          action: Autoland
+          action: TODO — Autoland
           output: TODO
       right_trackpad:
         up:
@@ -245,13 +245,13 @@ modes:
           action: Unlock target
           output: Left Alt + T
         left:
-          action: Previous target
+          action: TODO — Previous target
           output: TODO
         right:
-          action: Next target
+          action: TODO — Next target
           output: TODO
         center:
-          action: Nearest / lock target
+          action: TODO — Nearest / lock target
           output: TODO
       left_trackpad:
         up:
@@ -267,7 +267,7 @@ modes:
           action: Weapons
           output: P
         center:
-          action: Doors
+          action: TODO — Doors
           output: TODO
 
     modifiers:

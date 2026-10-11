@@ -49,7 +49,7 @@
   <g id="layer-labels" transform="matrix(1,0,0,1,0,37.000013)">
     <g id="flight-lb-label">
       <text x="430" y="145" class="label" text-anchor="end">LB</text>
-      <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.flight.controls.lb.regular.action">Zoom / precision</text>
+      <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.flight.controls.lb.regular.action">TODO — Zoom / precision</text>
       <text x="430" y="197" class="meta" text-anchor="end">[2] <tspan data-bind="modes.flight.controls.lb.double_press.action">Gimbal mode toggle</tspan></text>
       <text x="430" y="223" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.lb.regular.action">Decoy</tspan></text>
     </g>
@@ -79,7 +79,7 @@
     <g id="flight-dpad-down-label">
       <text x="430" y="722" class="label" text-anchor="end">D-PAD ↓</text>
       <text x="430" y="748" class="body" text-anchor="end" data-bind="modes.flight.controls.dpad_down.regular.action">Landing gear</text>
-      <text x="430" y="774" class="meta" text-anchor="end">[H] <tspan data-bind="modes.flight.controls.dpad_down.long_press.action">Autoland</tspan></text>
+      <text x="430" y="774" class="meta" text-anchor="end">[H] <tspan data-bind="modes.flight.controls.dpad_down.long_press.action">TODO — Autoland</tspan></text>
       <text x="430" y="800" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.dpad_down.regular.action">Request landing</tspan></text>
     </g>
 
@@ -97,7 +97,7 @@
       <text x="398" y="1242" class="body" text-anchor="end">↓ <tspan data-bind="modes.flight.controls.left_trackpad.down.action">Engines</tspan></text>
       <text x="398" y="1268" class="body" text-anchor="end">← <tspan data-bind="modes.flight.controls.left_trackpad.left.action">Shields</tspan></text>
       <text x="398" y="1294" class="body" text-anchor="end">→ <tspan data-bind="modes.flight.controls.left_trackpad.right.action">Weapons</tspan></text>
-      <text x="398" y="1320" class="body" text-anchor="end">● <tspan data-bind="modes.flight.controls.left_trackpad.center.action">Doors</tspan></text>
+      <text x="398" y="1320" class="body" text-anchor="end">● <tspan data-bind="modes.flight.controls.left_trackpad.center.action">TODO — Doors</tspan></text>
     </g>
 
     <g id="flight-start-label">
@@ -138,7 +138,7 @@
     <g id="flight-a-label">
       <text x="2110" y="785" class="label">A</text>
       <text x="2110" y="811" class="body" data-bind="modes.flight.controls.a.regular.action">NAV / Combat toggle</text>
-      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">Engage Quantum Travel</tspan></text>
+      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">TODO — Engage Quantum Travel</tspan></text>
       <text x="2110" y="863" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.a.regular.action">Decoupled toggle</tspan></text>
     </g>
 
@@ -148,7 +148,7 @@
       <text x="2130" y="1004" class="meta">Touch: <tspan data-bind="modes.flight.controls.right_stick_touch.regular.action">Precision aim</tspan></text>
       <text x="2130" y="1030" class="meta">[2] Touch: <tspan data-bind="modes.flight.controls.right_stick_touch.double_press.action">Lights</tspan></text>
       <text x="2130" y="1056" class="mod">M1 [2] Touch: <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.right_stick_touch.double_press.action">LAMP</tspan></text>
-      <text x="2130" y="1082" class="meta">R3: <tspan data-bind="modes.flight.controls.r3.regular.action">Cycle weapons</tspan></text>
+      <text x="2130" y="1082" class="meta">R3: <tspan data-bind="modes.flight.controls.r3.regular.action">TODO — Cycle weapons</tspan></text>
       <text x="2130" y="1108" class="mod">M1 R3: <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.r3.regular.action">Freelook</tspan></text>
     </g>
 
@@ -156,9 +156,9 @@
       <text x="2140" y="1172" class="label">RIGHT TRACKPAD</text>
       <text x="2140" y="1198" class="body">↑ <tspan data-bind="modes.flight.controls.right_trackpad.up.action">Target in view</tspan></text>
       <text x="2140" y="1224" class="body">↓ <tspan data-bind="modes.flight.controls.right_trackpad.down.action">Unlock target</tspan></text>
-      <text x="2140" y="1250" class="body">← <tspan data-bind="modes.flight.controls.right_trackpad.left.action">Previous target</tspan></text>
-      <text x="2140" y="1276" class="body">→ <tspan data-bind="modes.flight.controls.right_trackpad.right.action">Next target</tspan></text>
-      <text x="2140" y="1302" class="body">● <tspan data-bind="modes.flight.controls.right_trackpad.center.action">Nearest / lock target</tspan></text>
+      <text x="2140" y="1250" class="body">← <tspan data-bind="modes.flight.controls.right_trackpad.left.action">TODO — Previous target</tspan></text>
+      <text x="2140" y="1276" class="body">→ <tspan data-bind="modes.flight.controls.right_trackpad.right.action">TODO — Next target</tspan></text>
+      <text x="2140" y="1302" class="body">● <tspan data-bind="modes.flight.controls.right_trackpad.center.action">TODO — Nearest / lock target</tspan></text>
     </g>
   </g>
 
