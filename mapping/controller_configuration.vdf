@@ -1338,6 +1338,13 @@
 							"binding"		"mouse_button MIDDLE, , "
 						}
 					}
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press B, , "
+						}
+					}
 				}
 				"disabled_activators"
 				{
@@ -1445,6 +1452,13 @@
 						"bindings"
 						{
 							"binding"		"key_press J, , "
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press O, , "
 						}
 					}
 				}
@@ -1899,7 +1913,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action empty_binding, , "
+							"binding"		"key_press 4, , "
 						}
 					}
 				}
@@ -1915,7 +1929,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press 4, , "
+							"binding"		"key_press G, , "
 						}
 					}
 				}

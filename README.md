@@ -25,6 +25,8 @@ Hold **L4** to temporarily activate the mode-specific modifier layer. Long-press
 
 > A Steam Input Regular Press mapped to a keyboard key remains held while the physical control remains held. This is used where Star Citizen itself distinguishes between tapping and holding the same key.
 
+> **Custom bind required:** Star Citizen Alpha 4.10 has no default keyboard binding for **Inspect Item**. Bind **Inspect Item** to `O` in Star Citizen → Options → Keybindings → Advanced Controls Customization → On Foot - All. The Steam layout then exposes it as **M1 + R3 [H]**.
+
 ## Global controls
 
 These controls are shared between FPS and Flight Mode.
@@ -55,7 +57,7 @@ FPS Mode keeps conventional shooter movement on the sticks while using the rear 
 | Right Stick Touch | Touch | Enable precision gyro aim | Gyro To Mouse |
 | Right Stick Touch | `[2]` | Flashlight | `T` |
 | R3 | Regular | Melee | Middle Mouse |
-| R3 | `[2]` | Fire mode toggle | TODO |
+| R3 | `[2]` | Fire mode toggle | `B` |
 | LT | Regular | ADS | Right Mouse |
 | RT | Regular | Fire / Use | Left Mouse |
 | LB | Regular | Lean left | `Q` press/release |
@@ -79,10 +81,10 @@ FPS Mode keeps conventional shooter movement on the sticks while using the rear 
 | --- | --- | --- | --- |
 | M1 + A | Regular | Key B | `B` |
 | M1 + X | Regular | Ammo backpack refill | `Left Alt + 1` |
-| M1 + LB | Regular | Healing / Weapon wheel | TODO |
-| M1 + RB | Regular | Throwables radial | `4` |
-| M1 + R3 | Regular | Next weapon | `J` |
-| M1 + R3 | `[H]` | Inspect weapon | TODO |
+| M1 + LB | Regular | Consumable / healing wheel | `4` |
+| M1 + RB | Regular | Throwables radial | `G` |
+| M1 + R3 | Regular | Customize weapon | `J` |
+| M1 + R3 | `[H]` | Inspect item / weapon | `O`* |
 | M1 + D-pad Up | Regular | Camera view | `F4` |
 | M1 + D-pad Down | Regular | Helmet on/off | `Left Alt + H` |
 | M1 + BACK | Regular | Accept invite | `[` |

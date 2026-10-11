@@ -43,7 +43,7 @@ modes:
           output: Middle Mouse
         double_press:
           action: Fire mode toggle
-          output: TODO
+          output: B
       gyro:
         action: Precision aim
         output: Gyro To Mouse
@@ -122,19 +122,19 @@ modes:
               output: Left Alt + 1
           lb:
             regular:
-              action: Healing / Weapon wheel
-              output: TODO
+              action: Consumable / healing wheel
+              output: 4
           rb:
             regular:
               action: Throwables radial
-              output: 4
+              output: G
           r3:
             regular:
-              action: Next weapon
+              action: Customize weapon
               output: J
             long_press:
-              action: Inspect weapon
-              output: TODO
+              action: Inspect item / weapon
+              output: O (custom Star Citizen bind)
           dpad_up:
             regular:
               action: Camera view
