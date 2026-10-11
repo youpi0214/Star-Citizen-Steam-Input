@@ -1,0 +1,641 @@
+--- a/mapping/controller_configuration.vdf
++++ b/mapping/controller_configuration.vdf
+@@ -1,7 +1,7 @@
+ "controller_mappings"
+ {
+ 	"version"		"3"
+-	"revision"		"167"
++	"revision"		"168"
+ 	"title"		"Star Citizen Steam Controller 2 v1"
+ 	"description"		"#SettingsController_AutosaveDescription"
+ 	"creator"		"76561199072057355"
+@@ -560,6 +560,22 @@
+ 		"description"		""
+ 		"inputs"
+ 		{
++			"dpad_south"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press N, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
+ 		}
+ 		"settings"
+ 		{
+@@ -575,19 +591,15 @@
+ 		"description"		""
+ 		"inputs"
+ 		{
+-			"click"
++			"touch"
+ 			{
+ 				"activators"
+ 				{
+-					"Full_Press"
++					"Double_Press"
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"mouse_button LEFT, , "
+-						}
+-						"settings"
+-						{
+-							"haptic_intensity"		"1"
++							"binding"		"key_press L, , "
+ 						}
+ 					}
+ 				}
+@@ -617,12 +629,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"mouse_button LEFT, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"2"
++							"binding"		"key_press W, , "
+ 						}
+ 					}
+ 				}
+@@ -648,12 +655,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"mouse_button RIGHT, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"2"
++							"binding"		"key_press S, , "
+ 						}
+ 					}
+ 				}
+@@ -679,12 +681,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press W, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press SPACE, , "
+ 						}
+ 					}
+ 				}
+@@ -700,12 +697,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press S, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press LEFT_CONTROL, , "
+ 						}
+ 					}
+ 				}
+@@ -713,7 +705,7 @@
+ 				{
+ 				}
+ 			}
+-			"dpad_east"
++			"dpad_west"
+ 			{
+ 				"activators"
+ 				{
+@@ -721,12 +713,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press D, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press Q, , "
+ 						}
+ 					}
+ 				}
+@@ -734,7 +721,7 @@
+ 				{
+ 				}
+ 			}
+-			"dpad_west"
++			"dpad_east"
+ 			{
+ 				"activators"
+ 				{
+@@ -742,12 +729,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press A, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press E, , "
+ 						}
+ 					}
+ 				}
+@@ -765,11 +747,6 @@
+ 						{
+ 							"binding"		"key_press LEFT_SHIFT, , "
+ 						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
+-						}
+ 					}
+ 				}
+ 				"disabled_activators"
+@@ -786,24 +763,37 @@
+ 	"group"
+ 	{
+ 		"id"		"14"
+-		"mode"		"absolute_mouse"
++		"mode"		"dpad"
+ 		"name"		""
+ 		"description"		""
+ 		"inputs"
+ 		{
+-			"click"
++			"dpad_north"
+ 			{
+ 				"activators"
+ 				{
+-					"Soft_Press"
++					"Full_Press"
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"mouse_button LEFT, , "
++							"binding"		"key_press T, , "
+ 						}
+-						"settings"
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"dpad_south"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
+ 						{
+-							"haptic_intensity"		"1"
++							"binding"		"key_press LEFT_ALT, , "
++							"binding"		"key_press T, , "
+ 						}
+ 					}
+ 				}
+@@ -814,8 +804,7 @@
+ 		}
+ 		"settings"
+ 		{
+-			"sensitivity"		"145"
+-			"doubetap_max_duration"		"320"
++			"edge_binding_radius"		"24996"
+ 		}
+ 	}
+ 	"group"
+@@ -834,12 +823,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press 1, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press U, , "
+ 						}
+ 					}
+ 				}
+@@ -855,12 +839,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press 3, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press I, , "
+ 						}
+ 					}
+ 				}
+@@ -868,7 +847,7 @@
+ 				{
+ 				}
+ 			}
+-			"dpad_east"
++			"dpad_west"
+ 			{
+ 				"activators"
+ 				{
+@@ -876,12 +855,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press 2, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press O, , "
+ 						}
+ 					}
+ 				}
+@@ -889,7 +863,7 @@
+ 				{
+ 				}
+ 			}
+-			"dpad_west"
++			"dpad_east"
+ 			{
+ 				"activators"
+ 				{
+@@ -897,12 +871,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press 4, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
+-							"haptic_intensity"		"1"
++							"binding"		"key_press P, , "
+ 						}
+ 					}
+ 				}
+@@ -932,11 +901,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press SPACE, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
++							"binding"		"key_press B, , "
+ 						}
+ 					}
+ 				}
+@@ -952,11 +917,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press E, , "
+-						}
+-						"settings"
+-						{
+-							"repeat_rate"		"99"
++							"binding"		"key_press X, , "
+ 						}
+ 					}
+ 				}
+@@ -972,11 +933,14 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"key_press R, , "
++							"binding"		"mouse_button MIDDLE, , "
+ 						}
+-						"settings"
++					}
++					"Double_Press"
++					{
++						"bindings"
+ 						{
+-							"repeat_rate"		"99"
++							"binding"		"key_press TAB, , "
+ 						}
+ 					}
+ 				}
+@@ -992,11 +956,25 @@
+ 					{
+ 						"bindings"
+ 						{
++							"binding"		"key_press K, , "
++						}
++					}
++					"Double_Press"
++					{
++						"bindings"
++						{
+ 							"binding"		"key_press F, , "
+ 						}
+ 						"settings"
+ 						{
+-							"repeat_rate"		"99"
++							"toggle"		"1"
++						}
++					}
++					"Long_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press Y, , "
+ 						}
+ 					}
+ 				}
+@@ -1061,6 +1039,22 @@
+ 		"description"		""
+ 		"inputs"
+ 		{
++			"button_a"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press C, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
+ 		}
+ 		"settings"
+ 		{
+@@ -1180,6 +1174,23 @@
+ 				{
+ 				}
+ 			}
++			"dpad_south"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press LEFT_ALT, , "
++							"binding"		"key_press N, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
+ 		}
+ 		"settings"
+ 		{
+@@ -1703,7 +1714,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"mouse_wheel SCROLL_DOWN, , "
++							"binding"		"controller_action empty_binding, , "
+ 						}
+ 					}
+ 				}
+@@ -1719,7 +1730,7 @@
+ 					{
+ 						"bindings"
+ 						{
+-							"binding"		"mouse_wheel SCROLL_UP, , "
++							"binding"		"mouse_button LEFT, , "
+ 						}
+ 					}
+ 				}
+@@ -1879,12 +1890,188 @@
+ 				{
+ 				}
+ 			}
++			"left_bumper"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press H, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"right_bumper"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press J, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
+ 		}
+ 		"settings"
+ 		{
+ 			"layer"		"1"
+ 		}
+ 	}
++	"group"
++	{
++		"id"		"70"
++		"mode"		"dpad"
++		"name"		""
++		"description"		""
++		"inputs"
++		{
++			"dpad_north"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press SPACE, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"dpad_south"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press LEFT_CONTROL, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"dpad_west"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press A, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"dpad_east"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press D, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"click"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press LEFT_SHIFT, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++		}
++		"settings"
++		{
++			"layer"		"1"
++			"requires_click"		"0"
++			"edge_binding_radius"		"24995"
++		}
++	}
++	"group"
++	{
++		"id"		"71"
++		"mode"		"joystick_mouse"
++		"name"		""
++		"description"		""
++		"inputs"
++		{
++			"click"
++			{
++				"activators"
++				{
++					"Full_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press Z, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++			"touch"
++			{
++				"activators"
++				{
++					"Double_Press"
++					{
++						"bindings"
++						{
++							"binding"		"key_press RIGHT_ALT, , "
++							"binding"		"key_press L, , "
++						}
++					}
++				}
++				"disabled_activators"
++				{
++				}
++			}
++		}
++		"settings"
++		{
++			"layer"		"1"
++			"output_joystick"		"2"
++		}
++	}
+ 	"preset"
+ 	{
+ 		"id"		"0"
+@@ -1928,6 +2115,7 @@
+ 			"17"		"right_trigger active"
+ 			"18"		"right_joystick active"
+ 			"19"		"dpad active"
++			"61"		"gyro active"
+ 		}
+ 	}
+ 	"preset"
+@@ -1957,6 +2145,8 @@
+ 			"34"		"left_trigger active"
+ 			"35"		"right_trigger active"
+ 			"41"		"dpad active"
++			"70"		"joystick active"
++			"71"		"right_joystick active"
+ 		}
+ 	}
+ 	"settings"
