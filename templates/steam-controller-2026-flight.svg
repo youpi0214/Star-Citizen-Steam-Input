@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="2560" height="1440" viewBox="0 0 2560 1440" version="1.1" id="svg-flight" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg{fill:#f3f4f6}
+      .title{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:42px;font-weight:800;fill:#111827;letter-spacing:.4px}
+      .subtitle{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:20px;font-weight:500;fill:#4b5563}
+      .mode{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:24px;font-weight:800;fill:#0f766e;letter-spacing:1px}
+      .label{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:22px;font-weight:700;fill:#111827}
+      .body{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:21px;font-weight:600;fill:#111827}
+      .meta{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:19px;font-weight:600;fill:#374151}
+      .mod{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:19px;font-weight:700;fill:#c56a00}
+      .legend{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:600;fill:#374151}
+      .legendKey{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:800;fill:#111827}
+      .legendMod{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:800;fill:#c56a00}
+    </style>
+  </defs>
+
+  <g id="layer-header">
+    <text x="70" y="72" class="title">STAR CITIZEN · STEAM CONTROLLER 2026</text>
+    <text x="70" y="108" class="subtitle">Player quick-reference · Flight Mode · complete Steam Input mapping</text>
+    <text x="2390" y="72" class="mode" text-anchor="end" id="mode_name">FLIGHT MODE</text>
+  </g>
+
+  <image id="controller-front" x="525.414" y="318.651" width="1455.34" height="905.916" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png"/>
+
+  <!-- Reuse the approved FPS callout geometry so the two sheets stay visually consistent. -->
+  <g id="layer-leaders" transform="matrix(1,0,0,1,0,36.000013)">
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1746.147 512.861 L 1968.455 626.794 L 2094.892 629.573"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1668.339 433.664 L 2093.503 437.832"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1593.31 500.356 L 1629.435 373.919 L 2089.334 276.659"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1671.118 583.722 L 1961.508 772.683 L 2099.06 825.481"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1450.2 586.501 L 1786.44 903.289 L 2114.344 1011.664"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1509.945 840.765 L 1857.301 1233.972 L 2122.681 1239.529"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1483.546 414.212 L 1479.378 232.198"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1022.258 408.654 C 1022.258 408.654 1022.258 414.212 1022.258 408.654 C 1022.258 403.096 1027.815 233.587 1027.815 233.587"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 985.993 832.848 L 665.078 1250.038 L 415.222 1254.623"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 845.019 576.116 L 739.576 722.82 L 447.314 734.282"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 767.083 505.057 L 698.315 596.747 L 447.314 595.601"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 836.997 430.558 L 458.775 437.435"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 916.079 502.764 L 880.549 362.937 L 442.729 283.854"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1057.053 585.285 L 746.453 890.155 L 447.314 936"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1651.892 338.868 L 1756.189 263.224 L 2089.712 158.927"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1546.448 333.138 L 1636.992 187.58"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 866.796 340.015 L 764.791 268.955 L 448.46 177.265"/>
+    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 949.317 333.138 L 835.85 199.041"/>
+  </g>
+
+  <g id="layer-labels" transform="matrix(1,0,0,1,0,37.000013)">
+    <g id="flight-lb-label">
+      <text x="430" y="145" class="label" text-anchor="end">LB</text>
+      <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.flight.controls.lb.regular.action">Precision targeting / hold max zoom</text>
+      <text x="430" y="197" class="meta" text-anchor="end">[2] <tspan data-bind="modes.flight.controls.lb.double_press.action">Gimbal mode toggle</tspan></text>
+      <text x="430" y="223" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.lb.regular.action">Decoy</tspan></text>
+    </g>
+
+    <g id="flight-lt-label">
+      <text x="835" y="145" class="label" text-anchor="middle">LT</text>
+      <text x="835" y="171" class="body" text-anchor="middle" data-bind="modes.flight.controls.lt.regular.action">Reverse thrust</text>
+    </g>
+
+    <g id="flight-back-label">
+      <text x="1028" y="191" class="label" text-anchor="middle">BACK</text>
+      <text x="1028" y="214" class="body" text-anchor="middle" data-bind="global.back.regular.action">mobiGlas</text>
+      <text x="1028" y="237" class="meta" text-anchor="middle">[H] <tspan data-bind="global.back.long_press.action">Map</tspan></text>
+      <text x="1028" y="260" class="mod" text-anchor="middle">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.back.regular.action">Accept invite</tspan></text>
+    </g>
+
+    <g id="flight-dpad-up-label">
+      <text x="440" y="420" class="label" text-anchor="end">D-PAD ↑</text>
+      <text x="440" y="446" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.dpad_up.regular.action">Camera view</tspan></text>
+    </g>
+
+    <g id="flight-dpad-left-label">
+      <text x="430" y="584" class="label" text-anchor="end">D-PAD ←</text>
+      <text x="430" y="610" class="meta" text-anchor="end">Unassigned</text>
+    </g>
+
+    <g id="flight-dpad-down-label">
+      <text x="430" y="722" class="label" text-anchor="end">D-PAD ↓</text>
+      <text x="430" y="748" class="body" text-anchor="end" data-bind="modes.flight.controls.dpad_down.regular.action">Landing gear</text>
+      <text x="430" y="774" class="meta" text-anchor="end">[H] <tspan data-bind="modes.flight.controls.dpad_down.long_press.action">Autoland</tspan></text>
+      <text x="430" y="800" class="mod" text-anchor="end">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.dpad_down.regular.action">Request landing</tspan></text>
+    </g>
+
+    <g id="flight-left-stick-label">
+      <text x="430" y="887" class="label" text-anchor="end">LEFT STICK</text>
+      <text x="430" y="913" class="body" text-anchor="end">X: <tspan data-bind="modes.flight.controls.left_stick_x.action">Roll left / right</tspan></text>
+      <text x="430" y="939" class="body" text-anchor="end">Y: <tspan data-bind="modes.flight.controls.left_stick_y.action">Strafe up / down</tspan></text>
+      <text x="430" y="965" class="meta" text-anchor="end">L3: <tspan data-bind="modes.flight.controls.l3.regular.action">Boost</tspan></text>
+      <text x="430" y="991" class="mod" text-anchor="end">M1 X: <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.left_stick_x.action">Strafe left / right</tspan></text>
+    </g>
+
+    <g id="flight-left-trackpad-label">
+      <text x="398" y="1190" class="label" text-anchor="end">LEFT TRACKPAD</text>
+      <text x="398" y="1216" class="body" text-anchor="end">↑ <tspan data-bind="modes.flight.controls.left_trackpad.up.action">Power</tspan></text>
+      <text x="398" y="1242" class="body" text-anchor="end">↓ <tspan data-bind="modes.flight.controls.left_trackpad.down.action">Engines</tspan></text>
+      <text x="398" y="1268" class="body" text-anchor="end">← <tspan data-bind="modes.flight.controls.left_trackpad.left.action">Shields</tspan></text>
+      <text x="398" y="1294" class="body" text-anchor="end">→ <tspan data-bind="modes.flight.controls.left_trackpad.right.action">Weapons</tspan></text>
+      <text x="398" y="1320" class="body" text-anchor="end">● <tspan data-bind="modes.flight.controls.left_trackpad.center.action">Toggle ship ports / doors</tspan></text>
+    </g>
+
+    <g id="flight-start-label">
+      <text x="1479" y="190" class="label" text-anchor="middle">START</text>
+      <text x="1479" y="214" class="body" text-anchor="middle" data-bind="global.start.regular.action">Menu</text>
+      <text x="1479" y="238" class="mod" text-anchor="middle">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.start.regular.action">Decline invite</tspan></text>
+    </g>
+
+    <g id="flight-rb-label">
+      <text x="2110" y="127" class="label">RB</text>
+      <text x="2110" y="153" class="body" data-bind="modes.flight.controls.rb.regular.action">Fire</text>
+      <text x="2110" y="179" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.rb.regular.action">Noise</tspan></text>
+    </g>
+
+    <g id="flight-rt-label">
+      <text x="1637" y="135" class="label" text-anchor="middle">RT</text>
+      <text x="1637" y="161" class="body" text-anchor="middle" data-bind="modes.flight.controls.rt.regular.action">Forward thrust</text>
+    </g>
+
+    <g id="flight-x-label">
+      <text x="2110" y="252" class="label">X</text>
+      <text x="2110" y="278" class="body" data-bind="modes.flight.controls.x.regular.action">Cycle operator mode</text>
+      <text x="2110" y="304" class="meta">[2] <tspan data-bind="modes.flight.controls.x.double_press.action">Ping</tspan></text>
+    </g>
+
+    <g id="flight-y-label">
+      <text x="2110" y="414" class="label">Y</text>
+      <text x="2110" y="440" class="body" data-bind="modes.flight.controls.y.regular.action">VTOL</text>
+      <text x="2110" y="466" class="meta">[2] <tspan data-bind="modes.flight.controls.y.double_press.action">Hold interaction</tspan></text>
+      <text x="2110" y="492" class="meta">[H] <tspan data-bind="modes.flight.controls.y.long_press.action">Exit seat</tspan></text>
+    </g>
+
+    <g id="flight-b-label">
+      <text x="2110" y="606" class="label">B</text>
+      <text x="2110" y="632" class="body" data-bind="modes.flight.controls.b.regular.action">Spacebrake</text>
+    </g>
+
+    <g id="flight-a-label">
+      <text x="2110" y="785" class="label">A</text>
+      <text x="2110" y="811" class="body" data-bind="modes.flight.controls.a.regular.action">NAV / Combat toggle</text>
+      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">Engage Quantum Drive</tspan></text>
+      <text x="2110" y="863" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.a.regular.action">Decoupled toggle</tspan></text>
+    </g>
+
+    <g id="flight-right-stick-label">
+      <text x="2130" y="952" class="label">RIGHT STICK / R3</text>
+      <text x="2130" y="978" class="body" data-bind="modes.flight.controls.right_stick.action">Pitch / Yaw</text>
+      <text x="2130" y="1004" class="meta">Touch: <tspan data-bind="modes.flight.controls.right_stick_touch.regular.action">Precision aim</tspan></text>
+      <text x="2130" y="1030" class="meta">[2] Touch: <tspan data-bind="modes.flight.controls.right_stick_touch.double_press.action">Lights</tspan></text>
+      <text x="2130" y="1056" class="mod">M1 [2] Touch: <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.right_stick_touch.double_press.action">LAMP</tspan></text>
+      <text x="2130" y="1082" class="meta">R3: <tspan data-bind="modes.flight.controls.r3.regular.action">Next weapon preset</tspan></text>
+      <text x="2130" y="1108" class="mod">M1 R3: <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.r3.regular.action">Freelook</tspan></text>
+    </g>
+
+    <g id="flight-right-trackpad-label">
+      <text x="2140" y="1172" class="label">RIGHT TRACKPAD</text>
+      <text x="2140" y="1198" class="body">↑ <tspan data-bind="modes.flight.controls.right_trackpad.up.action">Target in view</tspan></text>
+      <text x="2140" y="1224" class="body">↓ <tspan data-bind="modes.flight.controls.right_trackpad.down.action">Unlock target</tspan></text>
+      <text x="2140" y="1250" class="body">← <tspan data-bind="modes.flight.controls.right_trackpad.left.action">Cycle attackers</tspan></text>
+      <text x="2140" y="1276" class="body">→ <tspan data-bind="modes.flight.controls.right_trackpad.right.action">Cycle hostiles</tspan></text>
+      <text x="2140" y="1302" class="body">● <tspan data-bind="modes.flight.controls.right_trackpad.center.action">Cycle all / closest</tspan></text>
+    </g>
+  </g>
+
+  <g id="flight-rear-global" transform="matrix(1,0,0,1,1060,1190)">
+    <text x="0" y="0" class="label">REAR / GLOBAL</text>
+    <text x="0" y="28" class="mod">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
+    <text x="0" y="54" class="meta">RG [H]: <tspan data-bind="global.rg.long_press.action">Switch FPS / Flight mode</tspan></text>
+  </g>
+
+  <g id="flight-legend" transform="matrix(1,0,0,1,64,52)">
+    <text x="950" y="1340" class="legend"><tspan class="legendKey">[H]</tspan> Hold</text>
+    <text x="1090" y="1340" class="legend"><tspan class="legendKey">[2]</tspan> Double Press</text>
+    <text x="1275" y="1340" class="legend"><tspan class="legendMod">M1</tspan> L4 Modifier</text>
+  </g>
+</svg>

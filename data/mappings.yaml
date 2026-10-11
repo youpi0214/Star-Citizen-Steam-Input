@@ -43,7 +43,7 @@ modes:
           output: Middle Mouse
         double_press:
           action: Fire mode toggle
-          output: TODO
+          output: B
       gyro:
         action: Precision aim
         output: Gyro To Mouse
@@ -116,29 +116,25 @@ modes:
             regular:
               action: Key B
               output: B
-          b:
-            regular:
-              action: Healing / Weapon wheel
-              output: TODO
           x:
             regular:
               action: Ammo backpack refill
               output: Left Alt + 1
           lb:
             regular:
-              action: Unassigned
-              output: Empty binding
+              action: Consumable / healing wheel
+              output: 4
           rb:
             regular:
               action: Throwables radial
-              output: 4
+              output: G
           r3:
             regular:
-              action: Next weapon
+              action: Customize weapon
               output: J
             long_press:
-              action: Inspect weapon
-              output: TODO
+              action: Inspect item / weapon
+              output: O (custom Star Citizen bind)
           dpad_up:
             regular:
               action: Camera view
@@ -189,8 +185,8 @@ modes:
           output: Left Mouse
       lb:
         regular:
-          action: Zoom / precision
-          output: TODO
+          action: Precision targeting / hold max zoom
+          output: Right Mouse
         double_press:
           action: Gimbal mode toggle
           output: G
@@ -200,15 +196,15 @@ modes:
           output: Left Shift
       r3:
         regular:
-          action: Cycle weapons
-          output: TODO
+          action: Next weapon preset
+          output: Mouse Wheel Down
       a:
         regular:
           action: NAV / Combat toggle
           output: B
         long_press:
-          action: Engage Quantum Travel
-          output: TODO
+          action: Engage Quantum Drive
+          output: Left Mouse
       b:
         regular:
           action: Spacebrake
@@ -236,7 +232,7 @@ modes:
           output: N
         long_press:
           action: Autoland
-          output: TODO
+          output: N (hold)
       right_trackpad:
         up:
           action: Target in view
@@ -245,14 +241,14 @@ modes:
           action: Unlock target
           output: Left Alt + T
         left:
-          action: Previous target
-          output: TODO
+          action: Cycle attackers
+          output: 4
         right:
-          action: Next target
-          output: TODO
+          action: Cycle hostiles
+          output: 5
         center:
-          action: Nearest / lock target
-          output: TODO
+          action: Cycle all / closest
+          output: 7
       left_trackpad:
         up:
           action: Power
@@ -267,8 +263,8 @@ modes:
           action: Weapons
           output: P
         center:
-          action: Doors
-          output: TODO
+          action: Toggle ship ports / doors
+          output: Right Alt + K
 
     modifiers:
       l4:

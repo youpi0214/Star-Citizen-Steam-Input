@@ -47,7 +47,7 @@
     <g id="fps-lb-label">
       <text x="430" y="145" class="label" text-anchor="end" style="white-space: pre;">LB</text>
       <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.fps.controls.lb.regular.action" style="white-space: pre;">Lean left</text>
-      <text x="430" y="197" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Unassigned</tspan></text>
+      <text x="430" y="197" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Consumable / healing wheel</tspan></text>
     </g>
     <g id="fps-lt-label">
       <text x="835" y="145" class="label" text-anchor="middle" style="white-space: pre;">LT</text>
@@ -112,7 +112,6 @@
       <text x="2110" y="606" class="label" style="white-space: pre;">B</text>
       <text x="2110" y="632" class="body" data-bind="modes.fps.controls.b.regular.action" style="white-space: pre;">Crouch</text>
       <text x="2110" y="658" class="meta" style="white-space: pre;">[H] <tspan data-bind="modes.fps.controls.b.long_press.action">Prone</tspan></text>
-      <text x="2110" y="684" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.b.regular.action">Healing / Weapon wheel</tspan></text>
     </g>
     <g id="fps-a-label">
       <text x="2110" y="811" class="label" style="white-space: pre;">A</text>
@@ -126,8 +125,8 @@
       <text x="2130" y="1062" class="meta" style="white-space: pre;">[2] Touch: <tspan data-bind="modes.fps.controls.right_stick_touch.double_press.action">Flashlight</tspan></text>
       <text x="2130" y="1088" class="meta" style="white-space: pre;">R3: <tspan data-bind="modes.fps.controls.r3.regular.action">Melee</tspan></text>
       <text x="2130" y="1114" class="meta" style="white-space: pre;">[2] R3: <tspan data-bind="modes.fps.controls.r3.double_press.action">Fire mode toggle</tspan></text>
-      <text x="2130" y="1140" class="mod" style="white-space: pre;">M1 R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Next weapon</tspan></text>
-      <text x="2130" y="1166" class="mod" style="white-space: pre;">M1 [H] R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.long_press.action">Inspect weapon</tspan></text>
+      <text x="2130" y="1140" class="mod" style="white-space: pre;">M1 R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Customize weapon</tspan></text>
+      <text x="2130" y="1166" class="mod" style="white-space: pre;">M1 [H] R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.long_press.action">Inspect item / weapon</tspan></text>
     </g>
     <g id="fps-right-trackpad-label">
       <text x="2140" y="1224" class="label" style="white-space: pre;">RIGHT TRACKPAD</text>
