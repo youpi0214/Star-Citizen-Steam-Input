@@ -45,7 +45,7 @@ jobs:
           svg_path = Path('templates/steam-controller-2026-flight.svg')
           svg = svg_path.read_text()
           svg_replacements = {
-              '>Zoom / precision</tspan>': '>TODO — Zoom / precision</tspan>',
+              '>Zoom / precision</text>': '>TODO — Zoom / precision</text>',
               '>Cycle weapons</tspan>': '>TODO — Cycle weapons</tspan>',
               '>Engage Quantum Travel</tspan>': '>TODO — Engage Quantum Travel</tspan>',
               '>Autoland</tspan>': '>TODO — Autoland</tspan>',
