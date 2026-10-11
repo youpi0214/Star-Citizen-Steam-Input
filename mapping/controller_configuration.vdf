@@ -1232,7 +1232,6 @@
 				{
 				}
 			}
-		}
 			"dpad_west"
 			{
 				"activators"
@@ -1249,6 +1248,7 @@
 				{
 				}
 			}
+		}
 		"settings"
 		{
 			"layer"		"1"
@@ -1295,7 +1295,6 @@
 				{
 				}
 			}
-		}
 			"dpad_west"
 			{
 				"activators"
@@ -1312,6 +1311,7 @@
 				{
 				}
 			}
+		}
 		"settings"
 		{
 			"layer"		"1"
