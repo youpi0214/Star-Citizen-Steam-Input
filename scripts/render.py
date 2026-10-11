@@ -3,13 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import mimetypes
+import shutil
+import subprocess
+import tempfile
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-try:
-    import yaml
-except ImportError as exc:
-    raise SystemExit("Missing dependency: PyYAML. Install with: pip install pyyaml") from exc
 
 
 def get_by_path(data: dict, dotted_path: str):
@@ -21,14 +22,21 @@ def get_by_path(data: dict, dotted_path: str):
     return value
 
 
-def render(template_path: Path, mappings_path: Path, output_path: Path, mode: str) -> None:
-    mappings = yaml.safe_load(mappings_path.read_text(encoding="utf-8"))
+def render(template_path: Path, mappings_path: Path | None, output_path: Path, mode: str,
+           width: int = 5120) -> None:
+    mappings = None
+    if mappings_path is not None:
+        try:
+            import yaml
+        except ImportError as exc:
+            raise SystemExit("Missing dependency: PyYAML. Install with: pip install pyyaml") from exc
+        mappings = yaml.safe_load(mappings_path.read_text(encoding="utf-8"))
     tree = ET.parse(template_path)
     root = tree.getroot()
 
     for element in root.iter():
         binding = element.attrib.get("data-bind")
-        if not binding:
+        if not binding or mappings is None:
             continue
 
         effective_binding = binding.replace("modes.fps.", f"modes.{mode}.", 1)
@@ -41,15 +49,54 @@ def render(template_path: Path, mappings_path: Path, output_path: Path, mode: st
         element.text = str(value)
 
     for element in root.iter():
-        if element.attrib.get("id") == "mode_name":
+        if mappings is not None and element.attrib.get("id") == "mode_name":
             try:
                 element.text = str(get_by_path(mappings, f"modes.{mode}.name")).upper()
             except KeyError:
                 element.text = mode.upper()
             break
 
+    # Resolve assets against the source SVG before moving it to a temporary file.
+    for element in root.iter():
+        if element.tag.rsplit("}", 1)[-1] != "image":
+            continue
+        for key in ("href", "{http://www.w3.org/1999/xlink}href"):
+            href = element.get(key)
+            if not href or href.startswith(("data:", "http:", "https:")):
+                continue
+            asset = template_path.parent / href
+            mime = mimetypes.guess_type(asset.name)[0] or "application/octet-stream"
+            embedded = f"data:{mime};base64," + base64.b64encode(asset.read_bytes()).decode("ascii")
+            element.set(key, embedded)
+            element.set("{http://www.w3.org/1999/xlink}href", embedded)
+
+    suffix = output_path.suffix.lower()
+    if suffix not in (".svg", ".png", ".jpg", ".jpeg"):
+        raise ValueError("Output must use .png, .jpg, .jpeg, or .svg")
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    tree.write(output_path, encoding="utf-8", xml_declaration=True)
+    if suffix == ".svg":
+        tree.write(output_path, encoding="utf-8", xml_declaration=True)
+        return
+    renderer = shutil.which("rsvg-convert")
+    if renderer is None:
+        raise SystemExit("Missing dependency: rsvg-convert. Install librsvg to export raster images.")
+    with tempfile.TemporaryDirectory(prefix="controller-render-") as temporary:
+        svg = Path(temporary) / "sheet.svg"
+        png = Path(temporary) / "sheet.png"
+        tree.write(svg, encoding="utf-8", xml_declaration=True)
+        subprocess.run([
+            renderer, "--format=png", f"--width={width}",
+            "--background-color=white", "--output", str(png), str(svg),
+        ], check=True)
+        if suffix == ".png":
+            shutil.copyfile(png, output_path)
+        else:
+            try:
+                from PIL import Image
+            except ImportError as exc:
+                raise SystemExit("Missing dependency: Pillow. Install with: pip install pillow") from exc
+            with Image.open(png) as image:
+                image.convert("RGB").save(output_path, quality=95, subsampling=0)
 
 
 def resolve_template(mode: str, explicit_template: Path | None) -> Path:
@@ -64,16 +111,20 @@ def resolve_template(mode: str, explicit_template: Path | None) -> Path:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Render Star Citizen controller mapping SVG from YAML data.")
+    parser = argparse.ArgumentParser(description="Export finished controller SVG templates as high-resolution images.")
     parser.add_argument("--mode", choices=("fps", "flight"), required=True)
-    parser.add_argument("--data", type=Path, default=Path("data/mappings.yaml"))
+    parser.add_argument("--data", type=Path, help="Optionally replace template labels with YAML mappings")
     parser.add_argument("--template", type=Path)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--format", choices=("png", "jpeg", "svg"), default="png")
+    parser.add_argument("--width", type=int, default=5120, help="Raster width in pixels (default: 5120)")
     args = parser.parse_args()
+    if args.width <= 0:
+        parser.error("--width must be positive")
 
     template = resolve_template(args.mode, args.template)
-    output = args.output or Path(f"output/{args.mode}.svg")
-    render(template, args.data, output, args.mode)
+    output = args.output or Path(f"output/{args.mode}.{args.format}")
+    render(template, args.data, output, args.mode, args.width)
     print(f"Rendered {output} from {template}")
 
 

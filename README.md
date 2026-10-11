@@ -192,6 +192,17 @@ The repository includes separate visual mapping sheets for FPS and Flight Mode:
 
 The Steam button and `...` button are intentionally omitted from the callouts because they are not intended to be mapped.
 
+Export the finished templates from the repository root:
+
+```sh
+python scripts/render.py --mode fps
+python scripts/render.py --mode flight --format jpeg
+```
+
+The default export is a 5120 × 2880 PNG. The controller image is included in the exported pixels, and the finished template labels are preserved. Use `--width 7680` for a larger export, or `--output output/fps.jpg` to choose a filename and format. Raster exports use `rsvg-convert` (provided by librsvg); JPEG export also requires Pillow. Both are installed in the current environment.
+
+Use `--data data/mappings.yaml` when you want to replace the template's bound labels with YAML values. This optional step requires PyYAML. `--format svg` exports a self-contained SVG with its controller image embedded. Paths are relative to the current working directory.
+
 ## Installing the Steam Input configuration
 
 1. Add the RSI Launcher / Star Citizen to Steam as a non-Steam game if it is not already present.
