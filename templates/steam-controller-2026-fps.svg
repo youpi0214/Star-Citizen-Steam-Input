@@ -1,13 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-  width="2560"
-  height="1440"
-  viewBox="0 0 2560 1440">
-
-  <defs>
-    <style><![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="2560" height="1440" viewBox="0 0 2560 1440" version="1.1" id="svg49" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs1">
+    <style id="style1">
       .bg{fill:#f3f4f6}
       .title{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:42px;font-weight:800;fill:#111827;letter-spacing:.4px}
       .subtitle{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:20px;font-weight:500;fill:#4b5563}
@@ -21,126 +15,38 @@
       .legendKey{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:800;fill:#111827}
       .legendMod{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:800;fill:#c56a00}
       .small{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:600;fill:#4b5563}
-    ]]></style>
+    </style>
   </defs>
-
-  <!-- Inkscape layers are intentionally named. Edit layout/style here; keep data-bind attributes intact. -->
-  <g inkscape:groupmode="layer" inkscape:label="01 Background" id="layer-background">
-    <rect class="bg" width="2560" height="1440"/>
+  <g id="layer-background"/>
+  <g id="layer-header">
+    <text x="70" y="72" class="title" id="text1" style="white-space: pre;">STAR CITIZEN · STEAM CONTROLLER 2026</text>
+    <text x="70" y="108" class="subtitle" id="text2" style="white-space: pre;">Player quick-reference · FPS Mode · grouped by physical control</text>
+    <text x="2390" y="72" class="mode" text-anchor="end" id="mode_name" style="white-space: pre;">FPS MODE</text>
   </g>
-
-  <g inkscape:groupmode="layer" inkscape:label="02 Header" id="layer-header">
-    <text x="70" y="72" class="title">STAR CITIZEN · STEAM CONTROLLER 2026</text>
-    <text x="70" y="108" class="subtitle">Player quick-reference · FPS Mode · grouped by physical control</text>
-    <text x="2390" y="72" class="mode" text-anchor="end" id="mode_name">FPS MODE</text>
+  <g id="layer-controller">
+    <image id="controller-front" x="525.41364" y="282.6506" width="1455.3413" height="905.91565" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png"/>
   </g>
-
-  <g inkscape:groupmode="layer" inkscape:label="03 Controller" id="layer-controller">
-    <image
-      id="controller-front"
-      x="490" y="140" width="1580" height="1037"
-      preserveAspectRatio="xMidYMid meet"
-      href="assets/steam-controller-2026.png"/>
-  </g>
-
-  <g inkscape:groupmode="layer" inkscape:label="04 Leader Lines" id="layer-leaders">
-    <path id="leader-back" class="leader" d="M1000 160 L1000 116 L792 116"/>
-    <path id="leader-start" class="leader" d="M1560 160 L1560 116 L1768 116"/>
-    <path id="leader-lt" class="leader" d="M870 286 L670 286 L462 232"/>
-    <path id="leader-lb" class="leader" d="M840 364 L640 364 L460 362"/>
-    <path id="leader-dpad" class="leader" d="M820 508 L600 508 L470 528"/>
-    <path id="leader-left-stick" class="leader" d="M996 642 L700 760 L468 880"/>
-    <path id="leader-rt" class="leader" d="M1688 286 L1896 286 L2100 232"/>
-    <path id="leader-rb" class="leader" d="M1715 364 L1916 364 L2094 362"/>
-    <path id="leader-face-buttons" class="leader" d="M1818 466 L2024 466 L2190 500"/>
-    <path id="leader-right-stick" class="leader" d="M1530 646 L1810 870 L2110 884"/>
-  </g>
-
-  <g inkscape:groupmode="layer" inkscape:label="05 Callout Labels" id="layer-labels">
-    <g id="callout-back">
-      <text x="788" y="92" class="label">BACK</text>
-      <text x="788" y="118" class="body" data-bind="global.back.regular.action">mobiGlas</text>
-      <text x="788" y="144" class="meta">[H] <tspan data-bind="global.back.long_press.action">Map</tspan></text>
-      <text x="788" y="170" class="mod">M1 <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.back.regular.action">Accept invite</tspan></text>
-    </g>
-
-    <g id="callout-start">
-      <text x="1772" y="92" class="label">START</text>
-      <text x="1772" y="118" class="body" data-bind="global.start.regular.action">Menu</text>
-      <text x="1772" y="144" class="mod">M1 <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.start.regular.action">Decline invite</tspan></text>
-    </g>
-
-    <g id="callout-lt">
-      <text x="82" y="214" class="label">LT</text>
-      <text x="82" y="240" class="body" data-bind="modes.fps.controls.lt.regular.action">ADS</text>
-    </g>
-
-    <g id="callout-lb">
-      <text x="82" y="346" class="label">LB</text>
-      <text x="82" y="372" class="body" data-bind="modes.fps.controls.lb.regular.action">Lean left</text>
-    </g>
-
-    <g id="callout-dpad">
-      <text x="82" y="512" class="label">D-PAD</text>
-      <text x="82" y="540" class="body">Right: <tspan data-bind="modes.fps.controls.dpad_right.regular.action">Inventory</tspan></text>
-      <text x="82" y="566" class="mod">M1 Up: <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.dpad_up.regular.action">Camera view</tspan></text>
-      <text x="82" y="592" class="mod">M1 Down: <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.dpad_down.regular.action">Helmet on/off</tspan></text>
-    </g>
-
-    <g id="callout-left-stick">
-      <text x="82" y="850" class="label">LEFT STICK</text>
-      <text x="82" y="878" class="body" data-bind="modes.fps.controls.left_stick.action">Move</text>
-      <text x="82" y="904" class="meta">L3: <tspan data-bind="modes.fps.controls.l3.regular.action">Sprint toggle</tspan></text>
-    </g>
-
-    <g id="callout-rt">
-      <text x="2110" y="214" class="label">RT</text>
-      <text x="2110" y="240" class="body" data-bind="modes.fps.controls.rt.regular.action">Fire / Use</text>
-    </g>
-
-    <g id="callout-rb">
-      <text x="2110" y="346" class="label">RB</text>
-      <text x="2110" y="372" class="body" data-bind="modes.fps.controls.rb.regular.action">Lean right</text>
-      <text x="2110" y="398" class="mod">M1 <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.rb.regular.action">Throwables radial</tspan></text>
-    </g>
-
-    <g id="callout-face-buttons">
-      <text x="2198" y="472" class="label">A / B / X / Y</text>
-      <text x="2198" y="500" class="body">A: <tspan data-bind="modes.fps.controls.a.regular.action">Jump</tspan></text>
-      <text x="2198" y="526" class="body">B: <tspan data-bind="modes.fps.controls.b.regular.action">Crouch</tspan></text>
-      <text x="2198" y="552" class="meta">[H] <tspan data-bind="modes.fps.controls.b.long_press.action">Prone</tspan></text>
-      <text x="2198" y="578" class="mod">M1 <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.b.regular.action">Healing / Weapon wheel</tspan></text>
-      <text x="2198" y="608" class="body">X: <tspan data-bind="modes.fps.controls.x.regular.action">Reload / Holster</tspan></text>
-      <text x="2198" y="634" class="mod">M1 <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.x.regular.action">Ammo backpack refill</tspan></text>
-      <text x="2198" y="664" class="body">Y: <tspan data-bind="modes.fps.controls.y.regular.action">Interact</tspan></text>
-      <text x="2198" y="690" class="meta">[2] <tspan data-bind="modes.fps.controls.y.double_press.action">Hold interaction</tspan></text>
-    </g>
-
-    <g id="callout-right-stick">
-      <text x="2120" y="854" class="label">RIGHT STICK / R3</text>
-      <text x="2120" y="882" class="body" data-bind="modes.fps.controls.right_stick.action">Aim / Look</text>
-      <text x="2120" y="908" class="meta">Touch: <tspan data-bind="modes.fps.controls.right_stick_touch.regular.action">Precision aim</tspan></text>
-      <text x="2120" y="934" class="meta">[2] Touch: <tspan data-bind="modes.fps.controls.right_stick_touch.double_press.action">Flashlight</tspan></text>
-      <text x="2120" y="960" class="body">R3: <tspan data-bind="modes.fps.controls.r3.regular.action">Melee</tspan></text>
-      <text x="2120" y="986" class="meta">[2] <tspan data-bind="modes.fps.controls.r3.double_press.action">Fire mode toggle</tspan></text>
-      <text x="2120" y="1012" class="mod">M1 <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Next weapon</tspan></text>
-      <text x="2120" y="1038" class="mod">M1 [H] <tspan fill="#111827" font-weight="600" data-bind="modes.fps.modifiers.l4.controls.r3.long_press.action">Inspect weapon</tspan></text>
-    </g>
-  </g>
-
-  <g inkscape:groupmode="layer" inkscape:label="06 Legend & Notes" id="layer-legend">
-    <g id="legend-activators">
-      <text x="160" y="1208" class="label">LEGEND</text>
-      <text x="160" y="1242" class="legend"><tspan class="legendKey">[H]</tspan> Hold</text>
-      <text x="160" y="1272" class="legend"><tspan class="legendKey">[2]</tspan> Double Press</text>
-      <text x="160" y="1302" class="legend"><tspan class="legendMod">M1</tspan> Modifier (L4)</text>
-    </g>
-
-    <g id="mode-switch-note">
-      <text x="1010" y="1210" class="label">MODE SWITCH</text>
-      <text x="1010" y="1242" class="legend">RG [2] <tspan data-bind="global.rg.double_press.action">Switch FPS / Flight mode</tspan></text>
-    </g>
-
-    <text x="1010" y="1302" class="small">Trackpads are currently unassigned in FPS Mode.</text>
-  </g>
+  <g id="layer-leaders"/>
+  <g id="layer-labels"/>
+  <g id="layer-legend"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1746.147 512.861 L 1968.455 626.794 L 2094.892 629.573"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1668.339 433.664 L 2093.503 437.832"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1593.31 500.356 L 1629.435 373.919 L 2089.334 276.659"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1671.118 583.722 L 1961.508 772.683 L 2099.06 825.481"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1450.2 586.501 L 1786.44 903.289 L 2114.344 1011.664"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1509.945 840.765 L 1857.301 1233.972 L 2122.681 1239.529"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1483.546 414.212 L 1479.378 232.198"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1022.258 408.654 C 1022.258 408.654 1022.258 414.212 1022.258 408.654 C 1022.258 403.096 1027.815 233.587 1027.815 233.587"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1255.681 501.746 L 1255.681 494.799 L 1252.902 159.948"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1250.123 844.933 L 1248.733 1093.64"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 985.993 832.848 L 665.078 1250.038 L 415.222 1254.623"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 845.019 576.116 L 739.576 722.82 L 447.314 734.282"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 767.083 505.057 L 698.315 596.747 L 447.314 595.601"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 836.997 430.558 L 458.775 437.435"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 916.079 502.764 L 880.549 362.937 L 442.729 283.854"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1057.053 585.285 L 746.453 890.155 L 447.314 936"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1651.892 338.868 L 1756.189 263.224 L 2089.712 158.927"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 1546.448 333.138 L 1636.992 187.58"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 866.796 340.015 L 764.791 268.955 L 448.46 177.265"/>
+  <path style="fill: none; stroke: rgb(0, 76, 237); stroke-width: 3px;" d="M 949.317 333.138 L 835.85 199.041"/>
 </svg>
