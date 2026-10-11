@@ -1,0 +1,72 @@
+name: Remove unused FPS M1+B mapping
+
+on:
+  push:
+    branches:
+      - feature/flight-visual-mapping
+    paths:
+      - .github/workflows/remove-fps-m1-b.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/flight-visual-mapping
+          fetch-depth: 0
+
+      - name: Remove unused FPS M1+B mapping
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          # VDF: remove button_b entirely from FPS L4 face-button group (group 62).
+          p = Path('mapping/controller_configuration.vdf')
+          s = p.read_text()
+          group_marker = '\t\t"id"\t\t"62"'
+          gp = s.index(group_marker)
+          gs = s.rfind('\t"group"\n\t{', 0, gp)
+          ge = s.find('\n\t"group"', gp)
+          g = s[gs:ge]
+          bs = g.index('\t\t\t"button_b"\n')
+          be = g.index('\t\t\t"button_x"\n', bs)
+          g = g[:bs] + g[be:]
+          s = s[:gs] + g + s[ge:]
+          p.write_text(s)
+
+          # YAML: remove M1+B from documented modifier controls entirely.
+          p = Path('data/mappings.yaml')
+          s = p.read_text()
+          old = '''          b:\n            regular:\n              action: Unassigned\n              output: Empty binding\n'''
+          if old not in s:
+              raise SystemExit('Expected FPS M1+B YAML block not found')
+          p.write_text(s.replace(old, '', 1))
+
+          # README: omit unused M1+B from the mapping table.
+          p = Path('README.md')
+          s = p.read_text()
+          row = '| M1 + B | Regular | Unassigned | — |\n'
+          if row not in s:
+              raise SystemExit('Expected README M1+B row not found')
+          p.write_text(s.replace(row, '', 1))
+
+          # FPS SVG: remove only the M1+B callout line, preserving all geometry.
+          p = Path('templates/steam-controller-2026-fps.svg')
+          s = p.read_text()
+          line = '      <text x="2110" y="684" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.b.regular.action">Unassigned</tspan></text>\n'
+          if line not in s:
+              raise SystemExit('Expected FPS SVG M1+B line not found')
+          p.write_text(s.replace(line, '', 1))
+          PY
+
+      - name: Commit removal
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mapping/controller_configuration.vdf data/mappings.yaml README.md templates/steam-controller-2026-fps.svg
+          git commit -m "Remove unused FPS M1+B mapping"
+          git push origin HEAD:feature/flight-visual-mapping
