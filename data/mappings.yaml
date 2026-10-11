@@ -14,8 +14,12 @@ global:
     long_press:
       action: Map
       output: F2
+  l4:
+    regular:
+      action: Hold L4 Modifier layer
+      output: Hold Action Set Layer
   rg:
-    double_press:
+    long_press:
       action: Switch FPS / Flight mode
       output: Change Action Set
 
@@ -26,13 +30,22 @@ modes:
       left_stick:
         action: Move
         output: WASD
+      l3:
+        regular:
+          action: Sprint toggle
+          output: Left Shift
       right_stick:
         action: Aim / Look
         output: Mouse
-      right_stick_touch:
+      r3:
         regular:
-          action: Precision aim
-          output: Gyro To Mouse
+          action: Melee
+          output: Middle Mouse
+      gyro:
+        action: Precision aim
+        output: Gyro To Mouse
+        activation: Right Stick Touch
+      right_stick_touch:
         double_press:
           action: Flashlight
           output: T
@@ -65,42 +78,53 @@ modes:
           output: F
         double_press:
           action: Hold interaction
-          output: F (toggle/hold equivalent)
-      l3:
-        regular:
-          action: Sprint toggle
-          output: Left Shift
-      r3:
-        regular:
-          action: Melee
-          output: TODO
-        double_press:
-          action: Fire mode toggle
-          output: TODO
+          output: F (toggle)
       lb:
         regular:
           action: Lean left
-          output: Q
+          output: Q (press/release)
       rb:
         regular:
           action: Lean right
-          output: E
+          output: E (press/release)
       dpad_right:
         regular:
           action: Inventory
           output: I
+      left_trackpad:
+        action: Unassigned
+        output: None
+      right_trackpad:
+        up:
+          action: Scroll up
+          output: Mouse Wheel Up
+        down:
+          action: Scroll down
+          output: Mouse Wheel Down
+      left_rear_lower:
+        regular:
+          action: Key 1
+          output: 1
 
     modifiers:
       l4:
         controls:
+          a:
+            regular:
+              action: Key B
+              output: B
+          b:
+            regular:
+              action: Unassigned
+              output: Empty binding
           x:
             regular:
               action: Ammo backpack refill
               output: Left Alt + 1
-          b:
+          lb:
             regular:
-              action: Healing / Weapon wheel
-              output: TODO
+              action: Unassigned
+              output: Empty binding
           rb:
             regular:
               action: Throwables radial
@@ -109,9 +133,6 @@ modes:
             regular:
               action: Next weapon
               output: J
-            long_press:
-              action: Inspect weapon
-              output: TODO
           dpad_up:
             regular:
               action: Camera view
