@@ -118,16 +118,16 @@ modes:
               output: B
           b:
             regular:
-              action: Healing / Weapon wheel
-              output: TODO
+              action: Unassigned
+              output: Empty binding
           x:
             regular:
               action: Ammo backpack refill
               output: Left Alt + 1
           lb:
             regular:
-              action: Unassigned
-              output: Empty binding
+              action: Healing / Weapon wheel
+              output: TODO
           rb:
             regular:
               action: Throwables radial

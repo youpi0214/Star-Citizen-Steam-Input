@@ -78,9 +78,9 @@ FPS Mode keeps conventional shooter movement on the sticks while using the rear 
 | Control | Input | Action | Output |
 | --- | --- | --- | --- |
 | M1 + A | Regular | Key B | `B` |
-| M1 + B | Regular | Healing / Weapon wheel | TODO |
+| M1 + B | Regular | Unassigned | — |
 | M1 + X | Regular | Ammo backpack refill | `Left Alt + 1` |
-| M1 + LB | Regular | Unassigned | — |
+| M1 + LB | Regular | Healing / Weapon wheel | TODO |
 | M1 + RB | Regular | Throwables radial | `4` |
 | M1 + R3 | Regular | Next weapon | `J` |
 | M1 + R3 | `[H]` | Inspect weapon | TODO |
