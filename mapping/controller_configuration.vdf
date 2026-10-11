@@ -1405,22 +1405,6 @@
 				{
 				}
 			}
-			"button_b"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action empty_binding, , "
-						}
-					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
 			"button_x"
 			{
 				"activators"

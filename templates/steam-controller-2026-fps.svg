@@ -112,7 +112,6 @@
       <text x="2110" y="606" class="label" style="white-space: pre;">B</text>
       <text x="2110" y="632" class="body" data-bind="modes.fps.controls.b.regular.action" style="white-space: pre;">Crouch</text>
       <text x="2110" y="658" class="meta" style="white-space: pre;">[H] <tspan data-bind="modes.fps.controls.b.long_press.action">Prone</tspan></text>
-      <text x="2110" y="684" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.b.regular.action">Unassigned</tspan></text>
     </g>
     <g id="fps-a-label">
       <text x="2110" y="811" class="label" style="white-space: pre;">A</text>

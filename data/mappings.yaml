@@ -116,10 +116,6 @@ modes:
             regular:
               action: Key B
               output: B
-          b:
-            regular:
-              action: Unassigned
-              output: Empty binding
           x:
             regular:
               action: Ammo backpack refill
