@@ -41,6 +41,9 @@ modes:
         regular:
           action: Melee
           output: Middle Mouse
+        double_press:
+          action: Fire mode toggle
+          output: TODO
       gyro:
         action: Precision aim
         output: Gyro To Mouse
@@ -115,8 +118,8 @@ modes:
               output: B
           b:
             regular:
-              action: Unassigned
-              output: Empty binding
+              action: Healing / Weapon wheel
+              output: TODO
           x:
             regular:
               action: Ammo backpack refill
@@ -133,6 +136,9 @@ modes:
             regular:
               action: Next weapon
               output: J
+            long_press:
+              action: Inspect weapon
+              output: TODO
           dpad_up:
             regular:
               action: Camera view
