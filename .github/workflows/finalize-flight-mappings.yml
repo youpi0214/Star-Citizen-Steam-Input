@@ -1,0 +1,151 @@
+name: Finalize Flight mappings
+
+on:
+  push:
+    branches:
+      - feature/flight-visual-mapping
+    paths:
+      - .github/workflows/finalize-flight-mappings.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/flight-visual-mapping
+          fetch-depth: 0
+
+      - name: Apply verified Star Citizen 4.10 bindings
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          vdf_path = Path('mapping/controller_configuration.vdf')
+          text = vdf_path.read_text()
+
+          def replace_group(text, gid, new_block):
+              marker = f'\t\t"id"\t\t"{gid}"'
+              pos = text.index(marker)
+              start = text.rfind('\t"group"\n\t{', 0, pos)
+              if start < 0:
+                  raise SystemExit(f'group {gid} start not found')
+              lines = text[start:].splitlines(keepends=True)
+              depth = 0
+              seen = False
+              end_offset = 0
+              for line in lines:
+                  depth += line.count('{')
+                  if line.count('{'):
+                      seen = True
+                  depth -= line.count('}')
+                  end_offset += len(line)
+                  if seen and depth == 0:
+                      break
+              else:
+                  raise SystemExit(f'group {gid} end not found')
+              return text[:start] + new_block + text[start+end_offset:]
+
+          # LB regular = Precision Targeting (Right Click), double press G remains Gimbal toggle.
+          g11_marker = '\t\t"id"\t\t"11"'
+          p11 = text.index(g11_marker)
+          s11 = text.rfind('\t"group"\n\t{', 0, p11)
+          e11 = text.find('\n\t"group"', p11)
+          g11 = text[s11:e11]
+          old = '\t\t\t\t\t\t\t"binding"\t\t"controller_action empty_binding, , "'
+          if old not in g11:
+              raise SystemExit('Flight LB empty binding not found')
+          g11 = g11.replace(old, '\t\t\t\t\t\t\t"binding"\t\t"mouse_button RIGHT, , "', 1)
+          text = text[:s11] + g11 + text[e11:]
+
+          # R3 = next weapon preset (wheel down); touch double press keeps Lights.
+          g18 = '''\t"group"\n\t{\n\t\t"id"\t\t"18"\n\t\t"mode"\t\t"joystick_mouse"\n\t\t"name"\t\t""\n\t\t"description"\t\t""\n\t\t"inputs"\n\t\t{\n\t\t\t"click"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"mouse_wheel SCROLL_DOWN, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t\t"touch"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Double_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press L, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t"settings"\n\t\t{\n\t\t\t"output_joystick"\t\t"2"\n\t\t}\n\t}\n'''
+          text = replace_group(text, '18', g18)
+
+          # Right trackpad targeting: current 4.10 defaults use forward target cycles rather than generic previous/next.
+          g14 = '''\t"group"\n\t{\n\t\t"id"\t\t"14"\n\t\t"mode"\t\t"dpad"\n\t\t"name"\t\t""\n\t\t"description"\t\t""\n\t\t"inputs"\n\t\t{\n\t\t\t"dpad_north"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press T, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t\t"dpad_south"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press LEFT_ALT, , "\n\t\t\t\t\t\t\t"binding"\t\t"key_press T, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t\t"dpad_west"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press 4, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t\t"dpad_east"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press 5, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t\t"click"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press 7, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t"settings"\n\t\t{\n\t\t\t"edge_binding_radius"\t\t"24996"\n\t\t}\n\t}\n'''
+          text = replace_group(text, '14', g14)
+
+          # Left trackpad center = ship ports/doors toggle (Right Alt + K).
+          marker13 = '\t\t"id"\t\t"13"'
+          p13 = text.index(marker13)
+          s13 = text.rfind('\t"group"\n\t{', 0, p13)
+          e13 = text.find('\n\t"group"', p13)
+          g13 = text[s13:e13]
+          if '\t\t\t"click"\n' not in g13:
+              insert = '''\n\t\t\t"click"\n\t\t\t{\n\t\t\t\t"activators"\n\t\t\t\t{\n\t\t\t\t\t"Full_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"key_press RIGHT_ALT, , "\n\t\t\t\t\t\t\t"binding"\t\t"key_press K, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t"disabled_activators"\n\t\t\t\t{\n\t\t\t\t}\n\t\t\t}'''
+              close = g13.rfind('\n\t\t}\n\t\t"settings"')
+              if close < 0:
+                  raise SystemExit('group 13 inputs close not found')
+              g13 = g13[:close] + insert + g13[close:]
+              text = text[:s13] + g13 + text[e13:]
+
+          # A long press = hold Left Mouse to engage Quantum Drive while regular B remains Master Mode.
+          marker12 = '\t\t"id"\t\t"12"'
+          p12 = text.index(marker12)
+          s12 = text.rfind('\t"group"\n\t{', 0, p12)
+          e12 = text.find('\n\t"group"', p12)
+          g12 = text[s12:e12]
+          a_start = g12.index('\t\t\t"button_a"')
+          b_start = g12.index('\t\t\t"button_b"')
+          a_block = g12[a_start:b_start]
+          if '"Long_Press"' not in a_block:
+              needle = '\t\t\t\t}\n\t\t\t\t"disabled_activators"'
+              addition = '''\t\t\t\t\t"Long_Press"\n\t\t\t\t\t{\n\t\t\t\t\t\t"bindings"\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t"binding"\t\t"mouse_button LEFT, , "\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n'''
+              if needle not in a_block:
+                  raise SystemExit('button A activator insertion point not found')
+              a_block = a_block.replace(needle, addition + needle, 1)
+              g12 = g12[:a_start] + a_block + g12[b_start:]
+              text = text[:s12] + g12 + text[e12:]
+
+          text = text.replace('"revision"\t\t"168"', '"revision"\t\t"169"', 1)
+          vdf_path.write_text(text)
+
+          # Synchronize documentation to the actual implemented VDF.
+          yaml_path = Path('data/mappings.yaml')
+          y = yaml_path.read_text()
+          reps = {
+              'action: TODO — Zoom / precision\n          output: TODO': 'action: Precision targeting / hold max zoom\n          output: Right Mouse',
+              'action: TODO — Cycle weapons\n          output: TODO': 'action: Next weapon preset\n          output: Mouse Wheel Down',
+              'action: TODO — Engage Quantum Travel\n          output: TODO': 'action: Engage Quantum Drive\n          output: Left Mouse',
+              'action: TODO — Autoland\n          output: TODO': 'action: Autoland\n          output: N (hold)',
+              'action: TODO — Previous target\n          output: TODO': 'action: Cycle attackers\n          output: 4',
+              'action: TODO — Next target\n          output: TODO': 'action: Cycle hostiles\n          output: 5',
+              'action: TODO — Nearest / lock target\n          output: TODO': 'action: Cycle all / closest\n          output: 7',
+              'action: TODO — Doors\n          output: TODO': 'action: Toggle ship ports / doors\n          output: Right Alt + K',
+          }
+          for old, new in reps.items():
+              if old not in y:
+                  raise SystemExit(f'Missing YAML mapping: {old!r}')
+              y = y.replace(old, new, 1)
+          yaml_path.write_text(y)
+
+          svg_path = Path('templates/steam-controller-2026-flight.svg')
+          s = svg_path.read_text()
+          svg_reps = {
+              'TODO — Zoom / precision': 'Precision targeting / hold max zoom',
+              'TODO — Cycle weapons': 'Next weapon preset',
+              'TODO — Engage Quantum Travel': 'Engage Quantum Drive',
+              'TODO — Autoland': 'Autoland',
+              'TODO — Previous target': 'Cycle attackers',
+              'TODO — Next target': 'Cycle hostiles',
+              'TODO — Nearest / lock target': 'Cycle all / closest',
+              'TODO — Doors': 'Toggle ship ports / doors',
+          }
+          for old, new in svg_reps.items():
+              if old not in s:
+                  raise SystemExit(f'Missing SVG text: {old!r}')
+              s = s.replace(old, new, 1)
+          svg_path.write_text(s)
+          PY
+
+      - name: Commit final Flight mapping
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mapping/controller_configuration.vdf data/mappings.yaml templates/steam-controller-2026-flight.svg
+          git commit -m "Finish Flight Mode mappings for Star Citizen 4.10"
+          git push origin HEAD:feature/flight-visual-mapping
