@@ -12,8 +12,8 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 	"export_type"		"community"
 	"controller_type"		"controller_triton"
 	"controller_caps"		"1097187327"
-	"major_revision"		"0"
-	"minor_revision"		"0"
+	"major_revision"		"1"
+	"minor_revision"		"1"
 	"timestamp"		"0"
 	"actions"
 	{
