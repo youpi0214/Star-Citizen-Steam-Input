@@ -146,6 +146,7 @@ Flight Mode moves translational and rotational control onto the sticks/triggers 
 | LB | `[2]` | Gimbal mode toggle | `G` |
 | RB | Regular | Fire | Left Mouse |
 | RB | Hold in quantum mode | Engage Quantum Drive | Left Mouse held |
+| R5 | Regular | Cycle mouse mode (custom in-game bind; see [QoL settings](star-citizen-settings/settings-change.md)) | `.` |
 | R3 | Regular | Next weapon preset | Mouse Wheel Down |
 | A | `[H]` | NAV / Combat toggle | `B` |
 | B | Regular | Spacebrake | `X` |

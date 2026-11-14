@@ -159,6 +159,10 @@ modes:
   flight:
     name: Flight Mode
     controls:
+      r5:
+        regular:
+          action: Cycle mouse mode
+          output: Period (.)
       right_stick:
         action: Pitch / Yaw
         output: Mouse X/Y

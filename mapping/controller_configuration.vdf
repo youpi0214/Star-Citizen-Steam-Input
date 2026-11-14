@@ -1,16 +1,16 @@
 "controller_mappings"
 {
 	"version"		"3"
-	"revision"		"178"
+	"revision"		"199"
 	"title"		"Star Citizen Steam Controller 2"
 	"description"		"#SettingsController_AutosaveDescription"
 	"creator"		"76561199072057355"
-	"progenitor"		""
-	"url"		"autosave:///home/youpi0214/.local/share/Steam/steamapps/common/Steam Controller Configs/1111791627/config/rsi launcher/controller_neptune.vdf"
+	"progenitor"		"usercloud://rsi launcher/FXA99616060CB"
+	"url"		"autosave:///home/youpi0214/.local/share/Steam/steamapps/common/Steam Controller Configs/1111791627/config/rsi launcher/FXA99616060CB.vdf"
 	"export_type"		"personal_cloud"
 	"controller_type"		"controller_triton"
 	"controller_caps"		"1097187327"
-	"major_revision"		"1"
+	"major_revision"		"0"
 	"minor_revision"		"0"
 	"timestamp"		"0"
 	"actions"
@@ -187,7 +187,7 @@
 				{
 				}
 			}
-			"button_b"
+			"button_B"
 			{
 				"activators"
 				{
@@ -214,7 +214,7 @@
 				{
 				}
 			}
-			"button_x"
+			"button_X"
 			{
 				"activators"
 				{
@@ -515,7 +515,6 @@
 		"settings"
 		{
 			"requires_click"		"0"
-			"haptic_intensity_override"		"0"
 		}
 	}
 	"group"
@@ -580,7 +579,6 @@
 		"settings"
 		{
 			"requires_click"		"0"
-			"haptic_intensity_override"		"0"
 		}
 	}
 	"group"
@@ -626,7 +624,13 @@
 		}
 		"settings"
 		{
+			"curve_exponent"		"2"
+			"acceleration_axis_style"		"1"
 			"output_joystick"		"2"
+			"deadzone_inner_radius"		"816"
+			"deadzone_outer_radius"		"32000"
+			"deadzone_enable_type"		"2"
+			"sensitivity"		"50"
 		}
 	}
 	"group"
@@ -990,7 +994,7 @@
 				{
 				}
 			}
-			"button_b"
+			"button_B"
 			{
 				"activators"
 				{
@@ -1006,7 +1010,7 @@
 				{
 				}
 			}
-			"button_x"
+			"button_X"
 			{
 				"activators"
 				{
@@ -1394,7 +1398,12 @@
 		}
 		"settings"
 		{
+			"curve_exponent"		"2"
+			"acceleration_axis_style"		"1"
 			"output_joystick"		"2"
+			"deadzone_outer_radius"		"32000"
+			"deadzone_enable_type"		"2"
+			"sensitivity"		"40"
 		}
 	}
 	"group"
@@ -1437,7 +1446,7 @@
 				{
 				}
 			}
-			"button_x"
+			"button_X"
 			{
 				"activators"
 				{
@@ -1873,6 +1882,15 @@
 				{
 				}
 			}
+			"button_back_right"
+			{
+				"activators"
+				{
+				}
+				"disabled_activators"
+				{
+				}
+			}
 			"button_back_left_upper"
 			{
 				"activators"
@@ -1900,15 +1918,6 @@
 							"binding"		"controller_action CHANGE_PRESET 2 1 1, , "
 						}
 					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_rightauxcapsense"
-			{
-				"activators"
-				{
 				}
 				"disabled_activators"
 				{
@@ -1995,6 +2004,22 @@
 						"bindings"
 						{
 							"binding"		"mouse_button LEFT, , "
+						}
+					}
+				}
+				"disabled_activators"
+				{
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press PERIOD, , "
 						}
 					}
 				}
