@@ -1,13 +1,15 @@
 "controller_mappings"
 {
 	"version"		"3"
-	"revision"		"199"
-	"title"		"Star Citizen Steam Controller 2"
-	"description"		"#SettingsController_AutosaveDescription"
+	"revision"		"200"
+	"title"		"youpi0214-Star-Citizen-Steam-Input"
+	"description"		"A Steam Input configuration for Star Citizen built around the Steam Controller 2026.
+
+The layout is designed to make both on-foot and flight gameplay practical from the controller without trying to reproduce every keyboard binding. It uses two dedicated Steam Input Action Sets, a shared L4 modifier layer, gyro-assisted aiming, trackpad menus, and direct mode switching."
 	"creator"		"76561199072057355"
-	"progenitor"		"usercloud://rsi launcher/FXA99616060CB"
+	"progenitor"		""
 	"url"		"autosave:///home/youpi0214/.local/share/Steam/steamapps/common/Steam Controller Configs/1111791627/config/rsi launcher/FXA99616060CB.vdf"
-	"export_type"		"personal_cloud"
+	"export_type"		"community"
 	"controller_type"		"controller_triton"
 	"controller_caps"		"1097187327"
 	"major_revision"		"0"
@@ -1877,15 +1879,6 @@
 							"binding"		"key_press 1, , "
 						}
 					}
-				}
-				"disabled_activators"
-				{
-				}
-			}
-			"button_back_right"
-			{
-				"activators"
-				{
 				}
 				"disabled_activators"
 				{
