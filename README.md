@@ -4,6 +4,7 @@
   <a href="https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest">
     <img src="https://img.shields.io/github/v/release/youpi0214/Star-Citizen-Steam-Input" alt="Latest release">
   </a>
+  <img src="https://img.shields.io/badge/Star%20Citizen-4.10.3-blue" alt="Supported Star Citizen version: 4.10.3">
 </p>
 
 A Steam Input configuration for **Star Citizen** built around the **Steam Controller 2026**.
@@ -12,45 +13,37 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 
 ## Status
 
-FPS and Flight Mode layouts are implemented, including L4 modifier layers, gyro aiming, and R4 mode switching. The FPS left trackpad is intentionally unassigned; Inspect Item requires the custom in-game bind described below.
+FPS and Flight Mode layouts are implemented, including L4 modifier layers, gyro aiming, and R4 mode switching. The FPS left trackpad is intentionally unassigned.
 
 | OS | Distribution / version | Desktop environment | Validation |
 | --- | --- | --- | --- |
 | Linux | CachyOS | KDE Plasma 6.8.2 | Tested |
 | Windows | — | — | Not validated |
 
-## Installing the Steam Input configuration
+## Setup and installation
 
-1. Add the RSI Launcher / Star Citizen to Steam as a non-Steam game if it is not already present.
-2. Close Steam before replacing or importing controller configuration files.
-3. Use `mapping/controller_configuration.vdf` as the Steam Input configuration source.
-4. Restart Steam and verify that **FPS Mode**, **Flight Mode**, and their **L4 Modifier** layers are present.
-5. Test the configuration in Arena Commander or another safe environment before relying on it in the Persistent Universe.
+1. [Set up RSI Launcher in Steam](docs/setup.md): add the non-Steam shortcut, name it `rsi launcher`, and configure Steam Input.
+2. [Install the controller layout](docs/installation.md): apply the community layout or download the VDF from the [latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest).
+3. Configure the required in-game bindings below, then test the layout in Arena Commander or another safe environment.
 
-See [Suggested quality-of-life settings](star-citizen-settings/settings-change.md) for recommended in-game settings changes.
+If Steam activates desktop controls while playing, see [Linux troubleshooting](docs/troubleshooting.md).
 
-> Steam may associate local controller layouts with the Steam shortcut's app ID and local controller configuration state. Keep a backup before manually replacing Steam Input files.
+## Required in-game setup
 
-## Design goals
+Configure these custom bindings to use the corresponding controller actions:
 
-This layout prioritizes:
+| In-game action | Key | Controller input |
+| --- | --- | --- |
+| Inspect Item | Letter `O` | FPS: M1 + R3 hold |
+| Cycle mouse mode (VJoy / Relative) | `.` | Flight: R5 press |
 
-- keeping movement and aiming available at all times;
-- minimizing keyboard use during normal play;
-- separating FPS and Flight controls instead of overloading one layout;
-- using L4 as a temporary modifier rather than introducing additional persistent modes;
-- retaining gyro precision aiming through right-stick touch;
-- grouping targeting and ship-system controls spatially on the trackpads;
-- keeping the reference sheets readable enough to use while learning the layout.
+See [in-game setup instructions](docs/game-settings.md#required-in-game-bindings) for the menu paths and how to use a different key.
 
-## Overview
+## Quick controls
 
-The configuration contains two primary Action Sets:
-
-- **FPS Mode** — on-foot movement, combat, interaction and inventory controls.
-- **Flight Mode** — ship movement, combat, targeting and common vehicle systems.
-
-Hold **L4** to temporarily activate the mode-specific modifier layer. Press **R4** to switch between FPS and Flight Mode.
+- **FPS Mode:** on-foot movement, combat, interaction, and inventory.
+- **Flight Mode:** ships and ground vehicles, including movement, combat, targeting, and vehicle systems.
+- Hold **L4** for the current mode's modifier layer; press **R4** to switch modes.
 
 ### Input notation
 
@@ -64,9 +57,7 @@ Hold **L4** to temporarily activate the mode-specific modifier layer. Press **R4
 
 > A Steam Input Regular Press mapped to a keyboard key remains held while the physical control remains held. This is used where Star Citizen itself distinguishes between tapping and holding the same key.
 
-> **Custom bind required:** Star Citizen Alpha 4.10 has no default keyboard binding for **Inspect Item**. Bind **Inspect Item** to `O` in Star Citizen → Options → Keybindings → Advanced Controls Customization → On Foot - All. The Steam layout then exposes it as **M1 + R3 [H]**.
-
-## Global controls
+### Shared controls
 
 These controls are shared between FPS and Flight Mode.
 
@@ -80,183 +71,13 @@ These controls are shared between FPS and Flight Mode.
 | M1 + BACK | Regular | Accept invite | `[` |
 | M1 + START | Regular | Decline invite | `]` |
 
----
+## Control references
 
-# FPS Mode
+- [FPS controls and modifier mappings](docs/controls/fps.md)
+- [Flight controls, trackpads, and modifier mappings](docs/controls/flight.md)
+- [Download PNG/JPEG reference sheets from the latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest)
 
-FPS Mode keeps conventional shooter movement on the sticks while using the rear controls and L4 modifier for secondary Star Citizen actions.
+## Further reading
 
-## FPS mapping
-
-| Control | Input | Action | Output |
-| --- | --- | --- | --- |
-| Left Stick | — | Move | `WASD` |
-| L3 | Regular | Sprint toggle | `Left Shift` |
-| Right Stick | — | Aim / Look | Mouse |
-| Right Stick Touch | Touch | Enable precision gyro aim | Gyro To Mouse |
-| Right Stick Touch | `[2]` | Flashlight | `T` |
-| R3 | Regular | Melee | Middle Mouse |
-| R3 | `[2]` | Fire mode toggle | `B` |
-| LT | Regular | ADS | Right Mouse |
-| RT | Regular | Fire / Use | Left Mouse |
-| LB | Regular | Lean left | `Q` press/release |
-| RB | Regular | Lean right | `E` press/release |
-| A | Regular | Jump | `Space` |
-| B | Regular | Crouch | `C` |
-| B | `[H]` | Prone | `Left Ctrl` |
-| X | Regular | Reload / Holster | `R` |
-| Y | Regular | Interact | `F` |
-| Y | `[2]` | Hold interaction | `F` toggle |
-| D-pad Right | Regular | Inventory | `I` |
-| Right Trackpad ↑ | Regular | Scroll up | Mouse Wheel Up |
-| Right Trackpad ↓ | Regular | Scroll down | Mouse Wheel Down |
-| Left Trackpad | — | Unassigned | — |
-| **L5** | Tap | Primary weapon | `1` |
-| **L5** | Hold | Weapon wheel | `1` held |
-
-## FPS — L4 modifier (`M1`)
-
-| Control | Input | Action | Output |
-| --- | --- | --- | --- |
-| M1 + A | Regular | Key B | `B` |
-| M1 + X | Regular | Ammo backpack refill | `Left Alt + 1` |
-| M1 + LB | Regular | Consumable / healing wheel | `4` |
-| M1 + RB | Regular | Throwables radial | `G` |
-| M1 + R3 | Regular | Customize weapon | `J` |
-| M1 + R3 | `[H]` | Inspect item / weapon | `O`* |
-| M1 + D-pad Up | Regular | Camera view | `F4` |
-| M1 + D-pad Left | Regular | Toggle chat | `F12` |
-| M1 + D-pad Down | Regular | Helmet on/off | `Left Alt + H` |
-| M1 + BACK | Regular | Accept invite | `[` |
-| M1 + START | Regular | Decline invite | `]` |
-
----
-
-# Flight Mode
-
-Flight Mode moves translational and rotational control onto the sticks/triggers while using the trackpads as dedicated targeting and ship-system clusters.
-
-## Flight mapping
-
-| Control | Input | Action | Output |
-| --- | --- | --- | --- |
-| Right Stick | — | Pitch / Yaw | Mouse X/Y |
-| Right Stick Touch | Touch | Precision aim | Gyro To Mouse |
-| Right Stick Touch | `[2]` | Lights | `L` |
-| LT | Regular | Reverse thrust | `S` |
-| RT | Regular | Forward thrust | `W` |
-| Left Stick Y | — | Strafe up / down | `Space` / `Left Ctrl` |
-| Left Stick X | — | Roll left / right | `Q` / `E` |
-| L3 | Regular | Boost | `Left Shift` |
-| LB | Regular | Precision targeting / hold max zoom | Right Mouse |
-| LB | `[2]` | Gimbal mode toggle | `G` |
-| RB | Regular | Fire | Left Mouse |
-| RB | Hold in quantum mode | Engage Quantum Drive | Left Mouse held |
-| R5 | Regular | Cycle mouse mode (custom in-game bind; see [QoL settings](star-citizen-settings/settings-change.md)) | `.` |
-| R3 | Regular | Next weapon preset | Mouse Wheel Down |
-| A | `[H]` | NAV / Combat toggle | `B` |
-| B | Regular | Spacebrake | `X` |
-| X | Regular | Cycle operator mode | Middle Mouse |
-| X | `[2]` | Ping | `Tab` |
-| Y | Regular | VTOL | `K` |
-| Y | `[2]` | Hold interaction | `F` toggle/hold equivalent |
-| Y | `[H]` | Exit seat | `Y` |
-| D-pad Down | Regular | Landing gear | `N` |
-| D-pad Down | `[H]` | Autoland | `N` held |
-
-Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold to engage Quantum Drive in quantum mode; no separate Steam Input Long Press activator is needed.
-
-## Flight — Right trackpad targeting
-
-| Trackpad input | Action | Output |
-| --- | --- | --- |
-| ↑ | Target in view | `T` |
-| ↓ | Unlock target | `Left Alt + T` |
-| ← | Cycle attackers | `4` |
-| → | Cycle hostiles | `5` |
-| Center click | Cycle all / closest | `7` |
-
-## Flight — Left trackpad systems
-
-| Trackpad input | Action | Output |
-| --- | --- | --- |
-| ↑ | Power | `U` |
-| ↓ | Engines | `I` |
-| ← | Shields | `O` |
-| → | Weapons | `P` |
-| Center click | Toggle ship ports / doors | `Right Alt + K` |
-
-## Flight — L4 modifier (`M1`)
-
-| Control | Input | Action | Output |
-| --- | --- | --- | --- |
-| M1 + Left Stick X | — | Strafe left / right | `A` / `D` |
-| M1 + A | Regular | Decoupled toggle | `C` |
-| M1 + LB | Regular | Decoy | `H` |
-| M1 + RB | Regular | Noise | `J` |
-| M1 + R3 | Regular | Freelook | `Z` |
-| M1 + Right Stick Touch | `[2]` | LAMP | `Right Alt + L` |
-| M1 + D-pad Up | Regular | Camera view | `F4` |
-| M1 + D-pad Left | Regular | Toggle chat | `F12` |
-| M1 + D-pad Down | Regular | Request landing | `Left Alt + N` |
-| M1 + BACK | Regular | Accept invite | `[` |
-| M1 + START | Regular | Decline invite | `]` |
-
----
-
-## Repository structure
-
-```text
-mapping/
-  controller_configuration.vdf   Steam Input configuration
-
-data/
-  mappings.yaml                  Human-readable mapping data
-
-templates/
-  steam-controller-2026-fps.svg
-  steam-controller-2026-flight.svg
-  assets/
-    steam-controller-2026.png
-
-scripts/
-  render.py                      SVG mapping renderer
-```
-
-The **VDF is the authoritative controller configuration**. `data/mappings.yaml` and the SVG sheets are documentation and should stay synchronized with it.
-
-## Visual reference sheets
-
-The repository includes separate visual mapping sheets for FPS and Flight Mode:
-
-- `templates/steam-controller-2026-fps.svg`
-- `templates/steam-controller-2026-flight.svg`
-
-The Steam button and `...` button are intentionally omitted from the callouts because they are not intended to be mapped.
-
-Export the finished templates from the repository root:
-
-```sh
-python scripts/render.py --mode fps
-python scripts/render.py --mode flight --format jpeg
-```
-
-The default export is a 5120 × 2880 PNG. The controller image is included in the exported pixels, and the finished template labels are preserved. Use `--width 7680` for a larger export, or `--output output/fps.jpg` to choose a filename and format. Raster exports use `rsvg-convert` (provided by librsvg); JPEG export also requires Pillow. Both are installed in the current environment.
-
-Use `--data data/mappings.yaml` when you want to replace the template's bound labels with YAML values. This optional step requires PyYAML. `--format svg` exports a self-contained SVG with its controller image embedded. Paths are relative to the current working directory.
-
-## Publishing a release
-
-In GitHub Actions, select **Release controller mapping → Run workflow**, select the branch to release, and choose `minor` or `major`. The workflow must first be merged into the default branch for manual dispatch to be available ([GitHub documentation](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)).
-
-The workflow reads all Git tags and selects the highest numeric stable version, accepting `v1.2.3`, `1.2.3`, `v1.2`, or `1.2`. Unrelated tags and prerelease tags are ignored. Minor increments the minor number; major increments the major number and resets minor to zero. Patch is always zero. With no version tags, the first release is `v0.1.0` for minor or `v1.0.0` for major.
-
-`scripts/release_version.py` updates only the VDF's `major_revision` and `minor_revision` fields. The workflow renders both finished templates at 5120 × 2880 in PNG and JPEG, commits the VDF version update to the selected branch, and pushes that commit and its version tag together. The GitHub release attaches `fps.png`, `flight.png`, `fps.jpeg`, `flight.jpeg`, and `controller_configuration.vdf`, with generated release notes.
-
-The workflow uses the built-in `GITHUB_TOKEN` with `contents: write`; repository rules must allow that token to push the version commit and release tag. Releases are serialized across branches to avoid duplicate version allocation.
-
-To run the version script locally (this edits the VDF):
-
-```sh
-python scripts/release_version.py minor
-```
+- [Suggested quality-of-life settings](docs/game-settings.md#suggested-quality-of-life-settings)
+- [Development, rendering, and releases](docs/development.md)
