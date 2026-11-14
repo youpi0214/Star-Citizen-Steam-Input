@@ -4,6 +4,39 @@ A Steam Input configuration for **Star Citizen** built around the **Steam Contro
 
 The layout is designed to make both on-foot and flight gameplay practical from the controller without trying to reproduce every keyboard binding. It uses two dedicated Steam Input Action Sets, a shared **L4 modifier layer**, gyro-assisted aiming, trackpad menus, and direct mode switching.
 
+## Status
+
+FPS and Flight Mode layouts are implemented, including L4 modifier layers, gyro aiming, and R4 mode switching. The FPS left trackpad is intentionally unassigned; Inspect Item requires the custom in-game bind described below.
+
+| OS | Distribution / version | Desktop environment | Validation |
+| --- | --- | --- | --- |
+| Linux | CachyOS | KDE Plasma 6.8.2 | Tested |
+| Windows | — | — | Not validated |
+
+## Installing the Steam Input configuration
+
+1. Add the RSI Launcher / Star Citizen to Steam as a non-Steam game if it is not already present.
+2. Close Steam before replacing or importing controller configuration files.
+3. Use `mapping/controller_configuration.vdf` as the Steam Input configuration source.
+4. Restart Steam and verify that **FPS Mode**, **Flight Mode**, and their **L4 Modifier** layers are present.
+5. Test the configuration in Arena Commander or another safe environment before relying on it in the Persistent Universe.
+
+See [Suggested quality-of-life settings](star-citizen-settings/settings-change.md) for recommended in-game settings changes.
+
+> Steam may associate local controller layouts with the Steam shortcut's app ID and local controller configuration state. Keep a backup before manually replacing Steam Input files.
+
+## Design goals
+
+This layout prioritizes:
+
+- keeping movement and aiming available at all times;
+- minimizing keyboard use during normal play;
+- separating FPS and Flight controls instead of overloading one layout;
+- using L4 as a temporary modifier rather than introducing additional persistent modes;
+- retaining gyro precision aiming through right-stick touch;
+- grouping targeting and ship-system controls spatially on the trackpads;
+- keeping the reference sheets readable enough to use while learning the layout.
+
 ## Overview
 
 The configuration contains two primary Action Sets:
@@ -220,29 +253,3 @@ To run the version script locally (this edits the VDF):
 ```sh
 python scripts/release_version.py minor
 ```
-
-## Installing the Steam Input configuration
-
-1. Add the RSI Launcher / Star Citizen to Steam as a non-Steam game if it is not already present.
-2. Close Steam before replacing or importing controller configuration files.
-3. Use `mapping/controller_configuration.vdf` as the Steam Input configuration source.
-4. Restart Steam and verify that **FPS Mode**, **Flight Mode**, and their **L4 Modifier** layers are present.
-5. Test the configuration in Arena Commander or another safe environment before relying on it in the Persistent Universe.
-
-> Steam may associate local controller layouts with the Steam shortcut's app ID and local controller configuration state. Keep a backup before manually replacing Steam Input files.
-
-## Design goals
-
-This layout prioritizes:
-
-- keeping movement and aiming available at all times;
-- minimizing keyboard use during normal play;
-- separating FPS and Flight controls instead of overloading one layout;
-- using L4 as a temporary modifier rather than introducing additional persistent modes;
-- retaining gyro precision aiming through right-stick touch;
-- grouping targeting and ship-system controls spatially on the trackpads;
-- keeping the reference sheets readable enough to use while learning the layout.
-
-## Status
-
-Flight Mode is fully mapped in the current configuration. FPS Mode is substantially complete, with a small number of secondary actions still awaiting final keyboard outputs in the documentation/configuration.
