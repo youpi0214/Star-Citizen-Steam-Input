@@ -137,8 +137,8 @@
   <g id="fps-rear-global" transform="matrix(1, 0, 0, 1, 1109.409579, 1193.311803)">
     <text x="0" y="0" class="label" style="white-space: pre;">REAR / GLOBAL</text>
     <text x="0" y="28" class="mod" style="white-space: pre;">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
-    <text x="0" y="54" class="body" style="white-space: pre;">Left rear lower: <tspan data-bind="modes.fps.controls.left_rear_lower.regular.action">Key 1</tspan></text>
-    <text x="0" y="80" class="meta" style="white-space: pre;">RG [H]: <tspan data-bind="global.rg.long_press.action">Switch FPS / Flight mode</tspan></text>
+    <text x="0" y="54" class="body" style="white-space: pre;">L5: <tspan data-bind="modes.fps.controls.l5.regular.action">Key 1</tspan></text>
+    <text x="0" y="80" class="meta" style="white-space: pre;">R4: <tspan data-bind="global.r4.regular.action">Switch FPS / Flight mode</tspan></text>
   </g>
   <g id="fps-legend" transform="matrix(1, 0, 0, 1, 64.887987, 52.49695)">
     <text x="950" y="1340" class="legend" style="white-space: pre;"><tspan class="legendKey">[H]</tspan> Hold</text>

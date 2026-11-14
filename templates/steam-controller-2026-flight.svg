@@ -38,7 +38,6 @@
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 845.019 576.116 L 739.576 722.82 L 447.314 734.282"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 767.083 505.057 L 698.315 596.747 L 447.314 595.601"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 836.997 430.558 L 458.775 437.435"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 916.079 502.764 L 880.549 362.937 L 442.729 283.854"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1057.053 585.285 L 746.453 890.155 L 447.314 936"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1651.892 338.868 L 1756.189 263.224 L 2089.712 158.927"/>
     <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1546.448 333.138 L 1636.992 187.58"/>
@@ -109,7 +108,8 @@
     <g id="flight-rb-label">
       <text x="2110" y="127" class="label">RB</text>
       <text x="2110" y="153" class="body" data-bind="modes.flight.controls.rb.regular.action">Fire</text>
-      <text x="2110" y="179" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.rb.regular.action">Noise</tspan></text>
+      <text x="2110" y="179" class="meta">[H] Quantum: <tspan data-bind="modes.flight.controls.rb.hold.action">Engage Quantum Drive</tspan></text>
+      <text x="2110" y="205" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.rb.regular.action">Noise</tspan></text>
     </g>
 
     <g id="flight-rt-label">
@@ -137,8 +137,7 @@
 
     <g id="flight-a-label">
       <text x="2110" y="785" class="label">A</text>
-      <text x="2110" y="811" class="body" data-bind="modes.flight.controls.a.regular.action">NAV / Combat toggle</text>
-      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">Engage Quantum Drive</tspan></text>
+      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">NAV / Combat toggle</tspan></text>
       <text x="2110" y="863" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.a.regular.action">Decoupled toggle</tspan></text>
     </g>
 
@@ -165,7 +164,8 @@
   <g id="flight-rear-global" transform="matrix(1,0,0,1,1060,1190)">
     <text x="0" y="0" class="label">REAR / GLOBAL</text>
     <text x="0" y="28" class="mod">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
-    <text x="0" y="54" class="meta">RG [H]: <tspan data-bind="global.rg.long_press.action">Switch FPS / Flight mode</tspan></text>
+    <text x="0" y="54" class="meta">R4: <tspan data-bind="global.r4.regular.action">Switch FPS / Flight mode</tspan></text>
+    <text x="0" y="80" class="meta">R5: <tspan data-bind="modes.flight.controls.r5.regular.action">Cycle mouse mode</tspan></text>
   </g>
 
   <g id="flight-legend" transform="matrix(1,0,0,1,64,52)">

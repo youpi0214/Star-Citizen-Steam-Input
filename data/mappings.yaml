@@ -18,8 +18,8 @@ global:
     regular:
       action: Hold L4 Modifier layer
       output: Hold Action Set Layer
-  rg:
-    long_press:
+  r4:
+    regular:
       action: Switch FPS / Flight mode
       output: Change Action Set
 
@@ -104,7 +104,7 @@ modes:
         down:
           action: Scroll down
           output: Mouse Wheel Down
-      left_rear_lower:
+      l5:
         regular:
           action: Key 1
           output: 1
@@ -159,6 +159,10 @@ modes:
   flight:
     name: Flight Mode
     controls:
+      r5:
+        regular:
+          action: Cycle mouse mode
+          output: Period (.)
       right_stick:
         action: Pitch / Yaw
         output: Mouse X/Y
@@ -187,6 +191,11 @@ modes:
         regular:
           action: Fire
           output: Left Mouse
+        hold:
+          action: Engage Quantum Drive
+          output: Left Mouse (held)
+          context: Quantum mode
+          activation: Hold the regular binding; no separate Long Press activator
       lb:
         regular:
           action: Precision targeting / hold max zoom
@@ -203,12 +212,9 @@ modes:
           action: Next weapon preset
           output: Mouse Wheel Down
       a:
-        regular:
+        long_press:
           action: NAV / Combat toggle
           output: B
-        long_press:
-          action: Engage Quantum Drive
-          output: Left Mouse
       b:
         regular:
           action: Spacebrake
