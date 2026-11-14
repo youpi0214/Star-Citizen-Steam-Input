@@ -1,4 +1,10 @@
-# Star Citizen — Steam Controller 2026
+<h1 align="center">Star Citizen — Steam Controller 2026</h1>
+
+<p align="center">
+  <a href="https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest">
+    <img src="https://img.shields.io/github/v/release/youpi0214/Star-Citizen-Steam-Input" alt="Latest release">
+  </a>
+</p>
 
 A Steam Input configuration for **Star Citizen** built around the **Steam Controller 2026**.
 
