@@ -109,7 +109,8 @@
     <g id="flight-rb-label">
       <text x="2110" y="127" class="label">RB</text>
       <text x="2110" y="153" class="body" data-bind="modes.flight.controls.rb.regular.action">Fire</text>
-      <text x="2110" y="179" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.rb.regular.action">Noise</tspan></text>
+      <text x="2110" y="179" class="meta">[H] Quantum: <tspan data-bind="modes.flight.controls.rb.hold.action">Engage Quantum Drive</tspan></text>
+      <text x="2110" y="205" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.rb.regular.action">Noise</tspan></text>
     </g>
 
     <g id="flight-rt-label">
@@ -137,8 +138,7 @@
 
     <g id="flight-a-label">
       <text x="2110" y="785" class="label">A</text>
-      <text x="2110" y="811" class="body" data-bind="modes.flight.controls.a.regular.action">NAV / Combat toggle</text>
-      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">Engage Quantum Drive</tspan></text>
+      <text x="2110" y="837" class="meta">[H] <tspan data-bind="modes.flight.controls.a.long_press.action">NAV / Combat toggle</tspan></text>
       <text x="2110" y="863" class="mod">M1 <tspan fill="#111827" data-bind="modes.flight.modifiers.l4.controls.a.regular.action">Decoupled toggle</tspan></text>
     </g>
 
@@ -165,7 +165,7 @@
   <g id="flight-rear-global" transform="matrix(1,0,0,1,1060,1190)">
     <text x="0" y="0" class="label">REAR / GLOBAL</text>
     <text x="0" y="28" class="mod">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
-    <text x="0" y="54" class="meta">RG [H]: <tspan data-bind="global.rg.long_press.action">Switch FPS / Flight mode</tspan></text>
+    <text x="0" y="54" class="meta">R4: <tspan data-bind="global.r4.regular.action">Switch FPS / Flight mode</tspan></text>
   </g>
 
   <g id="flight-legend" transform="matrix(1,0,0,1,64,52)">

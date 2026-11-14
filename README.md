@@ -11,7 +11,7 @@ The configuration contains two primary Action Sets:
 - **FPS Mode** — on-foot movement, combat, interaction and inventory controls.
 - **Flight Mode** — ship movement, combat, targeting and common vehicle systems.
 
-Hold **L4** to temporarily activate the mode-specific modifier layer. Long-press **RG** to switch between FPS and Flight Mode.
+Hold **L4** to temporarily activate the mode-specific modifier layer. Press **R4** to switch between FPS and Flight Mode.
 
 ### Input notation
 
@@ -37,7 +37,7 @@ These controls are shared between FPS and Flight Mode.
 | BACK | Regular | mobiGlas | `F1` |
 | BACK | `[H]` | Map | `F2` |
 | L4 | Regular / hold | Hold L4 Modifier layer | Steam Input Action Set Layer |
-| RG | `[H]` | Switch FPS / Flight Mode | Steam Input Change Action Set |
+| R4 | Regular | Switch FPS / Flight Mode | Steam Input Change Action Set |
 | M1 + BACK | Regular | Accept invite | `[` |
 | M1 + START | Regular | Decline invite | `]` |
 
@@ -112,9 +112,9 @@ Flight Mode moves translational and rotational control onto the sticks/triggers 
 | LB | Regular | Precision targeting / hold max zoom | Right Mouse |
 | LB | `[2]` | Gimbal mode toggle | `G` |
 | RB | Regular | Fire | Left Mouse |
+| RB | Hold in quantum mode | Engage Quantum Drive | Left Mouse held |
 | R3 | Regular | Next weapon preset | Mouse Wheel Down |
-| A | Regular | NAV / Combat toggle | `B` |
-| A | `[H]` | Engage Quantum Drive | Left Mouse |
+| A | `[H]` | NAV / Combat toggle | `B` |
 | B | Regular | Spacebrake | `X` |
 | X | Regular | Cycle operator mode | Middle Mouse |
 | X | `[2]` | Ping | `Tab` |
@@ -123,6 +123,8 @@ Flight Mode moves translational and rotational control onto the sticks/triggers 
 | Y | `[H]` | Exit seat | `Y` |
 | D-pad Down | Regular | Landing gear | `N` |
 | D-pad Down | `[H]` | Autoland | `N` held |
+
+Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold to engage Quantum Drive in quantum mode; no separate Steam Input Long Press activator is needed.
 
 ## Flight — Right trackpad targeting
 
