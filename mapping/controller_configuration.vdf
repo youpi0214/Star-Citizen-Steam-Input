@@ -1,13 +1,11 @@
 "controller_mappings"
 {
 	"version"		"3"
-	"revision"		"200"
+	"revision"		"202"
 	"title"		"youpi0214-Star-Citizen-Steam-Input"
-	"description"		"A Steam Input configuration for Star Citizen built around the Steam Controller 2026.
-
-The layout is designed to make both on-foot and flight gameplay practical from the controller without trying to reproduce every keyboard binding. It uses two dedicated Steam Input Action Sets, a shared L4 modifier layer, gyro-assisted aiming, trackpad menus, and direct mode switching."
+	"description"		"#SettingsController_AutosaveDescription"
 	"creator"		"76561199072057355"
-	"progenitor"		""
+	"progenitor"		"workshop://3839401839"
 	"url"		"autosave:///home/youpi0214/.local/share/Steam/steamapps/common/Steam Controller Configs/1111791627/config/rsi launcher/FXA99616060CB.vdf"
 	"export_type"		"community"
 	"controller_type"		"controller_triton"
@@ -189,7 +187,7 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 				{
 				}
 			}
-			"button_B"
+			"button_b"
 			{
 				"activators"
 				{
@@ -216,7 +214,7 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 				{
 				}
 			}
-			"button_X"
+			"button_x"
 			{
 				"activators"
 				{
@@ -629,10 +627,10 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 			"curve_exponent"		"2"
 			"acceleration_axis_style"		"1"
 			"output_joystick"		"2"
-			"deadzone_inner_radius"		"816"
+			"deadzone_inner_radius"		"1484"
 			"deadzone_outer_radius"		"32000"
 			"deadzone_enable_type"		"2"
-			"sensitivity"		"50"
+			"sensitivity"		"70"
 		}
 	}
 	"group"
@@ -996,7 +994,7 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 				{
 				}
 			}
-			"button_B"
+			"button_b"
 			{
 				"activators"
 				{
@@ -1012,7 +1010,7 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 				{
 				}
 			}
-			"button_X"
+			"button_x"
 			{
 				"activators"
 				{
@@ -1403,9 +1401,10 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 			"curve_exponent"		"2"
 			"acceleration_axis_style"		"1"
 			"output_joystick"		"2"
+			"deadzone_inner_radius"		"1523"
 			"deadzone_outer_radius"		"32000"
 			"deadzone_enable_type"		"2"
-			"sensitivity"		"40"
+			"sensitivity"		"100"
 		}
 	}
 	"group"
@@ -1448,7 +1447,7 @@ The layout is designed to make both on-foot and flight gameplay practical from t
 				{
 				}
 			}
-			"button_X"
+			"button_x"
 			{
 				"activators"
 				{
