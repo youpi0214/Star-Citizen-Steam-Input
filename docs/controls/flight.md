@@ -5,6 +5,8 @@ Flight Mode is used for both **ships and ground vehicles**. It places movement c
 
 See [quick controls and input notation](../../README.md#quick-controls) for shared controls, and [required game setup](../game-settings.md#required-in-game-bindings) for custom bindings.
 
+Hold **L4 (`M1`)** for mining, salvage, and secondary controls. Hold **L5** for advanced flight controls. Release either button to leave its modifier layer.
+
 ## Flight mapping
 
 | Control | Input | Action | Output |
@@ -22,6 +24,7 @@ See [quick controls and input notation](../../README.md#quick-controls) for shar
 | RB | Regular | Fire | Left Mouse |
 | RB | Hold in quantum mode | Engage Quantum Drive | Left Mouse held |
 | R5 | Regular | Cycle mouse mode (custom in-game bind; see [QoL settings](../game-settings.md)) | `.` |
+| L5 | Hold | Hold L5 Modifier layer | Steam Input Action Set Layer |
 | R3 | Regular | Next weapon preset | Mouse Wheel Down |
 | A | `[H]` | NAV / Combat toggle | `B` |
 | B | Regular | Spacebrake | `X` |
@@ -33,7 +36,7 @@ See [quick controls and input notation](../../README.md#quick-controls) for shar
 | D-pad Down | Regular | Landing gear | `N` |
 | D-pad Down | `[H]` | Autoland | `N` held |
 
-Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold to engage Quantum Drive in quantum mode; no separate Steam Input Long Press activator is needed.
+Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold to engage Quantum Drive in quantum mode; no separate Steam Input Long Press activator is needed. Likewise, holding **D-pad Down** holds `N` for Autoland without a separate Long Press activator.
 
 ## Flight — Right trackpad targeting
 
@@ -61,6 +64,7 @@ Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold
 | --- | --- | --- | --- |
 | M1 + Left Stick X | — | Strafe left / right | `A` / `D` |
 | M1 + A | Regular | Decoupled toggle | `C` |
+| M1 + X | Regular | Switch mining laser | Left Alt + Left Mouse |
 | M1 + LB | Regular | Decoy | `H` |
 | M1 + RB | Regular | Noise | `J` |
 | M1 + R3 | Regular | Freelook | `Z` |
@@ -70,5 +74,39 @@ Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold
 | M1 + D-pad Down | Regular | Request landing | `Left Alt + N` |
 | M1 + BACK | Regular | Accept invite | `[` |
 | M1 + START | Regular | Decline invite | `]` |
+
+### L4 — Right trackpad: mining and salvage
+
+Hold L4 while using the right trackpad. Scrolling adjusts mining laser power or salvage beam spacing, depending on the active operator mode.
+
+| Trackpad input | Action | Output |
+| --- | --- | --- |
+| ↑ | Increase mining power / salvage beam spacing | Mouse Wheel Up |
+| ↓ | Decrease mining power / salvage beam spacing | Mouse Wheel Down |
+| ← | Activate mining module 1 | `Left Alt + 1` |
+| Center click | Activate mining module 2 | `Left Alt + 2` |
+| → | Activate mining module 3 | `Left Alt + 3` |
+
+### L4 — Left trackpad: salvage tools and aim mode
+
+Hold L4 while using the left trackpad.
+
+| Trackpad input | Action | Output |
+| --- | --- | --- |
+| ↑ | Fire fracture tool | `Right Alt + W` |
+| ↓ | Fire disintegration tool | `Right Alt + S` |
+| ← | Fire left salvage tool | `Right Alt + A` |
+| → | Fire right salvage tool | `Right Alt + D` |
+| Center click | Cycle aim mode | `Right Alt + G` |
+
+## Flight — L5 modifier: advanced flight controls
+
+Hold L5 while using the right trackpad.
+
+| Trackpad input | Action | Output |
+| --- | --- | --- |
+| ↑ | Increase speed limiter | Left Alt + Mouse Wheel Up |
+| ↓ | Decrease speed limiter | Left Alt + Mouse Wheel Down |
+| Center click | Toggle cruise control | `Left Alt + C` |
 
 [Back to README](../../README.md)
