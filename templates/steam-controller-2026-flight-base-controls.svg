@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" version="1.1" data-sheet="flight_base" height="3391" viewBox="0 0 2560 3391">
+  <rect width="2560" height="3391" fill="white" />
+  <text x="70" y="66" fill="#172033" style="font-family:Arial,sans-serif;font-size:38px;font-weight:800">STAR CITIZEN · STEAM CONTROLLER 2026</text>
+  <text x="70" y="112" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:28px;font-weight:800">Flight Mode — Base Controls</text>
+  <text x="70" y="143" fill="#586174" style="font-family:Arial,sans-serif;font-size:18px;font-weight:500">All listed actions use your existing bindings. Context determines what the game does.</text>
+  <image id="controller-front" x="780" y="155" width="1000" height="650" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png" />
+  <path d="M 935 198 L 600 220" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="211" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">LB / LT</text>
+  <path d="M 1110 245 L 620 300" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="605" y="291" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">BACK</text>
+  <path d="M 980 315 L 600 390" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="381" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">D-PAD</text>
+  <path d="M 1140 400 L 600 490" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="481" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">LEFT STICK / L3</text>
+  <path d="M 1100 575 L 600 650" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="641" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">LEFT TRACKPAD</text>
+  <path d="M 1625 198 L 1870 220" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="211" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">RB / RT</text>
+  <path d="M 1445 245 L 1870 300" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="291" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">START</text>
+  <path d="M 1585 320 L 1870 390" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="381" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">A / B / X / Y</text>
+  <path d="M 1415 400 L 1870 490" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="481" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">RIGHT STICK / R3 / TOUCH</text>
+  <path d="M 1450 575 L 1870 650" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="641" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">RIGHT TRACKPAD</text>
+  <text x="1280" y="835" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500" text-anchor="middle">Rear: L4 / L5 on the left · R4 / R5 on the right</text>
+  <text x="70" y="892" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:700">Base = no modifier · L4 / L5 = hold that rear button · Hold ≠ a separate Steam Long Press</text>
+  <text x="70" y="951" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:20px;font-weight:800">MOVEMENT AND LEFT CONTROLS</text>
+  <text x="70" y="994" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LEFT STICK</text>
+  <g data-binding="modes.flight.controls.left_stick_y">
+    <text x="70" y="1023" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Y axis · Move  →  Space / Left Ctrl</text>
+    <g data-use="modes.flight.controls.left_stick_y.uses.0">
+      <text x="70" y="1048" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Strafe up / down</text>
+    </g>
+    <g data-use="modes.flight.controls.left_stick_y.uses.1">
+      <text x="70" y="1073" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Strafe up / down; hold up to launch from a surface</text>
+    </g>
+    <g data-use="modes.flight.controls.left_stick_y.uses.2">
+      <text x="70" y="1098" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Horn (stick up)</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.left_stick_x">
+    <text x="70" y="1139" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · X axis · Move  →  Q / E</text>
+    <g data-use="modes.flight.controls.left_stick_x.uses.0">
+      <text x="70" y="1164" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Roll left / right</text>
+    </g>
+    <g data-use="modes.flight.controls.left_stick_x.uses.1">
+      <text x="70" y="1189" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Roll left / right</text>
+    </g>
+    <g data-use="modes.flight.controls.left_stick_x.uses.2">
+      <text x="70" y="1214" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Left: cycle turret mouse mode; right: toggle gyro stabilization</text>
+      <text x="82" y="1239" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">These commands share Q/E with ship roll; they are incidental turret actions,</text>
+      <text x="82" y="1264" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">not steering.</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.left_stick_x">
+    <text x="70" y="1305" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · X axis · Move  →  A / D</text>
+    <g data-use="modes.flight.modifiers.l4.controls.left_stick_x.uses.0">
+      <text x="70" y="1330" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Strafe left / right</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.left_stick_x.uses.1">
+      <text x="70" y="1355" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Steer left / right</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.left_stick_x.uses.2">
+      <text x="70" y="1380" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Strafe left / right</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.left_stick_x.uses.3">
+      <text x="70" y="1405" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Previous / next remote turret</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.left_stick_x.uses.4">
+      <text x="70" y="1430" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: MFD left / right (during interaction)</text>
+    </g>
+  </g>
+  <path d="M 70 1468 H 830" stroke="#dce2ea" />
+  <text x="70" y="1501" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">L3</text>
+  <g data-binding="modes.flight.controls.l3.regular">
+    <text x="70" y="1530" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Left Shift</text>
+    <g data-use="modes.flight.controls.l3.regular.uses.0">
+      <text x="70" y="1555" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Boost</text>
+    </g>
+    <g data-use="modes.flight.controls.l3.regular.uses.1">
+      <text x="70" y="1580" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Boost</text>
+    </g>
+    <g data-use="modes.flight.controls.l3.regular.uses.2">
+      <text x="70" y="1605" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Boost</text>
+    </g>
+  </g>
+  <path d="M 70 1643 H 830" stroke="#dce2ea" />
+  <text x="70" y="1676" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LT</text>
+  <g data-binding="modes.flight.controls.lt.regular">
+    <text x="70" y="1705" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  S</text>
+    <g data-use="modes.flight.controls.lt.regular.uses.0">
+      <text x="70" y="1730" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Reverse thrust / decrease throttle</text>
+    </g>
+    <g data-use="modes.flight.controls.lt.regular.uses.1">
+      <text x="70" y="1755" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Drive backward</text>
+    </g>
+    <g data-use="modes.flight.controls.lt.regular.uses.2">
+      <text x="70" y="1780" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Strafe backward (Hold)</text>
+    </g>
+    <g data-use="modes.flight.controls.lt.regular.uses.3">
+      <text x="70" y="1805" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Change turret position</text>
+    </g>
+    <g data-use="modes.flight.controls.lt.regular.uses.4">
+      <text x="70" y="1830" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: MFD down (during interaction)</text>
+    </g>
+  </g>
+  <path d="M 70 1868 H 830" stroke="#dce2ea" />
+  <text x="70" y="1901" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LB</text>
+  <g data-binding="modes.flight.controls.lb.regular">
+    <text x="70" y="1930" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Right Mouse</text>
+    <g data-use="modes.flight.controls.lb.regular.uses.0">
+      <text x="70" y="1955" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Toggle precision targeting (Tap)</text>
+    </g>
+    <g data-use="modes.flight.controls.lb.regular.uses.1">
+      <text x="70" y="1980" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Maximum precision-targeting zoom (Hold)</text>
+    </g>
+    <g data-use="modes.flight.controls.lb.regular.uses.3">
+      <text x="70" y="2005" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Activate interaction</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.lb.double_press">
+    <text x="70" y="2046" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  G</text>
+    <g data-use="modes.flight.controls.lb.double_press.uses.0">
+      <text x="70" y="2071" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Toggle gimbal state</text>
+    </g>
+    <g data-use="modes.flight.controls.lb.double_press.uses.1">
+      <text x="70" y="2096" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Increase armed missile count</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.lb.regular">
+    <text x="70" y="2137" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  H</text>
+    <g data-use="modes.flight.modifiers.l4.controls.lb.regular.uses.0">
+      <text x="70" y="2162" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Launch decoy burst (Tap)</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.lb.regular.uses.1">
+      <text x="70" y="2187" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Set and launch decoy burst (Hold)</text>
+    </g>
+  </g>
+  <path d="M 70 2225 H 830" stroke="#dce2ea" />
+  <text x="70" y="2258" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">D-PAD</text>
+  <g data-binding="modes.flight.controls.dpad_down.regular">
+    <text x="70" y="2287" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · down · Press  →  N</text>
+    <g data-use="modes.flight.controls.dpad_down.regular.uses.0">
+      <text x="70" y="2312" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Landing gear</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.dpad_down.hold">
+    <text x="70" y="2353" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · down · Hold  →  N (hold)</text>
+    <g data-use="modes.flight.controls.dpad_down.hold.uses.0">
+      <text x="70" y="2378" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Autoland</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.dpad_up.regular">
+    <text x="70" y="2419" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · up · Press  →  F4</text>
+    <g data-use="modes.flight.modifiers.l4.controls.dpad_up.regular.uses.0">
+      <text x="70" y="2444" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Camera view</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.dpad_left.regular">
+    <text x="70" y="2485" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · left · Press  →  F12</text>
+    <g data-use="modes.flight.modifiers.l4.controls.dpad_left.regular.uses.0">
+      <text x="70" y="2510" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Toggle chat</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.dpad_down.regular">
+    <text x="70" y="2551" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · down · Press  →  Left Alt + N</text>
+    <g data-use="modes.flight.modifiers.l4.controls.dpad_down.regular.uses.0">
+      <text x="70" y="2576" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Request landing</text>
+    </g>
+  </g>
+  <path d="M 70 2614 H 830" stroke="#dce2ea" />
+  <text x="70" y="2647" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LEFT TRACKPAD</text>
+  <g data-binding="modes.flight.controls.left_trackpad.up">
+    <text x="70" y="2676" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ↑ · Press  →  U</text>
+    <g data-use="modes.flight.controls.left_trackpad.up.uses.0">
+      <text x="70" y="2701" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Power</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.left_trackpad.down">
+    <text x="70" y="2742" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ↓ · Press  →  I</text>
+    <g data-use="modes.flight.controls.left_trackpad.down.uses.0">
+      <text x="70" y="2767" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Toggle engines</text>
+    </g>
+    <g data-use="modes.flight.controls.left_trackpad.down.uses.1">
+      <text x="70" y="2792" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Open inventory during interaction (Tap)</text>
+    </g>
+    <g data-use="modes.flight.controls.left_trackpad.down.uses.2">
+      <text x="70" y="2817" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Open loot screen during interaction (Hold)</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.left_trackpad.left">
+    <text x="70" y="2858" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ← · Press  →  O</text>
+    <g data-use="modes.flight.controls.left_trackpad.left.uses.0">
+      <text x="70" y="2883" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Shields</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.left_trackpad.right">
+    <text x="70" y="2924" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · → · Press  →  P</text>
+    <g data-use="modes.flight.controls.left_trackpad.right.uses.0">
+      <text x="70" y="2949" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Weapons</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.left_trackpad.center">
+    <text x="70" y="2990" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · click · Click  →  Right Alt + K</text>
+    <g data-use="modes.flight.controls.left_trackpad.center.uses.0">
+      <text x="70" y="3015" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Toggle ship ports / doors</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.left_trackpad.center">
+    <text x="70" y="3056" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · click · Click  →  Right Alt + G</text>
+    <g data-use="modes.flight.modifiers.l4.controls.left_trackpad.center.uses.0">
+      <text x="70" y="3081" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Cycle aim mode</text>
+    </g>
+  </g>
+  <path d="M 70 3119 H 830" stroke="#dce2ea" />
+  <text x="890" y="951" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:20px;font-weight:800">AIM, WEAPONS AND RIGHT CONTROLS</text>
+  <text x="890" y="994" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RIGHT STICK</text>
+  <g data-binding="modes.flight.controls.right_stick">
+    <text x="890" y="1023" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Move  →  Mouse X/Y</text>
+    <g data-use="modes.flight.controls.right_stick.uses.0">
+      <text x="890" y="1048" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Pitch / Yaw</text>
+    </g>
+  </g>
+  <path d="M 890 1086 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1119" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">R3</text>
+  <g data-binding="modes.flight.controls.r3.regular">
+    <text x="890" y="1148" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Mouse Wheel Down</text>
+    <g data-use="modes.flight.controls.r3.regular.uses.0">
+      <text x="890" y="1173" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Next weapon preset</text>
+    </g>
+    <g data-use="modes.flight.controls.r3.regular.uses.1">
+      <text x="890" y="1198" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Next missile type</text>
+    </g>
+    <g data-use="modes.flight.controls.r3.regular.uses.4">
+      <text x="890" y="1223" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Scanning: Decrease scanning angle</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.r3.regular">
+    <text x="890" y="1264" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  Z</text>
+    <g data-use="modes.flight.modifiers.l4.controls.r3.regular.uses.0">
+      <text x="890" y="1289" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Freelook (Hold)</text>
+    </g>
+  </g>
+  <path d="M 890 1327 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1360" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RIGHT STICK TOUCH</text>
+  <g data-binding="modes.flight.controls.right_stick_touch.regular">
+    <text x="890" y="1389" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Gyro To Mouse</text>
+    <g data-use="modes.flight.controls.right_stick_touch.regular.uses.0">
+      <text x="890" y="1414" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Precision aim</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.right_stick_touch.double_press">
+    <text x="890" y="1455" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  L</text>
+    <g data-use="modes.flight.controls.right_stick_touch.double_press.uses.0">
+      <text x="890" y="1480" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Lights</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.right_stick_touch.double_press">
+    <text x="890" y="1521" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Double press  →  Right Alt + L</text>
+    <g data-use="modes.flight.modifiers.l4.controls.right_stick_touch.double_press.uses.0">
+      <text x="890" y="1546" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: LAMP</text>
+    </g>
+  </g>
+  <path d="M 890 1584 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1617" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RT</text>
+  <g data-binding="modes.flight.controls.rt.regular">
+    <text x="890" y="1646" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  W</text>
+    <g data-use="modes.flight.controls.rt.regular.uses.0">
+      <text x="890" y="1671" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Forward thrust / increase throttle</text>
+    </g>
+    <g data-use="modes.flight.controls.rt.regular.uses.1">
+      <text x="890" y="1696" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Drive forward</text>
+    </g>
+    <g data-use="modes.flight.controls.rt.regular.uses.2">
+      <text x="890" y="1721" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Strafe forward (Hold)</text>
+    </g>
+    <g data-use="modes.flight.controls.rt.regular.uses.3">
+      <text x="890" y="1746" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: MFD up (during interaction)</text>
+    </g>
+  </g>
+  <path d="M 890 1784 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1817" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RB</text>
+  <g data-binding="modes.flight.controls.rb.regular">
+    <text x="890" y="1846" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Left Mouse</text>
+    <g data-use="modes.flight.controls.rb.regular.uses.0">
+      <text x="890" y="1871" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Fire weapons</text>
+    </g>
+    <g data-use="modes.flight.controls.rb.regular.uses.1">
+      <text x="890" y="1896" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Launch missiles (Tap)</text>
+    </g>
+    <g data-use="modes.flight.controls.rb.regular.uses.2">
+      <text x="890" y="1921" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Quantum: Request jump (Tap)</text>
+    </g>
+    <g data-use="modes.flight.controls.rb.regular.uses.5">
+      <text x="890" y="1946" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Scanning: Activate scanning (Hold)</text>
+    </g>
+    <g data-use="modes.flight.controls.rb.regular.uses.6">
+      <text x="890" y="1971" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Activate interaction</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.rb.hold">
+    <text x="890" y="2012" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Hold  →  Left Mouse (held)</text>
+    <g data-use="modes.flight.controls.rb.hold.uses.0">
+      <text x="890" y="2037" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Quantum: Engage Quantum Drive</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.rb.regular">
+    <text x="890" y="2078" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  J</text>
+    <g data-use="modes.flight.modifiers.l4.controls.rb.regular.uses.0">
+      <text x="890" y="2103" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Noise</text>
+    </g>
+  </g>
+  <path d="M 890 2141 H 1650" stroke="#dce2ea" />
+  <text x="890" y="2174" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RIGHT TRACKPAD</text>
+  <g data-binding="modes.flight.controls.right_trackpad.up">
+    <text x="890" y="2203" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ↑ · Press  →  T</text>
+    <g data-use="modes.flight.controls.right_trackpad.up.uses.0">
+      <text x="890" y="2228" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Target in view</text>
+    </g>
+    <g data-use="modes.flight.controls.right_trackpad.up.uses.1">
+      <text x="890" y="2253" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Toggle auto-targeting (Hold)</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.right_trackpad.down">
+    <text x="890" y="2294" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ↓ · Press  →  Left Alt + T</text>
+    <g data-use="modes.flight.controls.right_trackpad.down.uses.0">
+      <text x="890" y="2319" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Unlock target</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.right_trackpad.left">
+    <text x="890" y="2360" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ← · Press  →  4</text>
+    <g data-use="modes.flight.controls.right_trackpad.left.uses.0">
+      <text x="890" y="2385" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Cycle attackers</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.right_trackpad.right">
+    <text x="890" y="2426" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · → · Press  →  5</text>
+    <g data-use="modes.flight.controls.right_trackpad.right.uses.0">
+      <text x="890" y="2451" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Cycle hostiles</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.right_trackpad.center">
+    <text x="890" y="2492" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · click · Click  →  7</text>
+    <g data-use="modes.flight.controls.right_trackpad.center.uses.0">
+      <text x="890" y="2517" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Cycle all / closest</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.up">
+    <text x="890" y="2558" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · ↑ · Scroll  →  Mouse Wheel Up</text>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.2">
+      <text x="890" y="2583" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Scanning: Increase scanning angle</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.4">
+      <text x="890" y="2608" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Zoom in</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.5">
+      <text x="890" y="2633" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Previous missile type / weapon preset</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.6">
+      <text x="890" y="2658" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Zoom in in interaction mode</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.down">
+    <text x="890" y="2699" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · ↓ · Scroll  →  Mouse Wheel Down</text>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.2">
+      <text x="890" y="2724" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Scanning: Decrease scanning angle</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.4">
+      <text x="890" y="2749" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Zoom out</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.5">
+      <text x="890" y="2774" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Next missile type / weapon preset</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.6">
+      <text x="890" y="2799" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Zoom out in interaction mode</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.left">
+    <text x="890" y="2840" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · ← · Scroll  →  Left Alt + 1</text>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.left.uses.1">
+      <text x="890" y="2865" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Pin / unpin selected target in slot 1</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.center">
+    <text x="890" y="2906" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · click · Click  →  Left Alt + 2</text>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.center.uses.1">
+      <text x="890" y="2931" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Pin / unpin selected target in slot 2</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.right">
+    <text x="890" y="2972" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · → · Scroll  →  Left Alt + 3</text>
+    <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.right.uses.1">
+      <text x="890" y="2997" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Pin / unpin selected target in slot 3</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l5.controls.right_trackpad.up">
+    <text x="890" y="3038" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L5 · ↑ · Scroll  →  Left Alt + Mouse Wheel Up</text>
+    <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.up.uses.0">
+      <text x="890" y="3063" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Increase speed limiter</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.up.uses.1">
+      <text x="890" y="3088" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Increase turret speed limiter</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l5.controls.right_trackpad.down">
+    <text x="890" y="3129" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L5 · ↓ · Scroll  →  Left Alt + Mouse Wheel Down</text>
+    <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.down.uses.0">
+      <text x="890" y="3154" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Decrease speed limiter</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.down.uses.1">
+      <text x="890" y="3179" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Decrease turret speed limiter</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l5.controls.right_trackpad.center">
+    <text x="890" y="3220" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L5 · click · Click  →  Left Alt + C</text>
+    <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.center.uses.0">
+      <text x="890" y="3245" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Cruise control toggle</text>
+    </g>
+  </g>
+  <path d="M 890 3283 H 1650" stroke="#dce2ea" />
+  <text x="1710" y="951" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:20px;font-weight:800">BUTTONS, REAR CONTROLS AND MENUS</text>
+  <text x="1710" y="994" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">A</text>
+  <g data-binding="modes.flight.controls.a.long_press">
+    <text x="1710" y="1023" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Long press  →  B</text>
+    <g data-use="modes.flight.controls.a.long_press.uses.0">
+      <text x="1710" y="1048" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Cycle master mode (NAV / Combat) (Hold)</text>
+      <text x="1722" y="1073" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">Steam first recognizes the Long Press, then sends B. Keep holding for the</text>
+      <text x="1722" y="1098" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">in-game hold action.</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.a.regular">
+    <text x="1710" y="1139" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  C</text>
+    <g data-use="modes.flight.modifiers.l4.controls.a.regular.uses.0">
+      <text x="1710" y="1164" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Toggle decoupled mode</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.a.regular.uses.1">
+      <text x="1710" y="1189" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Toggle auto braking on idle</text>
+    </g>
+    <g data-use="modes.flight.modifiers.l4.controls.a.regular.uses.2">
+      <text x="1710" y="1214" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Recenter turret (Hold)</text>
+    </g>
+  </g>
+  <path d="M 1710 1252 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1285" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">B</text>
+  <g data-binding="modes.flight.controls.b.regular">
+    <text x="1710" y="1314" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  X</text>
+    <g data-use="modes.flight.controls.b.regular.uses.0">
+      <text x="1710" y="1339" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Spacebrake</text>
+    </g>
+    <g data-use="modes.flight.controls.b.regular.uses.1">
+      <text x="1710" y="1364" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Flight: Release throttle trim</text>
+    </g>
+    <g data-use="modes.flight.controls.b.regular.uses.2">
+      <text x="1710" y="1389" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Ground vehicle: Brake (Hold)</text>
+    </g>
+    <g data-use="modes.flight.controls.b.regular.uses.3">
+      <text x="1710" y="1414" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Brake (Hold)</text>
+    </g>
+  </g>
+  <path d="M 1710 1452 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1485" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">X</text>
+  <g data-binding="modes.flight.controls.x.regular">
+    <text x="1710" y="1514" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Middle Mouse</text>
+    <g data-use="modes.flight.controls.x.regular.uses.0">
+      <text x="1710" y="1539" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Next operator mode</text>
+    </g>
+    <g data-use="modes.flight.controls.x.regular.uses.1">
+      <text x="1710" y="1564" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Focus interaction</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.x.double_press">
+    <text x="1710" y="1605" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  Tab</text>
+    <g data-use="modes.flight.controls.x.double_press.uses.0">
+      <text x="1710" y="1630" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Scanning: Ping (Double press; hold second press for charged ping)</text>
+      <text x="1722" y="1655" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">The PDF requires holding and releasing Tab; verify charged ping in game.</text>
+    </g>
+  </g>
+  <path d="M 1710 1693 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1726" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">Y</text>
+  <g data-binding="modes.flight.controls.y.regular">
+    <text x="1710" y="1755" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  K</text>
+    <g data-use="modes.flight.controls.y.regular.uses.0">
+      <text x="1710" y="1780" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: VTOL</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.y.double_press">
+    <text x="1710" y="1821" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  F (toggle/hold equivalent)</text>
+    <g data-use="modes.flight.controls.y.double_press.uses.0">
+      <text x="1710" y="1846" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Hold interaction</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.controls.y.long_press">
+    <text x="1710" y="1887" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Long press  →  Y</text>
+    <g data-use="modes.flight.controls.y.long_press.uses.0">
+      <text x="1710" y="1912" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Exit seat</text>
+    </g>
+    <g data-use="modes.flight.controls.y.long_press.uses.1">
+      <text x="1710" y="1937" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Turret: Exit remote turret</text>
+    </g>
+    <g data-use="modes.flight.controls.y.long_press.uses.2">
+      <text x="1710" y="1962" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">EVA: Detach from surface</text>
+      <text x="1722" y="1987" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">Y is sent after the Steam Long Press threshold.</text>
+    </g>
+  </g>
+  <path d="M 1710 2025 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2058" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">L4</text>
+  <g data-binding="global.l4.regular">
+    <text x="1710" y="2087" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Hold Action Set Layer</text>
+    <g data-use="global.l4.regular.uses.0">
+      <text x="1710" y="2112" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Hold L4 Modifier layer</text>
+    </g>
+  </g>
+  <path d="M 1710 2150 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2183" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">L5</text>
+  <g data-binding="modes.flight.controls.l5.regular">
+    <text x="1710" y="2212" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Hold Action Set Layer</text>
+    <g data-use="modes.flight.controls.l5.regular.uses.0">
+      <text x="1710" y="2237" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Hold L5 Modifier layer</text>
+    </g>
+  </g>
+  <path d="M 1710 2275 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2308" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">R4</text>
+  <g data-binding="global.r4.regular">
+    <text x="1710" y="2337" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Change Action Set</text>
+    <g data-use="global.r4.regular.uses.0">
+      <text x="1710" y="2362" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Switch FPS / Flight mode</text>
+    </g>
+  </g>
+  <path d="M 1710 2400 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2433" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">R5</text>
+  <g data-binding="modes.flight.controls.r5.regular">
+    <text x="1710" y="2462" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Period (.)</text>
+    <g data-use="modes.flight.controls.r5.regular.uses.0">
+      <text x="1710" y="2487" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Systems / interaction: Cycle mouse mode</text>
+    </g>
+  </g>
+  <path d="M 1710 2525 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2558" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">BACK</text>
+  <g data-binding="global.back.regular">
+    <text x="1710" y="2587" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  F1</text>
+    <g data-use="global.back.regular.uses.0">
+      <text x="1710" y="2612" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: mobiGlas</text>
+    </g>
+  </g>
+  <g data-binding="global.back.long_press">
+    <text x="1710" y="2653" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Long press  →  F2</text>
+    <g data-use="global.back.long_press.uses.0">
+      <text x="1710" y="2678" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Map</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.back.regular">
+    <text x="1710" y="2719" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  [</text>
+    <g data-use="modes.flight.modifiers.l4.controls.back.regular.uses.0">
+      <text x="1710" y="2744" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Accept invite</text>
+    </g>
+  </g>
+  <path d="M 1710 2782 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2815" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">START</text>
+  <g data-binding="global.start.regular">
+    <text x="1710" y="2844" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Esc</text>
+    <g data-use="global.start.regular.uses.0">
+      <text x="1710" y="2869" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Menu</text>
+    </g>
+  </g>
+  <g data-binding="modes.flight.modifiers.l4.controls.start.regular">
+    <text x="1710" y="2910" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  ]</text>
+    <g data-use="modes.flight.modifiers.l4.controls.start.regular.uses.0">
+      <text x="1710" y="2935" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Decline invite</text>
+    </g>
+  </g>
+  <path d="M 1710 2973 H 2470" stroke="#dce2ea" />
+  <text x="70" y="3357" fill="#586174" style="font-family:Arial,sans-serif;font-size:18px;font-weight:500">Reference: Alpha 4.10.2 defaults + custom bindings · Check notes for toggled or delayed inputs.</text>
+</svg>

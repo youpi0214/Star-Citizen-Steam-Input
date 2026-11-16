@@ -38,9 +38,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install --yes librsvg2-bin fonts-dejavu-core fonts-liberation2
-          python -m pip install Pillow
+          python -m pip install PyYAML
 
-      - name: Test version calculation
+      - name: Test version calculation and reference sheets
         run: python -m unittest discover -s tests -v
 
       - name: Update VDF release version
@@ -51,10 +51,8 @@ jobs:
 
       - name: Render FPS and flight sheets
         run: |
-          python scripts/render.py --mode fps --output output/fps.png
-          python scripts/render.py --mode flight --output output/flight.png
-          python scripts/render.py --mode fps --output output/fps.jpeg
-          python scripts/render.py --mode flight --output output/flight.jpeg
+          python scripts/render.py --mode fps --output output/fps-mode.png
+          python scripts/render.py --mode flight --sheet all --format png
 
       - name: Commit version and push release tag
         env:
@@ -75,5 +73,5 @@ jobs:
           RELEASE_TAG: ${{ steps.version.outputs.tag }}
         run: |
           gh release create "$RELEASE_TAG" --verify-tag --title "$RELEASE_TAG" --generate-notes \
-            output/fps.png output/flight.png output/fps.jpeg output/flight.jpeg \
+            output/fps-mode.png output/flight-base-controls.png output/flight-mining-and-salvage.png \
             mapping/controller_configuration.vdf

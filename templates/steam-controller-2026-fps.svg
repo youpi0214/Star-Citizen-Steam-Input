@@ -1,148 +1,385 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg width="2560" height="1440" viewBox="0 0 2560 1440" version="1.1" id="svg49" xmlns="http://www.w3.org/2000/svg">
-  <defs id="defs1">
-    <style id="style1">
-      .bg{fill:#f3f4f6}
-      .title{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:42px;font-weight:800;fill:#111827;letter-spacing:.4px}
-      .subtitle{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:20px;font-weight:500;fill:#4b5563}
-      .mode{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:24px;font-weight:800;fill:#0f766e;letter-spacing:1px}
-      .label{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:22px;font-weight:700;fill:#111827}
-      .body{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:21px;font-weight:600;fill:#111827}
-      .meta{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:19px;font-weight:600;fill:#374151}
-      .mod{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:19px;font-weight:700;fill:#c56a00}
-      .legend{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:600;fill:#374151}
-      .legendKey{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:800;fill:#111827}
-      .legendMod{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:800;fill:#c56a00}
-      .small{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:18px;font-weight:600;fill:#4b5563}
-    </style>
-  </defs>
-  <g id="layer-background"/>
-  <g id="layer-header">
-    <text x="70" y="72" class="title" style="white-space: pre;">STAR CITIZEN · STEAM CONTROLLER 2026</text>
-    <text x="70" y="108" class="subtitle" style="white-space: pre;">Player quick-reference · FPS Mode · complete Steam Input mapping</text>
-    <text x="2390" y="72" class="mode" text-anchor="end" id="mode_name" style="white-space: pre;">FPS MODE</text>
-  </g>
-  <image id="controller-front" x="525.414" y="318.651" width="1455.34" height="905.916" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png"/>
-  <g id="layer-leaders" transform="matrix(1, 0, 0, 1, 0, 36.000013)">
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1746.147 512.861 L 1968.455 626.794 L 2094.892 629.573"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1668.339 433.664 L 2093.503 437.832"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1593.31 500.356 L 1629.435 373.919 L 2089.334 276.659"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1671.118 583.722 L 1961.508 772.683 L 2099.06 825.481"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1450.2 586.501 L 1786.44 903.289 L 2114.344 1011.664"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1509.945 840.765 L 1857.301 1233.972 L 2122.681 1239.529"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1483.546 414.212 L 1479.378 232.198"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1022.258 408.654 C 1022.258 408.654 1022.258 414.212 1022.258 408.654 C 1022.258 403.096 1027.815 233.587 1027.815 233.587"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 985.993 832.848 L 665.078 1250.038 L 415.222 1254.623"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 845.019 576.116 L 739.576 722.82 L 447.314 734.282"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 767.083 505.057 L 698.315 596.747 L 447.314 595.601"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 836.997 430.558 L 458.775 437.435"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 916.079 502.764 L 880.549 362.937 L 442.729 283.854"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1057.053 585.285 L 746.453 890.155 L 447.314 936"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1651.892 338.868 L 1756.189 263.224 L 2089.712 158.927"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 1546.448 333.138 L 1636.992 187.58"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 866.796 340.015 L 764.791 268.955 L 448.46 177.265"/>
-    <path style="fill:none;stroke:rgb(0,76,237);stroke-width:3px" d="M 949.317 333.138 L 835.85 199.041"/>
-  </g>
-  <g id="layer-labels" transform="matrix(1, 0, 0, 1, 0, 37.000013)">
-    <g id="fps-lb-label">
-      <text x="430" y="145" class="label" text-anchor="end" style="white-space: pre;">LB</text>
-      <text x="430" y="171" class="body" text-anchor="end" data-bind="modes.fps.controls.lb.regular.action" style="white-space: pre;">Lean left</text>
-      <text x="430" y="197" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.lb.regular.action">Consumable / healing wheel</tspan></text>
-    </g>
-    <g id="fps-lt-label">
-      <text x="835" y="145" class="label" text-anchor="middle" style="white-space: pre;">LT</text>
-      <text x="835" y="171" class="body" text-anchor="middle" data-bind="modes.fps.controls.lt.regular.action" style="white-space: pre;">ADS</text>
-    </g>
-    <g id="fps-back-label">
-      <text x="1028" y="191" class="label" text-anchor="middle" style="white-space: pre;">BACK</text>
-      <text x="1028" y="214" class="body" text-anchor="middle" data-bind="global.back.regular.action" style="white-space: pre;">mobiGlas</text>
-      <text x="1028" y="237" class="meta" text-anchor="middle" style="white-space: pre;">[H] <tspan data-bind="global.back.long_press.action">Map</tspan></text>
-      <text x="1028" y="260" class="mod" text-anchor="middle" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.back.regular.action">Accept invite</tspan></text>
-    </g>
-    <g id="fps-dpad-right-label">
-      <text x="424" y="266" class="label" text-anchor="end" style="white-space: pre;">D-PAD →</text>
-      <text x="424" y="292" class="body" text-anchor="end" data-bind="modes.fps.controls.dpad_right.regular.action" style="white-space: pre;">Inventory</text>
-    </g>
-    <g id="fps-dpad-up-label">
-      <text x="440" y="420" class="label" text-anchor="end" style="white-space: pre;">D-PAD ↑</text>
-      <text x="440" y="446" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_up.regular.action">Camera view</tspan></text>
-    </g>
-    <g id="fps-dpad-left-label">
-      <text x="430" y="584" class="label" text-anchor="end" style="white-space: pre;">D-PAD ←</text>
-      <text x="430" y="610" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_left.regular.action">Toggle chat</tspan></text>
-    </g>
-    <g id="fps-dpad-down-label">
-      <text x="430" y="722" class="label" text-anchor="end" style="white-space: pre;">D-PAD ↓</text>
-      <text x="430" y="748" class="mod" text-anchor="end" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.dpad_down.regular.action">Helmet on/off</tspan></text>
-    </g>
-    <g id="fps-left-stick-label">
-      <text x="430" y="915" class="label" text-anchor="end" style="white-space: pre;">LEFT STICK</text>
-      <text x="430" y="941" class="body" text-anchor="end" data-bind="modes.fps.controls.left_stick.action" style="white-space: pre;">Move</text>
-      <text x="430" y="967" class="meta" text-anchor="end" style="white-space: pre;">L3: <tspan data-bind="modes.fps.controls.l3.regular.action">Sprint toggle</tspan></text>
-    </g>
-    <g id="fps-left-trackpad-label">
-      <text x="398" y="1238" class="label" text-anchor="end" style="white-space: pre;">LEFT TRACKPAD</text>
-      <text x="398" y="1264" class="meta" text-anchor="end" data-bind="modes.fps.controls.left_trackpad.action" style="white-space: pre;">Unassigned</text>
-    </g>
-    <g id="fps-start-label">
-      <text x="1479" y="190" class="label" text-anchor="middle" style="white-space: pre;">START</text>
-      <text x="1479" y="214" class="body" text-anchor="middle" data-bind="global.start.regular.action" style="white-space: pre;">Menu</text>
-      <text x="1479" y="238" class="mod" text-anchor="middle" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.start.regular.action">Decline invite</tspan></text>
-    </g>
-    <g id="fps-rb-label">
-      <text x="2110" y="127" class="label" style="white-space: pre;">RB</text>
-      <text x="2110" y="153" class="body" data-bind="modes.fps.controls.rb.regular.action" style="white-space: pre;">Lean right</text>
-      <text x="2110" y="179" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.rb.regular.action">Throwables radial</tspan></text>
-    </g>
-    <g id="fps-rt-label">
-      <text x="1637" y="135" class="label" text-anchor="middle" style="white-space: pre;">RT</text>
-      <text x="1637" y="161" class="body" text-anchor="middle" data-bind="modes.fps.controls.rt.regular.action" style="white-space: pre;">Fire / Use</text>
-    </g>
-    <g id="fps-x-label">
-      <text x="2110" y="252" class="label" style="white-space: pre;">X</text>
-      <text x="2110" y="278" class="body" data-bind="modes.fps.controls.x.regular.action" style="white-space: pre;">Reload / Holster</text>
-      <text x="2110" y="304" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.x.regular.action">Ammo backpack refill</tspan></text>
-    </g>
-    <g id="fps-y-label">
-      <text x="2110" y="414" class="label" style="white-space: pre;">Y</text>
-      <text x="2110" y="440" class="body" data-bind="modes.fps.controls.y.regular.action" style="white-space: pre;">Interact</text>
-      <text x="2110" y="466" class="meta" style="white-space: pre;">[2] <tspan data-bind="modes.fps.controls.y.double_press.action">Hold interaction</tspan></text>
-    </g>
-    <g id="fps-b-label">
-      <text x="2110" y="606" class="label" style="white-space: pre;">B</text>
-      <text x="2110" y="632" class="body" data-bind="modes.fps.controls.b.regular.action" style="white-space: pre;">Crouch</text>
-      <text x="2110" y="658" class="meta" style="white-space: pre;">[H] <tspan data-bind="modes.fps.controls.b.long_press.action">Prone</tspan></text>
-    </g>
-    <g id="fps-a-label">
-      <text x="2110" y="811" class="label" style="white-space: pre;">A</text>
-      <text x="2110" y="837" class="body" data-bind="modes.fps.controls.a.regular.action" style="white-space: pre;">Jump</text>
-      <text x="2110" y="863" class="mod" style="white-space: pre;">M1 <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.a.regular.action">Key B</tspan></text>
-    </g>
-    <g id="fps-right-stick-label">
-      <text x="2130" y="984" class="label" style="white-space: pre;">RIGHT STICK / R3</text>
-      <text x="2130" y="1010" class="body" data-bind="modes.fps.controls.right_stick.action" style="white-space: pre;">Aim / Look</text>
-      <text x="2130" y="1036" class="meta" style="white-space: pre;">Touch: Gyro To Mouse (<tspan data-bind="modes.fps.gyro.action">Precision aim</tspan>)</text>
-      <text x="2130" y="1062" class="meta" style="white-space: pre;">[2] Touch: <tspan data-bind="modes.fps.controls.right_stick_touch.double_press.action">Flashlight</tspan></text>
-      <text x="2130" y="1088" class="meta" style="white-space: pre;">R3: <tspan data-bind="modes.fps.controls.r3.regular.action">Melee</tspan></text>
-      <text x="2130" y="1114" class="meta" style="white-space: pre;">[2] R3: <tspan data-bind="modes.fps.controls.r3.double_press.action">Fire mode toggle</tspan></text>
-      <text x="2130" y="1140" class="mod" style="white-space: pre;">M1 R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.regular.action">Customize weapon</tspan></text>
-      <text x="2130" y="1166" class="mod" style="white-space: pre;">M1 [H] R3: <tspan fill="#111827" data-bind="modes.fps.modifiers.l4.controls.r3.long_press.action">Inspect item / weapon</tspan></text>
-    </g>
-    <g id="fps-right-trackpad-label">
-      <text x="2140" y="1224" class="label" style="white-space: pre;">RIGHT TRACKPAD</text>
-      <text x="2140" y="1250" class="body" style="white-space: pre;">↑ <tspan data-bind="modes.fps.controls.right_trackpad.up.action">Scroll up</tspan></text>
-      <text x="2140" y="1276" class="body" style="white-space: pre;">↓ <tspan data-bind="modes.fps.controls.right_trackpad.down.action">Scroll down</tspan></text>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" version="1.1" data-sheet="fps" height="2731" viewBox="0 0 2560 2731">
+  <rect width="2560" height="2731" fill="white" />
+  <text x="70" y="66" fill="#172033" style="font-family:Arial,sans-serif;font-size:38px;font-weight:800">STAR CITIZEN · STEAM CONTROLLER 2026</text>
+  <text x="70" y="112" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:28px;font-weight:800">FPS Mode</text>
+  <text x="70" y="143" fill="#586174" style="font-family:Arial,sans-serif;font-size:18px;font-weight:500">All listed actions use your existing bindings. Context determines what the game does.</text>
+  <image id="controller-front" x="780" y="155" width="1000" height="650" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png" />
+  <path d="M 935 198 L 600 220" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="211" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">LB / LT</text>
+  <path d="M 1110 245 L 620 300" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="605" y="291" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">BACK</text>
+  <path d="M 980 315 L 600 390" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="381" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">D-PAD</text>
+  <path d="M 1140 400 L 600 490" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="481" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">LEFT STICK / L3</text>
+  <path d="M 1100 575 L 600 650" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="585" y="641" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700" text-anchor="end">LEFT TRACKPAD</text>
+  <path d="M 1625 198 L 1870 220" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="211" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">RB / RT</text>
+  <path d="M 1445 245 L 1870 300" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="291" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">START</text>
+  <path d="M 1585 320 L 1870 390" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="381" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">A / B / X / Y</text>
+  <path d="M 1415 400 L 1870 490" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="481" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">RIGHT STICK / R3 / TOUCH</text>
+  <path d="M 1450 575 L 1870 650" fill="none" stroke="#2164df" stroke-width="2" />
+  <text x="1885" y="641" fill="#172033" style="font-family:Arial,sans-serif;font-size:21px;font-weight:700">RIGHT TRACKPAD</text>
+  <text x="1280" y="835" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500" text-anchor="middle">Rear: L4 / L5 on the left · R4 / R5 on the right</text>
+  <text x="70" y="892" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:700">Base = no modifier · L4 = hold L4 · L5 = weapon selection · Hold ≠ a separate Steam Long Press</text>
+  <text x="70" y="951" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:20px;font-weight:800">MOVEMENT AND LEFT CONTROLS</text>
+  <text x="70" y="994" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LEFT STICK</text>
+  <g data-binding="modes.fps.controls.left_stick">
+    <text x="70" y="1023" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Move  →  WASD</text>
+    <g data-use="modes.fps.controls.left_stick.uses.0">
+      <text x="70" y="1048" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Move</text>
     </g>
   </g>
-  <g id="fps-rear-global" transform="matrix(1, 0, 0, 1, 1109.409579, 1193.311803)">
-    <text x="0" y="0" class="label" style="white-space: pre;">REAR / GLOBAL</text>
-    <text x="0" y="28" class="mod" style="white-space: pre;">L4: <tspan fill="#111827" data-bind="global.l4.regular.action">Hold L4 Modifier layer</tspan></text>
-    <text x="0" y="54" class="body" style="white-space: pre;">L5: <tspan data-bind="modes.fps.controls.l5.regular.action">Key 1</tspan></text>
-    <text x="0" y="80" class="meta" style="white-space: pre;">R4: <tspan data-bind="global.r4.regular.action">Switch FPS / Flight mode</tspan></text>
+  <path d="M 70 1086 H 830" stroke="#dce2ea" />
+  <text x="70" y="1119" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">L3</text>
+  <g data-binding="modes.fps.controls.l3.regular">
+    <text x="70" y="1148" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Left Shift</text>
+    <g data-use="modes.fps.controls.l3.regular.uses.0">
+      <text x="70" y="1173" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Sprint toggle</text>
+    </g>
+    <g data-use="modes.fps.controls.l3.regular.uses.1">
+      <text x="70" y="1198" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Interact with scope / hold breath while ADS</text>
+      <text x="82" y="1223" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">Left Shift is toggled by L3; press again to release it.</text>
+    </g>
   </g>
-  <g id="fps-legend" transform="matrix(1, 0, 0, 1, 64.887987, 52.49695)">
-    <text x="950" y="1340" class="legend" style="white-space: pre;"><tspan class="legendKey">[H]</tspan> Hold</text>
-    <text x="1090" y="1340" class="legend" style="white-space: pre;"><tspan class="legendKey">[2]</tspan> Double Press</text>
-    <text x="1275" y="1340" class="legend" style="white-space: pre;"><tspan class="legendMod">M1</tspan> L4 Modifier</text>
+  <path d="M 70 1261 H 830" stroke="#dce2ea" />
+  <text x="70" y="1294" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LT</text>
+  <g data-binding="modes.fps.controls.lt.regular">
+    <text x="70" y="1323" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Right Mouse</text>
+    <g data-use="modes.fps.controls.lt.regular.uses.0">
+      <text x="70" y="1348" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Aim down sights</text>
+    </g>
+    <g data-use="modes.fps.controls.lt.regular.uses.1">
+      <text x="70" y="1373" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Light right melee attack (Tap)</text>
+    </g>
+    <g data-use="modes.fps.controls.lt.regular.uses.2">
+      <text x="70" y="1398" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Heavy right melee attack / underarm throw (Hold)</text>
+    </g>
+    <g data-use="modes.fps.controls.lt.regular.uses.3">
+      <text x="70" y="1423" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Tool secondary action / inject medical pen into another player</text>
+    </g>
+    <g data-use="modes.fps.controls.lt.regular.uses.4">
+      <text x="70" y="1448" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Activate interaction</text>
+    </g>
+    <g data-use="modes.fps.controls.lt.regular.uses.5">
+      <text x="70" y="1473" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Orbit inventory camera (Hold)</text>
+    </g>
   </g>
+  <path d="M 70 1511 H 830" stroke="#dce2ea" />
+  <text x="70" y="1544" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LB</text>
+  <g data-binding="modes.fps.controls.lb.regular">
+    <text x="70" y="1573" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Q (press/release)</text>
+    <g data-use="modes.fps.controls.lb.regular.uses.0">
+      <text x="70" y="1598" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Lean left</text>
+    </g>
+    <g data-use="modes.fps.controls.lb.regular.uses.1">
+      <text x="70" y="1623" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Toggle looting weapon attachments (Press)</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.lb.regular">
+    <text x="70" y="1664" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  4</text>
+    <g data-use="modes.fps.modifiers.l4.controls.lb.regular.uses.0">
+      <text x="70" y="1689" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Consumable / healing wheel</text>
+    </g>
+  </g>
+  <path d="M 70 1727 H 830" stroke="#dce2ea" />
+  <text x="70" y="1760" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">D-PAD</text>
+  <g data-binding="modes.fps.controls.dpad_right.regular">
+    <text x="70" y="1789" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · right · Press  →  I</text>
+    <g data-use="modes.fps.controls.dpad_right.regular.uses.0">
+      <text x="70" y="1814" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Open inventory (Tap)</text>
+    </g>
+    <g data-use="modes.fps.controls.dpad_right.regular.uses.1">
+      <text x="70" y="1839" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Open loot screen (Hold)</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.dpad_up.regular">
+    <text x="70" y="1880" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · up · Press  →  F4</text>
+    <g data-use="modes.fps.modifiers.l4.controls.dpad_up.regular.uses.0">
+      <text x="70" y="1905" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Camera view</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.dpad_left.regular">
+    <text x="70" y="1946" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · left · Press  →  F12</text>
+    <g data-use="modes.fps.modifiers.l4.controls.dpad_left.regular.uses.0">
+      <text x="70" y="1971" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Toggle chat</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.dpad_down.regular">
+    <text x="70" y="2012" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · down · Press  →  Left Alt + H</text>
+    <g data-use="modes.fps.modifiers.l4.controls.dpad_down.regular.uses.0">
+      <text x="70" y="2037" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Helmet on/off</text>
+    </g>
+  </g>
+  <path d="M 70 2075 H 830" stroke="#dce2ea" />
+  <text x="70" y="2108" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">LEFT TRACKPAD</text>
+  <g data-binding="modes.fps.controls.left_trackpad">
+    <text x="70" y="2137" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Unassigned  →  None</text>
+    <g data-use="modes.fps.controls.left_trackpad.uses.0">
+      <text x="70" y="2162" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Unassigned</text>
+    </g>
+  </g>
+  <path d="M 70 2200 H 830" stroke="#dce2ea" />
+  <text x="890" y="951" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:20px;font-weight:800">AIM, WEAPONS AND RIGHT CONTROLS</text>
+  <text x="890" y="994" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RIGHT STICK</text>
+  <g data-binding="modes.fps.controls.right_stick">
+    <text x="890" y="1023" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Move  →  Mouse</text>
+    <g data-use="modes.fps.controls.right_stick.uses.0">
+      <text x="890" y="1048" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Aim / Look</text>
+    </g>
+  </g>
+  <path d="M 890 1086 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1119" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">R3</text>
+  <g data-binding="modes.fps.controls.r3.regular">
+    <text x="890" y="1148" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Middle Mouse</text>
+    <g data-use="modes.fps.controls.r3.regular.uses.0">
+      <text x="890" y="1173" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Weapon melee / takedown (Hold)</text>
+    </g>
+    <g data-use="modes.fps.controls.r3.regular.uses.1">
+      <text x="890" y="1198" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Focus (Press)</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.controls.r3.double_press">
+    <text x="890" y="1239" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  B</text>
+    <g data-use="modes.fps.controls.r3.double_press.uses.0">
+      <text x="890" y="1264" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Fire mode toggle</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.r3.regular">
+    <text x="890" y="1305" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  J</text>
+    <g data-use="modes.fps.modifiers.l4.controls.r3.regular.uses.0">
+      <text x="890" y="1330" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Customize weapon</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.r3.long_press">
+    <text x="890" y="1371" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Long press  →  O (custom Star Citizen bind)</text>
+    <g data-use="modes.fps.modifiers.l4.controls.r3.long_press.uses.0">
+      <text x="890" y="1396" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Inspect item / weapon</text>
+    </g>
+  </g>
+  <path d="M 890 1434 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1467" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">GYRO</text>
+  <g data-binding="modes.fps.controls.gyro">
+    <text x="890" y="1496" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Touch enabled  →  Gyro To Mouse</text>
+    <g data-use="modes.fps.controls.gyro.uses.0">
+      <text x="890" y="1521" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Precision aim</text>
+    </g>
+  </g>
+  <path d="M 890 1559 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1592" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RIGHT STICK TOUCH</text>
+  <g data-binding="modes.fps.controls.right_stick_touch.double_press">
+    <text x="890" y="1621" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  T</text>
+    <g data-use="modes.fps.controls.right_stick_touch.double_press.uses.0">
+      <text x="890" y="1646" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Flashlight</text>
+    </g>
+  </g>
+  <path d="M 890 1684 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1717" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RT</text>
+  <g data-binding="modes.fps.controls.rt.regular">
+    <text x="890" y="1746" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Left Mouse</text>
+    <g data-use="modes.fps.controls.rt.regular.uses.0">
+      <text x="890" y="1771" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Fire weapon</text>
+    </g>
+    <g data-use="modes.fps.controls.rt.regular.uses.1">
+      <text x="890" y="1796" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Light left melee attack (Tap)</text>
+    </g>
+    <g data-use="modes.fps.controls.rt.regular.uses.2">
+      <text x="890" y="1821" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Heavy left melee attack / overarm throw (Hold)</text>
+    </g>
+    <g data-use="modes.fps.controls.rt.regular.uses.3">
+      <text x="890" y="1846" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Activate tool primary action</text>
+    </g>
+    <g data-use="modes.fps.controls.rt.regular.uses.4">
+      <text x="890" y="1871" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Activate interaction / port modification</text>
+    </g>
+    <g data-use="modes.fps.controls.rt.regular.uses.5">
+      <text x="890" y="1896" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Block melee attacks (Hold LT + RT)</text>
+      <text x="902" y="1921" fill="#586174" style="font-family:Arial,sans-serif;font-size:17px;font-weight:500">Requires both mouse buttons held together.</text>
+    </g>
+  </g>
+  <path d="M 890 1959 H 1650" stroke="#dce2ea" />
+  <text x="890" y="1992" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RB</text>
+  <g data-binding="modes.fps.controls.rb.regular">
+    <text x="890" y="2021" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  E (press/release)</text>
+    <g data-use="modes.fps.controls.rb.regular.uses.0">
+      <text x="890" y="2046" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Lean right</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.rb.regular">
+    <text x="890" y="2087" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  G</text>
+    <g data-use="modes.fps.modifiers.l4.controls.rb.regular.uses.0">
+      <text x="890" y="2112" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Throwables radial</text>
+    </g>
+  </g>
+  <path d="M 890 2150 H 1650" stroke="#dce2ea" />
+  <text x="890" y="2183" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">RIGHT TRACKPAD</text>
+  <g data-binding="modes.fps.controls.right_trackpad.up">
+    <text x="890" y="2212" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ↑ · Scroll  →  Mouse Wheel Up</text>
+    <g data-use="modes.fps.controls.right_trackpad.up.uses.0">
+      <text x="890" y="2237" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Increase movement speed</text>
+    </g>
+    <g data-use="modes.fps.controls.right_trackpad.up.uses.1">
+      <text x="890" y="2262" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Increase tractor-beam distance</text>
+    </g>
+    <g data-use="modes.fps.controls.right_trackpad.up.uses.2">
+      <text x="890" y="2287" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Zoom in</text>
+    </g>
+    <g data-use="modes.fps.controls.right_trackpad.up.uses.3">
+      <text x="890" y="2312" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Zoom in in interaction mode</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.controls.right_trackpad.down">
+    <text x="890" y="2353" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · ↓ · Scroll  →  Mouse Wheel Down</text>
+    <g data-use="modes.fps.controls.right_trackpad.down.uses.0">
+      <text x="890" y="2378" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Decrease movement speed</text>
+    </g>
+    <g data-use="modes.fps.controls.right_trackpad.down.uses.1">
+      <text x="890" y="2403" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Decrease tractor-beam distance</text>
+    </g>
+    <g data-use="modes.fps.controls.right_trackpad.down.uses.2">
+      <text x="890" y="2428" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">View: Zoom out</text>
+    </g>
+    <g data-use="modes.fps.controls.right_trackpad.down.uses.3">
+      <text x="890" y="2453" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Zoom out in interaction mode</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.right_trackpad.up">
+    <text x="890" y="2494" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · ↑ · Scroll  →  Left Alt + Mouse Wheel Up</text>
+    <text x="890" y="2519" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Alt + scroll up</text>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.right_trackpad.down">
+    <text x="890" y="2560" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · ↓ · Scroll  →  Left Alt + Mouse Wheel Down</text>
+    <text x="890" y="2585" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Alt + scroll down</text>
+  </g>
+  <path d="M 890 2623 H 1650" stroke="#dce2ea" />
+  <text x="1710" y="951" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:20px;font-weight:800">BUTTONS, REAR CONTROLS AND MENUS</text>
+  <text x="1710" y="994" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">A</text>
+  <g data-binding="modes.fps.controls.a.regular">
+    <text x="1710" y="1023" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Space</text>
+    <g data-use="modes.fps.controls.a.regular.uses.0">
+      <text x="1710" y="1048" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Jump (Tap)</text>
+    </g>
+    <g data-use="modes.fps.controls.a.regular.uses.1">
+      <text x="1710" y="1073" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Climb ledge / activate jump thrusters (Hold)</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.a.regular">
+    <text x="1710" y="1114" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  B</text>
+    <g data-use="modes.fps.modifiers.l4.controls.a.regular.uses.0">
+      <text x="1710" y="1139" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Change fire mode</text>
+    </g>
+  </g>
+  <path d="M 1710 1177 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1210" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">B</text>
+  <g data-binding="modes.fps.controls.b.regular">
+    <text x="1710" y="1239" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  C</text>
+    <g data-use="modes.fps.controls.b.regular.uses.0">
+      <text x="1710" y="1264" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Crouch</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.controls.b.long_press">
+    <text x="1710" y="1305" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Long press  →  Left Ctrl</text>
+    <g data-use="modes.fps.controls.b.long_press.uses.0">
+      <text x="1710" y="1330" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Movement: Prone</text>
+    </g>
+  </g>
+  <path d="M 1710 1368 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1401" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">X</text>
+  <g data-binding="modes.fps.controls.x.regular">
+    <text x="1710" y="1430" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  R</text>
+    <g data-use="modes.fps.controls.x.regular.uses.0">
+      <text x="1710" y="1455" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Reload (Tap)</text>
+    </g>
+    <g data-use="modes.fps.controls.x.regular.uses.1">
+      <text x="1710" y="1480" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Holster weapon (Hold)</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.x.regular">
+    <text x="1710" y="1521" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  Left Alt + 1</text>
+    <g data-use="modes.fps.modifiers.l4.controls.x.regular.uses.0">
+      <text x="1710" y="1546" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Tools: Ammo backpack refill</text>
+    </g>
+  </g>
+  <path d="M 1710 1584 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1617" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">Y</text>
+  <g data-binding="modes.fps.controls.y.regular">
+    <text x="1710" y="1646" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  F</text>
+    <g data-use="modes.fps.controls.y.regular.uses.0">
+      <text x="1710" y="1671" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Interact</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.controls.y.double_press">
+    <text x="1710" y="1712" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Double press  →  F (toggle)</text>
+    <g data-use="modes.fps.controls.y.double_press.uses.0">
+      <text x="1710" y="1737" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Interaction: Hold interaction</text>
+    </g>
+  </g>
+  <path d="M 1710 1775 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1808" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">L4</text>
+  <g data-binding="global.l4.regular">
+    <text x="1710" y="1837" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Hold Action Set Layer</text>
+    <g data-use="global.l4.regular.uses.0">
+      <text x="1710" y="1862" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Hold L4 Modifier layer</text>
+    </g>
+  </g>
+  <path d="M 1710 1900 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="1933" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">L5</text>
+  <g data-binding="modes.fps.controls.l5.regular">
+    <text x="1710" y="1962" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  1</text>
+    <g data-use="modes.fps.controls.l5.regular.uses.0">
+      <text x="1710" y="1987" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Select primary weapon (Tap)</text>
+    </g>
+    <g data-use="modes.fps.controls.l5.regular.uses.1">
+      <text x="1710" y="2012" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">Combat: Open weapon selection radial (Hold)</text>
+    </g>
+  </g>
+  <path d="M 1710 2050 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2083" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">R4</text>
+  <g data-binding="global.r4.regular">
+    <text x="1710" y="2112" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Change Action Set</text>
+    <g data-use="global.r4.regular.uses.0">
+      <text x="1710" y="2137" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Switch FPS / Flight mode</text>
+    </g>
+  </g>
+  <path d="M 1710 2175 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2208" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">BACK</text>
+  <g data-binding="global.back.regular">
+    <text x="1710" y="2237" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  F1</text>
+    <g data-use="global.back.regular.uses.0">
+      <text x="1710" y="2262" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: mobiGlas</text>
+    </g>
+  </g>
+  <g data-binding="global.back.long_press">
+    <text x="1710" y="2303" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Long press  →  F2</text>
+    <g data-use="global.back.long_press.uses.0">
+      <text x="1710" y="2328" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Map</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.back.regular">
+    <text x="1710" y="2369" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  [</text>
+    <g data-use="modes.fps.modifiers.l4.controls.back.regular.uses.0">
+      <text x="1710" y="2394" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Accept invite</text>
+    </g>
+  </g>
+  <path d="M 1710 2432 H 2470" stroke="#dce2ea" />
+  <text x="1710" y="2465" fill="#172033" style="font-family:Arial,sans-serif;font-size:23px;font-weight:800">START</text>
+  <g data-binding="global.start.regular">
+    <text x="1710" y="2494" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">Base · Press  →  Esc</text>
+    <g data-use="global.start.regular.uses.0">
+      <text x="1710" y="2519" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Menu</text>
+    </g>
+  </g>
+  <g data-binding="modes.fps.modifiers.l4.controls.start.regular">
+    <text x="1710" y="2560" fill="#9a5200" style="font-family:Arial,sans-serif;font-size:18px;font-weight:700">L4 · Press  →  ]</text>
+    <g data-use="modes.fps.modifiers.l4.controls.start.regular.uses.0">
+      <text x="1710" y="2585" fill="#172033" style="font-family:Arial,sans-serif;font-size:20px;font-weight:500">General: Decline invite</text>
+    </g>
+  </g>
+  <path d="M 1710 2623 H 2470" stroke="#dce2ea" />
+  <text x="70" y="2697" fill="#586174" style="font-family:Arial,sans-serif;font-size:18px;font-weight:500">Reference: Alpha 4.10.2 defaults + custom bindings · Check notes for toggled or delayed inputs.</text>
 </svg>
