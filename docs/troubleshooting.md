@@ -12,6 +12,8 @@ Open the gear menu beside **Edit Layout** to find **Layout Details**. The screen
 
 ![Applied controller layout with the gear menu highlighted beside Edit Layout](images/controller-mapping-view.png)
 
+![My Layout Details showing Layout ID 3839401839 and my shortcut app ID 2274664090 annotated in the layout link](images/controller-mapping-view_appid.png)
+
 For reference, my layout URI is:
 
 ```text
@@ -21,8 +23,6 @@ steam://controllerconfig/2274664090/3839401839
 Here, `2274664090` is **my non-Steam shortcut app ID**, not yours. This URI is a reference, not a universal installation link. Use the [Community Layouts search steps](installation.md#method-a--community-layouts) to apply the layout to your own RSI Launcher shortcut.
 
 The published **Layout ID** is `3839401839`. If you publish your own version, find its Layout ID under **Layout Details** and use that ID when sharing your version. The [Linux workaround](#find-your-shortcuts-app-id) requires your own shortcut's app ID, not my app ID or the published Layout ID.
-
-![My Layout Details showing Layout ID 3839401839 and my shortcut app ID 2274664090 annotated in the layout link](images/controller-mapping-view_appid.png)
 
 The annotation shows **my app ID** as an example. Find your own shortcut's app ID using the [desktop shortcut method](#find-your-shortcuts-app-id).
 

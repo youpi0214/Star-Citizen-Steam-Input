@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="2288" viewBox="0 0 3600 2288" version="1.1" data-sheet="flight_mining_salvage">
+  <rect width="3600" height="2288" fill="white" />
+  <defs>
+    <marker id="button-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#2164df" />
+    </marker>
+  </defs>
+  <text x="60" y="68" fill="#172033" style="font-family:Arial,sans-serif;font-size:44px;font-weight:800">STAR CITIZEN · STEAM CONTROLLER 2026</text>
+  <text x="60" y="111" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:32px;font-weight:800">Flight Mode — Mining and Salvage</text>
+  <image id="controller-front" x="950" y="460" width="1700" height="1115.7622739018088" preserveAspectRatio="xMidYMid" href="assets/steam-controller-2026.png" />
+  <g id="callout-back" data-control="back" data-bounds="1480 319 330 146">
+    <text x="1480" y="350" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">BACK</text>
+    <g data-label="mobiGlas">
+      <g data-binding="global.back.regular">
+        <g data-use="global.back.regular.uses.0" />
+      </g>
+      <text x="1480" y="393" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">mobiGlas</text>
+    </g>
+    <g data-label="[H] Map">
+      <g data-binding="global.back.long_press">
+        <g data-use="global.back.long_press.uses.0" />
+      </g>
+      <text x="1480" y="424" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">[H] Map</text>
+    </g>
+    <g data-label="L4: Accept invite">
+      <g data-binding="modes.flight.modifiers.l4.controls.back.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.back.regular.uses.0" />
+      </g>
+      <text x="1480" y="455" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4: Accept invite</text>
+    </g>
+  </g>
+  <path d="M 1515.57 480.00 L 1515.57 624.73" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="back" />
+  <g id="callout-start" data-control="start" data-bounds="2020 319 260 115">
+    <text x="2020" y="350" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">START</text>
+    <g data-label="Menu">
+      <g data-binding="global.start.regular">
+        <g data-use="global.start.regular.uses.0" />
+      </g>
+      <text x="2020" y="393" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Menu</text>
+    </g>
+    <g data-label="L4: Decline invite">
+      <g data-binding="modes.flight.modifiers.l4.controls.start.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.start.regular.uses.0" />
+      </g>
+      <text x="2020" y="424" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4: Decline invite</text>
+    </g>
+  </g>
+  <path d="M 2084.43 449.00 L 2084.43 623.63" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="start" />
+  <g id="callout-lb" data-control="lb" data-bounds="100 209 800 115">
+    <text x="900" y="240" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="end">LB</text>
+    <g data-label="Cycle focused salvage modifiers">
+      <g data-binding="modes.flight.controls.lb.regular">
+        <g data-use="modes.flight.controls.lb.regular.uses.2" />
+      </g>
+      <text x="900" y="283" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">Cycle focused salvage modifiers</text>
+    </g>
+    <g data-label="[2] Toggle salvage gimbal">
+      <g data-binding="modes.flight.controls.lb.double_press">
+        <g data-use="modes.flight.controls.lb.double_press.uses.2" />
+      </g>
+      <text x="900" y="314" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">[2] Toggle salvage gimbal</text>
+    </g>
+  </g>
+  <path d="M 900.00 339.00 L 1265.18 556.64" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="lb" />
+  <g id="callout-lt" data-control="lt" data-bounds="1000 114 620 84">
+    <text x="1000" y="145" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">LT</text>
+    <g data-label="Reverse thrust / ground reverse">
+      <g data-binding="modes.flight.controls.lt.regular">
+        <g data-use="modes.flight.controls.lt.regular.uses.0" />
+      </g>
+      <text x="1000" y="188" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Reverse thrust / ground reverse</text>
+    </g>
+  </g>
+  <path d="M 1310.00 213.00 L 1348.64 512.71" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="lt" />
+  <g id="callout-rb" data-control="rb" data-bounds="2820 269 650 208">
+    <text x="2820" y="300" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">RB</text>
+    <g data-label="Mining: Activate laser">
+      <g data-binding="modes.flight.controls.rb.regular">
+        <g data-use="modes.flight.controls.rb.regular.uses.2" />
+        <g data-use="modes.flight.controls.rb.regular.uses.3" />
+        <g data-use="modes.flight.controls.rb.regular.uses.4" />
+        <g data-use="modes.flight.controls.rb.regular.uses.5" />
+      </g>
+      <text x="2820" y="343" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Mining: Activate laser</text>
+    </g>
+    <g data-label="Salvage: Fire focused tool">
+      <g data-binding="modes.flight.controls.rb.regular">
+        <g data-use="modes.flight.controls.rb.regular.uses.2" />
+        <g data-use="modes.flight.controls.rb.regular.uses.3" />
+        <g data-use="modes.flight.controls.rb.regular.uses.4" />
+        <g data-use="modes.flight.controls.rb.regular.uses.5" />
+      </g>
+      <text x="2820" y="374" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Salvage: Fire focused tool</text>
+    </g>
+    <g data-label="Quantum: Request jump">
+      <g data-binding="modes.flight.controls.rb.regular">
+        <g data-use="modes.flight.controls.rb.regular.uses.2" />
+        <g data-use="modes.flight.controls.rb.regular.uses.3" />
+        <g data-use="modes.flight.controls.rb.regular.uses.4" />
+        <g data-use="modes.flight.controls.rb.regular.uses.5" />
+      </g>
+      <text x="2820" y="405" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Quantum: Request jump</text>
+    </g>
+    <g data-label="Quantum [H]: Engage drive">
+      <g data-binding="modes.flight.controls.rb.hold">
+        <g data-use="modes.flight.controls.rb.hold.uses.0" />
+      </g>
+      <text x="2820" y="436" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Quantum [H]: Engage drive</text>
+    </g>
+    <g data-label="[H] Activate scanning">
+      <g data-binding="modes.flight.controls.rb.regular">
+        <g data-use="modes.flight.controls.rb.regular.uses.2" />
+        <g data-use="modes.flight.controls.rb.regular.uses.3" />
+        <g data-use="modes.flight.controls.rb.regular.uses.4" />
+        <g data-use="modes.flight.controls.rb.regular.uses.5" />
+      </g>
+      <text x="2820" y="467" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">[H] Activate scanning</text>
+    </g>
+  </g>
+  <path d="M 2790.00 365.00 L 2333.72 556.64" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="rb" />
+  <g id="callout-rt" data-control="rt" data-bounds="2380 114 500 84">
+    <text x="2380" y="145" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">RT</text>
+    <g data-label="Forward thrust / ground forward">
+      <g data-binding="modes.flight.controls.rt.regular">
+        <g data-use="modes.flight.controls.rt.regular.uses.0" />
+      </g>
+      <text x="2380" y="188" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Forward thrust / ground forward</text>
+    </g>
+  </g>
+  <path d="M 2410.00 213.00 L 2250.26 512.71" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="rt" />
+  <g id="callout-dpad" data-control="dpad" data-bounds="100 489 800 208">
+    <text x="900" y="520" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="end">D-PAD</text>
+    <g data-label="↓: Landing gear">
+      <g data-binding="modes.flight.controls.dpad_down.regular">
+        <g data-use="modes.flight.controls.dpad_down.regular.uses.0" />
+      </g>
+      <text x="900" y="563" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">↓: Landing gear</text>
+    </g>
+    <g data-label="↓ [H]: Autoland">
+      <g data-binding="modes.flight.controls.dpad_down.hold">
+        <g data-use="modes.flight.controls.dpad_down.hold.uses.0" />
+      </g>
+      <text x="900" y="594" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">↓ [H]: Autoland</text>
+    </g>
+    <g data-label="L4 ↑: Camera view">
+      <g data-binding="modes.flight.modifiers.l4.controls.dpad_up.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.dpad_up.regular.uses.0" />
+      </g>
+      <text x="900" y="625" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 ↑: Camera view</text>
+    </g>
+    <g data-label="L4 ←: Toggle chat">
+      <g data-binding="modes.flight.modifiers.l4.controls.dpad_left.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.dpad_left.regular.uses.0" />
+      </g>
+      <text x="900" y="656" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 ←: Toggle chat</text>
+    </g>
+    <g data-label="L4 ↓: Request landing">
+      <g data-binding="modes.flight.modifiers.l4.controls.dpad_down.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.dpad_down.regular.uses.0" />
+      </g>
+      <text x="900" y="687" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 ↓: Request landing</text>
+    </g>
+  </g>
+  <path d="M 930.00 555.00 L 1035.00 555.00 L 1291.54 736.74" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="dpad" />
+  <g id="callout-left_stick" data-control="left_stick" data-bounds="100 819 800 177">
+    <text x="900" y="850" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="end">LEFT STICK / L3</text>
+    <g data-label="X: Roll left / right">
+      <g data-binding="modes.flight.controls.left_stick_x">
+        <g data-use="modes.flight.controls.left_stick_x.uses.0" />
+      </g>
+      <text x="900" y="893" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">X: Roll left / right</text>
+    </g>
+    <g data-label="Y: Strafe up / down">
+      <g data-binding="modes.flight.controls.left_stick_y">
+        <g data-use="modes.flight.controls.left_stick_y.uses.0" />
+      </g>
+      <text x="900" y="924" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">Y: Strafe up / down</text>
+    </g>
+    <g data-label="L3: Boost">
+      <g data-binding="modes.flight.controls.l3.regular">
+        <g data-use="modes.flight.controls.l3.regular.uses.0" />
+      </g>
+      <text x="900" y="955" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L3: Boost</text>
+    </g>
+    <g data-label="L4 X: Lateral strafe / ground steering">
+      <g data-binding="modes.flight.modifiers.l4.controls.left_stick_x">
+        <g data-use="modes.flight.modifiers.l4.controls.left_stick_x.uses.0" />
+      </g>
+      <text x="900" y="986" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 X: Lateral strafe / ground steering</text>
+    </g>
+  </g>
+  <path d="M 930.00 885.00 L 1035.00 885.00 L 1561.69 833.39" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="left_stick" />
+  <g id="callout-left_trackpad" data-control="left_trackpad" data-bounds="100 1229 800 394">
+    <text x="900" y="1260" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="end">LEFT TRACKPAD</text>
+    <g data-label="↑: Power">
+      <g data-binding="modes.flight.controls.left_trackpad.up">
+        <g data-use="modes.flight.controls.left_trackpad.up.uses.0" />
+      </g>
+      <text x="900" y="1303" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">↑: Power</text>
+    </g>
+    <g data-label="↓: Engines">
+      <g data-binding="modes.flight.controls.left_trackpad.down">
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.0" />
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.1" />
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.2" />
+      </g>
+      <text x="900" y="1334" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">↓: Engines</text>
+    </g>
+    <g data-label="←: Shields">
+      <g data-binding="modes.flight.controls.left_trackpad.left">
+        <g data-use="modes.flight.controls.left_trackpad.left.uses.0" />
+      </g>
+      <text x="900" y="1365" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">←: Shields</text>
+    </g>
+    <g data-label="→: Weapons">
+      <g data-binding="modes.flight.controls.left_trackpad.right">
+        <g data-use="modes.flight.controls.left_trackpad.right.uses.0" />
+      </g>
+      <text x="900" y="1396" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">→: Weapons</text>
+    </g>
+    <g data-label="●: Open / close ship ports">
+      <g data-binding="modes.flight.controls.left_trackpad.center">
+        <g data-use="modes.flight.controls.left_trackpad.center.uses.0" />
+      </g>
+      <text x="900" y="1427" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">●: Open / close ship ports</text>
+    </g>
+    <g data-label="Interaction ↓: Inventory">
+      <g data-binding="modes.flight.controls.left_trackpad.down">
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.0" />
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.1" />
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.2" />
+      </g>
+      <text x="900" y="1458" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">Interaction ↓: Inventory</text>
+    </g>
+    <g data-label="Interaction ↓ [H]: Loot">
+      <g data-binding="modes.flight.controls.left_trackpad.down">
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.0" />
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.1" />
+        <g data-use="modes.flight.controls.left_trackpad.down.uses.2" />
+      </g>
+      <text x="900" y="1489" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">Interaction ↓ [H]: Loot</text>
+    </g>
+    <g data-label="L4 ↑: Fire fracture tool">
+      <g data-binding="modes.flight.modifiers.l4.controls.left_trackpad.up">
+        <g data-use="modes.flight.modifiers.l4.controls.left_trackpad.up.uses.0" />
+      </g>
+      <text x="900" y="1520" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 ↑: Fire fracture tool</text>
+    </g>
+    <g data-label="L4 ↓: Fire disintegration tool">
+      <g data-binding="modes.flight.modifiers.l4.controls.left_trackpad.down">
+        <g data-use="modes.flight.modifiers.l4.controls.left_trackpad.down.uses.0" />
+      </g>
+      <text x="900" y="1551" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 ↓: Fire disintegration tool</text>
+    </g>
+    <g data-label="L4 ←: Fire left salvage tool">
+      <g data-binding="modes.flight.modifiers.l4.controls.left_trackpad.left">
+        <g data-use="modes.flight.modifiers.l4.controls.left_trackpad.left.uses.0" />
+      </g>
+      <text x="900" y="1582" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 ←: Fire left salvage tool</text>
+    </g>
+    <g data-label="L4 →: Fire right salvage tool">
+      <g data-binding="modes.flight.modifiers.l4.controls.left_trackpad.right">
+        <g data-use="modes.flight.modifiers.l4.controls.left_trackpad.right.uses.0" />
+      </g>
+      <text x="900" y="1613" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4 →: Fire right salvage tool</text>
+    </g>
+  </g>
+  <path d="M 930.00 1295.00 L 1035.00 1295.00 L 1491.41 1135.39" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="left_trackpad" />
+  <g id="callout-right_stick" data-control="right_stick" data-bounds="2750 1309 790 239">
+    <text x="2750" y="1340" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">RIGHT STICK / R3 / TOUCH</text>
+    <g data-label="Pitch / yaw">
+      <g data-binding="modes.flight.controls.right_stick">
+        <g data-use="modes.flight.controls.right_stick.uses.0" />
+      </g>
+      <text x="2750" y="1383" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Pitch / yaw</text>
+    </g>
+    <g data-label="R3: Decrease mining power / beam spacing">
+      <g data-binding="modes.flight.controls.r3.regular">
+        <g data-use="modes.flight.controls.r3.regular.uses.2" />
+        <g data-use="modes.flight.controls.r3.regular.uses.3" />
+        <g data-use="modes.flight.controls.r3.regular.uses.4" />
+        <g data-use="modes.flight.controls.r3.regular.uses.5" />
+      </g>
+      <text x="2750" y="1414" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">R3: Decrease mining power / beam spacing</text>
+    </g>
+    <g data-label="R3: Decrease scan angle / tractor distance">
+      <g data-binding="modes.flight.controls.r3.regular">
+        <g data-use="modes.flight.controls.r3.regular.uses.2" />
+        <g data-use="modes.flight.controls.r3.regular.uses.3" />
+        <g data-use="modes.flight.controls.r3.regular.uses.4" />
+        <g data-use="modes.flight.controls.r3.regular.uses.5" />
+      </g>
+      <text x="2750" y="1445" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">R3: Decrease scan angle / tractor distance</text>
+    </g>
+    <g data-label="L4 + R3: Freelook toggle">
+      <g data-binding="modes.flight.modifiers.l4.controls.r3.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.r3.regular.uses.0" />
+      </g>
+      <text x="2750" y="1476" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 + R3: Freelook toggle</text>
+    </g>
+    <g data-label="Touch [2]: Lights">
+      <g data-binding="modes.flight.controls.right_stick_touch.double_press">
+        <g data-use="modes.flight.controls.right_stick_touch.double_press.uses.0" />
+      </g>
+      <text x="2750" y="1507" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Touch [2]: Lights</text>
+    </g>
+    <g data-label="L4 + Touch [2]: Light amplification">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_stick_touch.double_press">
+        <g data-use="modes.flight.modifiers.l4.controls.right_stick_touch.double_press.uses.0" />
+      </g>
+      <text x="2750" y="1538" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 + Touch [2]: Light amplification</text>
+    </g>
+  </g>
+  <path d="M 2715.00 1365.00 L 2390.00 1365.00 L 2038.31 832.29" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="right_stick" />
+  <g id="callout-right_trackpad" data-control="right_trackpad" data-bounds="2750 1669 790 549">
+    <text x="2750" y="1700" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">RIGHT TRACKPAD</text>
+    <g data-label="L4 ↑: Increase mining power">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.up">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.6" />
+      </g>
+      <text x="2750" y="1743" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↑: Increase mining power</text>
+    </g>
+    <g data-label="L4 ↑: Increase beam spacing">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.up">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.6" />
+      </g>
+      <text x="2750" y="1774" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↑: Increase beam spacing</text>
+    </g>
+    <g data-label="L4 ↑: Increase tractor distance">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.up">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.6" />
+      </g>
+      <text x="2750" y="1805" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↑: Increase tractor distance</text>
+    </g>
+    <g data-label="L4 ↑: Increase scan angle">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.up">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.6" />
+      </g>
+      <text x="2750" y="1836" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↑: Increase scan angle</text>
+    </g>
+    <g data-label="L4 ↑: Zoom in">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.up">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.up.uses.6" />
+      </g>
+      <text x="2750" y="1867" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↑: Zoom in</text>
+    </g>
+    <g data-label="L4 ↓: Decrease mining power">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.down">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.6" />
+      </g>
+      <text x="2750" y="1898" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↓: Decrease mining power</text>
+    </g>
+    <g data-label="L4 ↓: Decrease beam spacing">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.down">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.6" />
+      </g>
+      <text x="2750" y="1929" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↓: Decrease beam spacing</text>
+    </g>
+    <g data-label="L4 ↓: Decrease tractor distance">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.down">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.6" />
+      </g>
+      <text x="2750" y="1960" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↓: Decrease tractor distance</text>
+    </g>
+    <g data-label="L4 ↓: Decrease scan angle">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.down">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.6" />
+      </g>
+      <text x="2750" y="1991" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↓: Decrease scan angle</text>
+    </g>
+    <g data-label="L4 ↓: Zoom out">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.down">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.0" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.1" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.2" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.3" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.4" />
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.down.uses.6" />
+      </g>
+      <text x="2750" y="2022" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ↓: Zoom out</text>
+    </g>
+    <g data-label="L4 ←: Activate mining module 1">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.left">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.left.uses.0" />
+      </g>
+      <text x="2750" y="2053" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ←: Activate mining module 1</text>
+    </g>
+    <g data-label="L4 ●: Activate mining module 2">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.center">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.center.uses.0" />
+      </g>
+      <text x="2750" y="2084" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 ●: Activate mining module 2</text>
+    </g>
+    <g data-label="L4 →: Activate mining module 3">
+      <g data-binding="modes.flight.modifiers.l4.controls.right_trackpad.right">
+        <g data-use="modes.flight.modifiers.l4.controls.right_trackpad.right.uses.0" />
+      </g>
+      <text x="2750" y="2115" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4 →: Activate mining module 3</text>
+    </g>
+    <g data-label="L5 ↑: Increase speed limiter">
+      <g data-binding="modes.flight.modifiers.l5.controls.right_trackpad.up">
+        <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.up.uses.0" />
+      </g>
+      <text x="2750" y="2146" fill="#7350a1" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L5 ↑: Increase speed limiter</text>
+    </g>
+    <g data-label="L5 ↓: Decrease speed limiter">
+      <g data-binding="modes.flight.modifiers.l5.controls.right_trackpad.down">
+        <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.down.uses.0" />
+      </g>
+      <text x="2750" y="2177" fill="#7350a1" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L5 ↓: Decrease speed limiter</text>
+    </g>
+    <g data-label="L5 ●: Cruise control">
+      <g data-binding="modes.flight.modifiers.l5.controls.right_trackpad.center">
+        <g data-use="modes.flight.modifiers.l5.controls.right_trackpad.center.uses.0" />
+      </g>
+      <text x="2750" y="2208" fill="#7350a1" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L5 ●: Cruise control</text>
+    </g>
+  </g>
+  <path d="M 2715.00 1725.00 L 2500.00 1725.00 L 2109.69 1133.19" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="right_trackpad" />
+  <g id="callout-a" data-control="a" data-bounds="2750 1109 790 115">
+    <text x="2750" y="1140" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">A</text>
+    <g data-label="[H] Cycle NAV / Combat master mode">
+      <g data-binding="modes.flight.controls.a.long_press">
+        <g data-use="modes.flight.controls.a.long_press.uses.0" />
+      </g>
+      <text x="2750" y="1183" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">[H] Cycle NAV / Combat master mode</text>
+    </g>
+    <g data-label="L4: Toggle decoupled mode">
+      <g data-binding="modes.flight.modifiers.l4.controls.a.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.a.regular.uses.0" />
+      </g>
+      <text x="2750" y="1214" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4: Toggle decoupled mode</text>
+    </g>
+  </g>
+  <path d="M 2715.00 1165.00 L 2480.00 1165.00 L 2309.56 824.60" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="a" />
+  <g id="callout-b" data-control="b" data-bounds="2750 759 790 84">
+    <text x="2750" y="790" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">B</text>
+    <g data-label="Spacebrake / release throttle trim">
+      <g data-binding="modes.flight.controls.b.regular">
+        <g data-use="modes.flight.controls.b.regular.uses.0" />
+        <g data-use="modes.flight.controls.b.regular.uses.1" />
+      </g>
+      <text x="2750" y="833" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Spacebrake / release throttle trim</text>
+    </g>
+  </g>
+  <path d="M 2715.00 815.00 L 2397.42 735.65" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="b" />
+  <g id="callout-x" data-control="x" data-bounds="2750 919 790 146">
+    <text x="2750" y="950" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">X</text>
+    <g data-label="Next operator mode / interaction focus">
+      <g data-binding="modes.flight.controls.x.regular">
+        <g data-use="modes.flight.controls.x.regular.uses.0" />
+        <g data-use="modes.flight.controls.x.regular.uses.1" />
+      </g>
+      <text x="2750" y="993" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">Next operator mode / interaction focus</text>
+    </g>
+    <g data-label="[2] Ping (hold second press to charge)">
+      <g data-binding="modes.flight.controls.x.double_press">
+        <g data-use="modes.flight.controls.x.double_press.uses.0" />
+      </g>
+      <text x="2750" y="1024" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">[2] Ping (hold second press to charge)</text>
+    </g>
+    <g data-label="L4: Switch mining laser">
+      <g data-binding="modes.flight.modifiers.l4.controls.x.regular">
+        <g data-use="modes.flight.modifiers.l4.controls.x.regular.uses.0" />
+      </g>
+      <text x="2750" y="1055" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">L4: Switch mining laser</text>
+    </g>
+  </g>
+  <path d="M 2715.00 975.00 L 2650.00 975.00 L 2425.00 806.00 L 2211.82 734.55" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="x" />
+  <g id="callout-y" data-control="y" data-bounds="2750 519 790 146">
+    <text x="2750" y="550" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="start">Y</text>
+    <g data-label="VTOL">
+      <g data-binding="modes.flight.controls.y.regular">
+        <g data-use="modes.flight.controls.y.regular.uses.0" />
+      </g>
+      <text x="2750" y="593" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">VTOL</text>
+    </g>
+    <g data-label="[2] Toggle interaction hold">
+      <g data-binding="modes.flight.controls.y.double_press">
+        <g data-use="modes.flight.controls.y.double_press.uses.0" />
+      </g>
+      <text x="2750" y="624" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">[2] Toggle interaction hold</text>
+    </g>
+    <g data-label="[H] Exit seat">
+      <g data-binding="modes.flight.controls.y.long_press">
+        <g data-use="modes.flight.controls.y.long_press.uses.0" />
+      </g>
+      <text x="2750" y="655" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="start">[H] Exit seat</text>
+    </g>
+  </g>
+  <path d="M 2715.00 575.00 L 2301.87 645.59" fill="none" stroke="#2164df" stroke-width="2.4" marker-end="url(#button-arrow)" data-anchor="y" />
+  <g id="callout-rear" data-control="rear" data-bounds="1400 1614 800 177">
+    <text x="1800.0" y="1645" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="middle">REAR CONTROLS · NOT SHOWN</text>
+    <g data-label="L4 [H]: Modifier layer">
+      <g data-binding="global.l4.regular">
+        <g data-use="global.l4.regular.uses.0" />
+      </g>
+      <text x="1800.0" y="1688" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="middle">L4 [H]: Modifier layer</text>
+    </g>
+    <g data-label="L5 [H]: Advanced flight layer">
+      <g data-binding="modes.flight.controls.l5.regular">
+        <g data-use="modes.flight.controls.l5.regular.uses.0" />
+      </g>
+      <text x="1800.0" y="1719" fill="#7350a1" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="middle">L5 [H]: Advanced flight layer</text>
+    </g>
+    <g data-label="R4: Switch FPS / Flight">
+      <g data-binding="global.r4.regular">
+        <g data-use="global.r4.regular.uses.0" />
+      </g>
+      <text x="1800.0" y="1750" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="middle">R4: Switch FPS / Flight</text>
+    </g>
+    <g data-label="R5: Cycle mouse mode (custom . key)">
+      <g data-binding="modes.flight.controls.r5.regular">
+        <g data-use="modes.flight.controls.r5.regular.uses.0" />
+      </g>
+      <text x="1800.0" y="1781" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="middle">R5: Cycle mouse mode (custom . key)</text>
+    </g>
+  </g>
+  <g id="callout-gyro" data-control="gyro" data-bounds="1400 1819 800 84">
+    <text x="1800.0" y="1850" fill="#172033" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="middle">GYRO</text>
+    <g data-label="Touch right stick: precision gyro aim">
+      <g data-binding="modes.flight.controls.right_stick_touch.regular">
+        <g data-use="modes.flight.controls.right_stick_touch.regular.uses.0" />
+      </g>
+      <text x="1800.0" y="1893" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="middle">Touch right stick: precision gyro aim</text>
+    </g>
+  </g>
+  <g id="modifier-legend" transform="translate(0,0)">
+    <text x="900" y="1800" fill="#087f7a" style="font-family:Arial,sans-serif;font-size:30px;font-weight:800" text-anchor="end">HOW TO READ THE CALLOUTS</text>
+    <text x="900" y="1843" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">No prefix: normal action</text>
+    <text x="900" y="1877" fill="#172033" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">[H] Hold · [2] Double press</text>
+    <text x="900" y="1914" fill="#ac5800" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L4: hold L4 while using the control</text>
+    <text x="900" y="1951" fill="#7350a1" style="font-family:Arial,sans-serif;font-size:25px;font-weight:500" text-anchor="end">L5: hold L5 while using the control</text>
+  </g>
+</svg>

@@ -23,7 +23,7 @@ FPS and Flight Mode layouts are implemented, including L4 modifier layers, gyro 
 ## Setup and installation
 
 1. [Set up RSI Launcher in Steam](docs/setup.md): add the non-Steam shortcut, name it `rsi launcher`, and configure Steam Input.
-2. [Install the controller layout](docs/installation.md): apply the community layout or download the VDF from the [latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest).
+2. [Install the controller layout](docs/installation.md): use **Community Layouts (recommended)**, or manually install the VDF from the [latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest).
 3. Configure the required in-game bindings below, then test the layout in Arena Commander or another safe environment.
 
 If Steam activates desktop controls while playing, see [Linux troubleshooting](docs/troubleshooting.md).
@@ -44,6 +44,7 @@ See [in-game setup instructions](docs/game-settings.md#required-in-game-bindings
 - **FPS Mode:** on-foot movement, combat, interaction, and inventory.
 - **Flight Mode:** ships and ground vehicles, including movement, combat, targeting, and vehicle systems.
 - Hold **L4** for the current mode's modifier layer; press **R4** to switch modes.
+- In Flight Mode, hold **L5** for cruise control and speed-limiter adjustment.
 
 ### Input notation
 
@@ -75,7 +76,8 @@ These controls are shared between FPS and Flight Mode.
 
 - [FPS controls and modifier mappings](docs/controls/fps.md)
 - [Flight controls, trackpads, and modifier mappings](docs/controls/flight.md)
-- [Download PNG/JPEG reference sheets from the latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest)
+- SVG sheets: [FPS Mode](templates/steam-controller-2026-fps.svg) · [Flight Mode — Base Controls](templates/steam-controller-2026-flight-base-controls.svg) · [Flight Mode — Mining and Salvage](templates/steam-controller-2026-flight-mining-and-salvage.svg)
+- [Download PNG reference sheets from the latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest)
 
 ## Further reading
 
