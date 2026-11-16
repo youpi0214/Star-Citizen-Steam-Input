@@ -7,6 +7,13 @@ See [quick controls and input notation](../../README.md#quick-controls) for shar
 
 Hold **L4 (`M1`)** for mining, salvage, and secondary controls. Hold **L5** for advanced flight controls. Release either button to leave its modifier layer.
 
+## Visual reference sheets
+
+- [Flight Mode — Base Controls](../../templates/steam-controller-2026-flight-base-controls.svg): general vehicle actions across base, L4, and L5.
+- [Flight Mode — Mining and Salvage](../../templates/steam-controller-2026-flight-mining-and-salvage.svg): profession actions and supporting vehicle controls across all layers.
+
+The sheets group actions by gameplay context, not by modifier. Each entry identifies the input and any required L4/L5 hold.
+
 ## Flight mapping
 
 | Control | Input | Action | Output |

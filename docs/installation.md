@@ -51,7 +51,7 @@ The imported layout may appear under its internal title rather than its filename
 
 ## Verify the layout
 
-Launch RSI Launcher through Steam. Confirm that **FPS Mode**, **Flight Mode**, and their **L4 Modifier** layers are present. Configure the [required in-game bindings](game-settings.md#required-in-game-bindings), then test the controls in Arena Commander or another safe environment.
+Launch RSI Launcher through Steam. Confirm that **FPS Mode**, **Flight Mode**, and their **L4 Modifier** layers are present, along with the **L5 Modifier** layer in Flight Mode. Configure the [required in-game bindings](game-settings.md#required-in-game-bindings), then test the controls in Arena Commander or another safe environment.
 
 If Steam uses desktop controls while the game is running, see [Linux troubleshooting](troubleshooting.md).
 
