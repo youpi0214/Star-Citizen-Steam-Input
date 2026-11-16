@@ -1,28 +1,118 @@
-version: 1
+version: 2
 controller:
   name: Steam Controller 2026
+
+# Each binding keeps its physical output once. `uses` lists contextual actions.
+# Sheet contexts select actions across base, L4, and L5; they do not define layers.
+reference:
+  file: docs/Star Citizen Keybinds & Controls — Full List (2026).pdf
+  game_version: 4.10.2
+  note: Context actions describe existing outputs, not additional Steam Input bindings. Hold behavior
+    and game-specific actions still require in-game verification.
+contexts:
+  shared: Menus, social controls, and modifier activation
+  fps_movement: On-foot movement
+  fps_combat: On-foot combat
+  fps_interaction: Interaction, inventory, and terminals
+  fps_tools: On-foot tools, consumables, and tractor beams
+  vehicle_movement: Ship and ground-vehicle movement
+  vehicle_systems: Vehicle systems and interaction
+  vehicle_combat: Weapons and targeting
+  quantum: Quantum travel
+  scanning: Vehicle scanning
+  mining: Vehicle mining
+  salvage: Vehicle salvage
+  vehicle_tractor: Vehicle tractor beams
+  ground_vehicle: Ground vehicles
+  turret: Turrets
+  eva: EVA
+  camera: View and camera controls
+sheets:
+  fps:
+    title: FPS Mode
+    mode: fps
+    layers:
+    - base
+    - l4
+    contexts:
+    - shared
+    - fps_movement
+    - fps_combat
+    - fps_interaction
+    - fps_tools
+    - camera
+    include_unclassified_outputs: true
+  flight_base:
+    title: Flight Mode — Base Controls
+    mode: flight
+    layers:
+    - base
+    - l4
+    - l5
+    contexts:
+    - shared
+    - vehicle_movement
+    - vehicle_systems
+    - vehicle_combat
+    - quantum
+    - scanning
+    - ground_vehicle
+    - turret
+    - eva
+    - camera
+  flight_mining_salvage:
+    title: Flight Mode — Mining and Salvage
+    mode: flight
+    layers:
+    - base
+    - l4
+    - l5
+    contexts:
+    - shared
+    - vehicle_movement
+    - vehicle_systems
+    - quantum
+    - scanning
+    - mining
+    - salvage
+    - vehicle_tractor
+    - camera
 
 global:
   start:
     regular:
       action: Menu
       output: Esc
+      uses:
+      - context: shared
+        action: Menu
   back:
     regular:
       action: mobiGlas
       output: F1
+      uses:
+      - context: shared
+        action: mobiGlas
     long_press:
       action: Map
       output: F2
+      uses:
+      - context: shared
+        action: Map
   l4:
     regular:
       action: Hold L4 Modifier layer
       output: Hold Action Set Layer
+      uses:
+      - context: shared
+        action: Hold L4 Modifier layer
   r4:
     regular:
       action: Switch FPS / Flight mode
       output: Change Action Set
-
+      uses:
+      - context: shared
+        action: Switch FPS / Flight mode
 modes:
   fps:
     name: FPS Mode
@@ -30,85 +120,215 @@ modes:
       left_stick:
         action: Move
         output: WASD
+        uses:
+        - context: fps_movement
+          action: Move
       l3:
         regular:
           action: Sprint toggle
           output: Left Shift
+          uses:
+          - context: fps_movement
+            action: Sprint toggle
+          - context: fps_combat
+            action: Interact with scope / hold breath while ADS
+            note: Left Shift is toggled by L3; press again to release it.
       right_stick:
         action: Aim / Look
         output: Mouse
+        uses:
+        - context: fps_combat
+          action: Aim / Look
       r3:
         regular:
           action: Melee
           output: Middle Mouse
+          uses:
+          - context: fps_combat
+            action: Weapon melee / takedown
+            input: Hold
+          - context: fps_interaction
+            action: Focus
+            input: Press
         double_press:
           action: Fire mode toggle
           output: B
+          uses:
+          - context: fps_combat
+            action: Fire mode toggle
       gyro:
         action: Precision aim
         output: Gyro To Mouse
         activation: Right Stick Touch
+        uses:
+        - context: fps_combat
+          action: Precision aim
       right_stick_touch:
         double_press:
           action: Flashlight
           output: T
+          uses:
+          - context: fps_combat
+            action: Flashlight
       rt:
         regular:
           action: Fire / Use
           output: Left Mouse
+          uses:
+          - context: fps_combat
+            action: Fire weapon
+          - context: fps_combat
+            action: Light left melee attack
+            input: Tap
+          - context: fps_combat
+            action: Heavy left melee attack / overarm throw
+            input: Hold
+          - context: fps_tools
+            action: Activate tool primary action
+          - context: fps_interaction
+            action: Activate interaction / port modification
+          - context: fps_combat
+            action: Block melee attacks
+            input: Hold LT + RT
+            note: Requires both mouse buttons held together.
       lt:
         regular:
           action: ADS
           output: Right Mouse
+          uses:
+          - context: fps_combat
+            action: Aim down sights
+          - context: fps_combat
+            action: Light right melee attack
+            input: Tap
+          - context: fps_combat
+            action: Heavy right melee attack / underarm throw
+            input: Hold
+          - context: fps_tools
+            action: Tool secondary action / inject medical pen into another player
+          - context: fps_interaction
+            action: Activate interaction
+          - context: fps_interaction
+            action: Orbit inventory camera
+            input: Hold
       a:
         regular:
           action: Jump
           output: Space
+          uses:
+          - context: fps_movement
+            action: Jump
+            input: Tap
+          - context: fps_movement
+            action: Climb ledge / activate jump thrusters
+            input: Hold
       b:
         regular:
           action: Crouch
           output: C
+          uses:
+          - context: fps_movement
+            action: Crouch
         long_press:
           action: Prone
           output: Left Ctrl
+          uses:
+          - context: fps_movement
+            action: Prone
       x:
         regular:
           action: Reload / Holster
           output: R
+          uses:
+          - context: fps_combat
+            action: Reload
+            input: Tap
+          - context: fps_combat
+            action: Holster weapon
+            input: Hold
       y:
         regular:
           action: Interact
           output: F
+          uses:
+          - context: fps_interaction
+            action: Interact
         double_press:
           action: Hold interaction
           output: F (toggle)
+          uses:
+          - context: fps_interaction
+            action: Hold interaction
       lb:
         regular:
           action: Lean left
           output: Q (press/release)
+          uses:
+          - context: fps_combat
+            action: Lean left
+          - context: fps_interaction
+            action: Toggle looting weapon attachments
+            input: Press
       rb:
         regular:
           action: Lean right
           output: E (press/release)
+          uses:
+          - context: fps_combat
+            action: Lean right
       dpad_right:
         regular:
           action: Inventory
           output: I
+          uses:
+          - context: fps_interaction
+            action: Open inventory
+            input: Tap
+          - context: fps_interaction
+            action: Open loot screen
+            input: Hold
       left_trackpad:
         action: Unassigned
         output: None
+        uses:
+        - context: fps_interaction
+          action: Unassigned
       right_trackpad:
         up:
           action: Scroll up
           output: Mouse Wheel Up
+          uses:
+          - context: fps_movement
+            action: Increase movement speed
+          - context: fps_tools
+            action: Increase tractor-beam distance
+          - context: camera
+            action: Zoom in
+          - context: fps_interaction
+            action: Zoom in in interaction mode
         down:
           action: Scroll down
           output: Mouse Wheel Down
+          uses:
+          - context: fps_movement
+            action: Decrease movement speed
+          - context: fps_tools
+            action: Decrease tractor-beam distance
+          - context: camera
+            action: Zoom out
+          - context: fps_interaction
+            action: Zoom out in interaction mode
       l5:
         regular:
           action: Key 1
           output: 1
-
+          uses:
+          - context: fps_combat
+            action: Select primary weapon
+            input: Tap
+          - context: fps_combat
+            action: Open weapon selection radial
+            input: Hold
     modifiers:
       l4:
         controls:
@@ -116,18 +336,30 @@ modes:
             regular:
               action: Key B
               output: B
+              uses:
+              - context: fps_combat
+                action: Change fire mode
           x:
             regular:
               action: Ammo backpack refill
               output: Left Alt + 1
+              uses:
+              - context: fps_tools
+                action: Ammo backpack refill
           lb:
             regular:
               action: Consumable / healing wheel
               output: 4
+              uses:
+              - context: fps_tools
+                action: Consumable / healing wheel
           rb:
             regular:
               action: Throwables radial
               output: G
+              uses:
+              - context: fps_tools
+                action: Throwables radial
           right_trackpad:
             up:
               action: Alt + scroll up
@@ -139,30 +371,50 @@ modes:
             regular:
               action: Customize weapon
               output: J
+              uses:
+              - context: fps_tools
+                action: Customize weapon
             long_press:
               action: Inspect item / weapon
               output: O (custom Star Citizen bind)
+              uses:
+              - context: fps_tools
+                action: Inspect item / weapon
           dpad_up:
             regular:
               action: Camera view
               output: F4
+              uses:
+              - context: camera
+                action: Camera view
           dpad_left:
             regular:
               action: Toggle chat
               output: F12
+              uses:
+              - context: shared
+                action: Toggle chat
           dpad_down:
             regular:
               action: Helmet on/off
               output: Left Alt + H
+              uses:
+              - context: fps_tools
+                action: Helmet on/off
           back:
             regular:
               action: Accept invite
               output: "["
+              uses:
+              - context: shared
+                action: Accept invite
           start:
             regular:
               action: Decline invite
               output: "]"
-
+              uses:
+              - context: shared
+                action: Decline invite
   flight:
     name: Flight Mode
     controls:
@@ -170,216 +422,539 @@ modes:
         regular:
           action: Hold L5 Modifier layer
           output: Hold Action Set Layer
+          uses:
+          - context: shared
+            action: Hold L5 Modifier layer
       r5:
         regular:
           action: Cycle mouse mode
           output: Period (.)
+          uses:
+          - context: vehicle_systems
+            action: Cycle mouse mode
       right_stick:
         action: Pitch / Yaw
         output: Mouse X/Y
+        uses:
+        - context: camera
+          action: Pitch / Yaw
       right_stick_touch:
         regular:
           action: Precision aim
           output: Gyro To Mouse
+          uses:
+          - context: camera
+            action: Precision aim
         double_press:
           action: Lights
           output: L
+          uses:
+          - context: camera
+            action: Lights
       rt:
         regular:
           action: Forward thrust
           output: W
+          uses:
+          - context: vehicle_movement
+            action: Forward thrust / increase throttle
+          - context: ground_vehicle
+            action: Drive forward
+          - context: eva
+            action: Strafe forward
+            input: Hold
+          - context: vehicle_systems
+            action: MFD up (during interaction)
       lt:
         regular:
           action: Reverse thrust
           output: S
+          uses:
+          - context: vehicle_movement
+            action: Reverse thrust / decrease throttle
+          - context: ground_vehicle
+            action: Drive backward
+          - context: eva
+            action: Strafe backward
+            input: Hold
+          - context: turret
+            action: Change turret position
+          - context: vehicle_systems
+            action: MFD down (during interaction)
       left_stick_y:
         action: Strafe up / down
         output: Space / Left Ctrl
+        uses:
+        - context: vehicle_movement
+          action: Strafe up / down
+        - context: eva
+          action: Strafe up / down; hold up to launch from a surface
+        - context: ground_vehicle
+          action: Horn (stick up)
       left_stick_x:
         action: Roll left / right
         output: Q / E
+        uses:
+        - context: vehicle_movement
+          action: Roll left / right
+        - context: eva
+          action: Roll left / right
+        - context: turret
+          action: 'Left: cycle turret mouse mode; right: toggle gyro stabilization'
+          note: These commands share Q/E with ship roll; they are incidental turret actions, not steering.
       rb:
         regular:
           action: Fire
           output: Left Mouse
+          uses:
+          - context: vehicle_combat
+            action: Fire weapons
+          - context: vehicle_combat
+            action: Launch missiles
+            input: Tap
+          - context: quantum
+            action: Request jump
+            input: Tap
+          - context: mining
+            action: Fire mining laser
+            input: Tap or hold
+          - context: salvage
+            action: Fire focused salvage tool
+            input: Tap or hold
+          - context: scanning
+            action: Activate scanning
+            input: Hold
+          - context: vehicle_systems
+            action: Activate interaction
         hold:
           action: Engage Quantum Drive
           output: Left Mouse (held)
           context: Quantum mode
           activation: Hold the regular binding; no separate Long Press activator
+          uses:
+          - context: quantum
+            action: Engage Quantum Drive
       lb:
         regular:
           action: Precision targeting / hold max zoom
           output: Right Mouse
+          uses:
+          - context: vehicle_combat
+            action: Toggle precision targeting
+            input: Tap
+          - context: vehicle_combat
+            action: Maximum precision-targeting zoom
+            input: Hold
+          - context: salvage
+            action: Cycle focused salvage modifiers
+          - context: vehicle_systems
+            action: Activate interaction
         double_press:
           action: Gimbal mode toggle
           output: G
+          uses:
+          - context: vehicle_combat
+            action: Toggle gimbal state
+          - context: vehicle_combat
+            action: Increase armed missile count
+          - context: salvage
+            action: Toggle salvage gimbal
       l3:
         regular:
           action: Boost
           output: Left Shift
+          uses:
+          - context: vehicle_movement
+            action: Boost
+          - context: ground_vehicle
+            action: Boost
+          - context: eva
+            action: Boost
       r3:
         regular:
           action: Next weapon preset
           output: Mouse Wheel Down
+          uses:
+          - context: vehicle_combat
+            action: Next weapon preset
+          - context: vehicle_combat
+            action: Next missile type
+          - context: mining
+            action: Decrease mining laser power
+          - context: salvage
+            action: Adjust beam spacing (wheel down)
+          - context: scanning
+            action: Decrease scanning angle
+          - context: vehicle_tractor
+            action: Decrease tractor-beam distance
       a:
         long_press:
           action: NAV / Combat toggle
           output: B
+          uses:
+          - context: vehicle_movement
+            action: Cycle master mode (NAV / Combat)
+            input: Hold
+            note: Steam first recognizes the Long Press, then sends B. Keep holding for the in-game hold action.
       b:
         regular:
           action: Spacebrake
           output: X
+          uses:
+          - context: vehicle_movement
+            action: Spacebrake
+          - context: vehicle_movement
+            action: Release throttle trim
+          - context: ground_vehicle
+            action: Brake
+            input: Hold
+          - context: eva
+            action: Brake
+            input: Hold
       x:
         regular:
           action: Cycle operator mode
           output: Middle Mouse
+          uses:
+          - context: vehicle_systems
+            action: Next operator mode
+          - context: vehicle_systems
+            action: Focus interaction
         double_press:
           action: Ping
           output: Tab
+          uses:
+          - context: scanning
+            action: Ping
+            input: Double press; hold second press for charged ping
+            note: The PDF requires holding and releasing Tab; verify charged ping in game.
       y:
         regular:
           action: VTOL
           output: K
+          uses:
+          - context: vehicle_systems
+            action: VTOL
         double_press:
           action: Hold interaction
           output: F (toggle/hold equivalent)
+          uses:
+          - context: vehicle_systems
+            action: Hold interaction
         long_press:
           action: Exit seat
           output: Y
+          uses:
+          - context: vehicle_systems
+            action: Exit seat
+          - context: turret
+            action: Exit remote turret
+          - context: eva
+            action: Detach from surface
+            note: Y is sent after the Steam Long Press threshold.
       dpad_down:
         regular:
           action: Landing gear
           output: N
+          uses:
+          - context: vehicle_systems
+            action: Landing gear
         hold:
           action: Autoland
           output: N (hold)
           activation: Hold the regular binding; no separate Long Press activator
+          uses:
+          - context: vehicle_systems
+            action: Autoland
       right_trackpad:
         up:
           action: Target in view
           output: T
+          uses:
+          - context: vehicle_combat
+            action: Target in view
+          - context: vehicle_combat
+            action: Toggle auto-targeting
+            input: Hold
         down:
           action: Unlock target
           output: Left Alt + T
+          uses:
+          - context: vehicle_combat
+            action: Unlock target
         left:
           action: Cycle attackers
           output: 4
+          uses:
+          - context: vehicle_combat
+            action: Cycle attackers
         right:
           action: Cycle hostiles
           output: 5
+          uses:
+          - context: vehicle_combat
+            action: Cycle hostiles
         center:
           action: Cycle all / closest
           output: 7
+          uses:
+          - context: vehicle_combat
+            action: Cycle all / closest
       left_trackpad:
         up:
           action: Power
           output: U
+          uses:
+          - context: vehicle_systems
+            action: Power
         down:
           action: Engines
           output: I
+          uses:
+          - context: vehicle_systems
+            action: Toggle engines
+          - context: vehicle_systems
+            action: Open inventory during interaction
+            input: Tap
+          - context: vehicle_systems
+            action: Open loot screen during interaction
+            input: Hold
         left:
           action: Shields
           output: O
+          uses:
+          - context: vehicle_systems
+            action: Shields
         right:
           action: Weapons
           output: P
+          uses:
+          - context: vehicle_systems
+            action: Weapons
         center:
           action: Toggle ship ports / doors
           output: Right Alt + K
-
+          uses:
+          - context: vehicle_systems
+            action: Toggle ship ports / doors
     modifiers:
       l4:
         controls:
           left_stick_x:
             action: Strafe left / right
             output: A / D
+            uses:
+            - context: vehicle_movement
+              action: Strafe left / right
+            - context: ground_vehicle
+              action: Steer left / right
+            - context: eva
+              action: Strafe left / right
+            - context: turret
+              action: Previous / next remote turret
+            - context: vehicle_systems
+              action: MFD left / right (during interaction)
           a:
             regular:
               action: Decoupled toggle
               output: C
+              uses:
+              - context: vehicle_movement
+                action: Toggle decoupled mode
+              - context: ground_vehicle
+                action: Toggle auto braking on idle
+              - context: turret
+                action: Recenter turret
+                input: Hold
           x:
             regular:
               action: Switch mining laser
               output: Left Alt + Left Mouse
+              uses:
+              - context: mining
+                action: Switch mining laser
           right_trackpad:
             up:
               action: Increase mining power / salvage beam spacing
               output: Mouse Wheel Up
+              uses:
+              - context: mining
+                action: Increase mining laser power
+              - context: salvage
+                action: Increase salvage beam spacing
+              - context: scanning
+                action: Increase scanning angle
+              - context: vehicle_tractor
+                action: Increase tractor-beam distance
+              - context: camera
+                action: Zoom in
+              - context: vehicle_combat
+                action: Previous missile type / weapon preset
+              - context: vehicle_systems
+                action: Zoom in in interaction mode
             down:
               action: Decrease mining power / salvage beam spacing
               output: Mouse Wheel Down
+              uses:
+              - context: mining
+                action: Decrease mining laser power
+              - context: salvage
+                action: Decrease salvage beam spacing
+              - context: scanning
+                action: Decrease scanning angle
+              - context: vehicle_tractor
+                action: Decrease tractor-beam distance
+              - context: camera
+                action: Zoom out
+              - context: vehicle_combat
+                action: Next missile type / weapon preset
+              - context: vehicle_systems
+                action: Zoom out in interaction mode
             left:
               action: Activate mining module 1
               output: Left Alt + 1
+              uses:
+              - context: mining
+                action: Activate mining module 1
+              - context: vehicle_combat
+                action: Pin / unpin selected target in slot 1
             center:
               action: Activate mining module 2
               output: Left Alt + 2
+              uses:
+              - context: mining
+                action: Activate mining module 2
+              - context: vehicle_combat
+                action: Pin / unpin selected target in slot 2
             right:
               action: Activate mining module 3
               output: Left Alt + 3
+              uses:
+              - context: mining
+                action: Activate mining module 3
+              - context: vehicle_combat
+                action: Pin / unpin selected target in slot 3
           left_trackpad:
             up:
               action: Fire fracture tool
               output: Right Alt + W
+              uses:
+              - context: salvage
+                action: Fire fracture tool
             down:
               action: Fire disintegration tool
               output: Right Alt + S
+              uses:
+              - context: salvage
+                action: Fire disintegration tool
             left:
               action: Fire left salvage tool
               output: Right Alt + A
+              uses:
+              - context: salvage
+                action: Fire left salvage tool
             right:
               action: Fire right salvage tool
               output: Right Alt + D
+              uses:
+              - context: salvage
+                action: Fire right salvage tool
             center:
               action: Cycle aim mode
               output: Right Alt + G
+              uses:
+              - context: vehicle_combat
+                action: Cycle aim mode
           lb:
             regular:
               action: Decoy
               output: H
+              uses:
+              - context: vehicle_combat
+                action: Launch decoy burst
+                input: Tap
+              - context: vehicle_combat
+                action: Set and launch decoy burst
+                input: Hold
           rb:
             regular:
               action: Noise
               output: J
+              uses:
+              - context: vehicle_combat
+                action: Noise
           r3:
             regular:
               action: Freelook
               output: Z
+              uses:
+              - context: camera
+                action: Freelook
+                input: Hold
           right_stick_touch:
             double_press:
               action: LAMP
               output: Right Alt + L
+              uses:
+              - context: camera
+                action: LAMP
           dpad_up:
             regular:
               action: Camera view
               output: F4
+              uses:
+              - context: camera
+                action: Camera view
           dpad_left:
             regular:
               action: Toggle chat
               output: F12
+              uses:
+              - context: shared
+                action: Toggle chat
           dpad_down:
             regular:
               action: Request landing
               output: Left Alt + N
+              uses:
+              - context: vehicle_systems
+                action: Request landing
           back:
             regular:
               action: Accept invite
               output: "["
+              uses:
+              - context: shared
+                action: Accept invite
           start:
             regular:
               action: Decline invite
               output: "]"
-
+              uses:
+              - context: shared
+                action: Decline invite
       l5:
         controls:
           right_trackpad:
             up:
               action: Increase speed limiter
               output: Left Alt + Mouse Wheel Up
+              uses:
+              - context: vehicle_movement
+                action: Increase speed limiter
+              - context: turret
+                action: Increase turret speed limiter
             down:
               action: Decrease speed limiter
               output: Left Alt + Mouse Wheel Down
+              uses:
+              - context: vehicle_movement
+                action: Decrease speed limiter
+              - context: turret
+                action: Decrease turret speed limiter
             center:
               action: Cruise control toggle
               output: Left Alt + C
+              uses:
+              - context: vehicle_movement
+                action: Cruise control toggle
