@@ -10,8 +10,8 @@
 	"export_type"		"community"
 	"controller_type"		"controller_triton"
 	"controller_caps"		"1097187327"
-	"major_revision"		"1"
-	"minor_revision"		"2"
+	"major_revision"		"2"
+	"minor_revision"		"0"
 	"timestamp"		"0"
 	"actions"
 	{
