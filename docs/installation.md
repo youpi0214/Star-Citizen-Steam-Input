@@ -1,16 +1,23 @@
 # Install the Controller Layout
 
-First, [set up the RSI Launcher shortcut](setup.md). Then choose either installation method below.
+First, [set up the RSI Launcher shortcut](setup.md). I recommend installing through Community Layouts (Method A). Manual installation is available as an alternative.
 
-## Method A — Community Layouts
+## Method A — Community Layouts (Recommended)
 
 1. Connect your controller.
 2. Open **rsi launcher → Controller Layout** in Steam.
 3. Click the current layout's name, then open **Community Layouts**.
 4. Use the **Search** tab to search for **youpi0214-Star-Citizen-Steam-Input**.
-5. Select the layout and choose **Apply Layout**.
+5. Select the latest version of **youpi0214-Star-Citizen-Steam-Input** and choose **Apply Layout**.
+6. Repeat step 3 to 5 whenever you want to change the version (for a newer one for example)
 
-![Steam layout search showing youpi0214-Star-Citizen-Steam-Input in the results](images/find-profile-in-community-layouts.png)
+Community layout names now include a version suffix: `youpi0214-Star-Citizen-Steam-Input <version number>`. <br> For example `youpi0214-Star-Citizen-Steam-Input v1.3.0`. 
+
+Older layouts used the name without a version number. Compare the suffix with the [latest release](https://github.com/youpi0214/Star-Citizen-Steam-Input/releases/latest) when choosing a layout.
+
+![Steam layout search showing a versioned community layout named youpi0214-Star-Citizen-Steam-Input v1.2.0](images/find-profile-in-community-layouts.png)
+
+The screenshot shows `v1.2.0` as an example. Pick the version of your choise when installing (I recommend the latest).
 
 ## Method B — Manual installation
 
