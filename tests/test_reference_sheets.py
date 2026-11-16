@@ -1,5 +1,3 @@
-"""Keep documented actions visible as the mapping grows."""
-
 from pathlib import Path
 import subprocess
 import sys
@@ -102,6 +100,40 @@ class ReferenceSheetTests(unittest.TestCase):
                 available_layers = {'base', *mode['modifiers']}
 
                 self.assertFalse(set(sheet['layers']) - available_layers)
+
+    def test_display_rows_reference_one_input_and_use_its_modifier_color(self):
+        mappings = yaml.safe_load((ROOT / 'data/mappings.yaml').read_text())
+        colors = {'l4': '#ac5800', 'l5': '#7350a1'}
+
+        for sheet_id, (filename, _) in SHEETS.items():
+            sheet = mappings['sheets'][sheet_id]
+            root = ET.parse(TEMPLATES / filename).getroot()
+
+            for rows in sheet['display']['callouts'].values():
+                for row in rows:
+                    self.assertEqual(len(row['bindings']), 1, row['label'])
+                    self.assertNotIn(' · ', row['label'], row['label'])
+
+            for node in root.iter():
+                if not node.get('data-label'):
+                    continue
+
+                binding = next(child.get('data-binding') for child in node if child.get('data-binding'))
+                
+                for layer, color in colors.items():
+                    if f'.modifiers.{layer}.' in binding:
+                        for label in node.iter(SVG_TEXT):
+                            self.assertEqual(label.get('fill'), color, node.get('data-label'))
+
+    def test_flight_references_exclude_eva_and_removed_interaction_actions(self):
+        mappings = yaml.safe_load((ROOT / 'data/mappings.yaml').read_text())
+
+        for sheet_id in ('flight_base', 'flight_mining_salvage'):
+            for records in select_bindings(mappings, sheet_id).values():
+                for _, _, _, _, uses in records:
+                    for _, use in uses:
+                        self.assertNotEqual(use['context'], 'eva')
+                        self.assertNotIn('MFD', use['action'])
 
     def test_context_actions_have_registered_contexts_and_a_matching_sheet(self):
         registered = set(self.mappings['contexts'])

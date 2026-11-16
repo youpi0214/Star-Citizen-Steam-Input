@@ -1,14 +1,11 @@
 version: 2
 controller:
   name: Steam Controller 2026
-
-# Each binding keeps its physical output once. `uses` lists contextual actions.
-# Sheet contexts select actions across base, L4, and L5; they do not define layers.
 reference:
   file: docs/Star Citizen Keybinds & Controls — Full List (2026).pdf
   game_version: 4.10.2
-  note: Context actions describe existing outputs, not additional Steam Input bindings. Hold behavior
-    and game-specific actions still require in-game verification.
+  note: Context actions describe existing outputs, not additional Steam Input bindings. Hold behavior and game-specific
+    actions still require in-game verification.
 contexts:
   shared: Menus, social controls, and modifier activation
   fps_movement: On-foot movement
@@ -41,7 +38,231 @@ sheets:
     - fps_interaction
     - fps_tools
     - camera
+    - eva
     include_unclassified_outputs: true
+    display:
+      callouts:
+        back:
+        - label: mobiGlas
+          bindings:
+          - global.back.regular
+        - label: '[H] Map'
+          bindings:
+          - global.back.long_press
+        - label: 'L4: Accept invite'
+          bindings:
+          - modifiers.l4.controls.back.regular
+        start:
+        - label: Menu
+          bindings:
+          - global.start.regular
+        - label: 'L4: Decline invite'
+          bindings:
+          - modifiers.l4.controls.start.regular
+        lb:
+        - label: Lean left
+          bindings:
+          - controls.lb.regular
+        - label: 'Looting: Toggle attachments'
+          bindings:
+          - controls.lb.regular
+        - label: 'L4: Consumables / healing wheel'
+          bindings:
+          - modifiers.l4.controls.lb.regular
+        lt:
+        - label: Aim down sights
+          bindings:
+          - controls.lt.regular
+        - label: Tool secondary action
+          bindings:
+          - controls.lt.regular
+        - label: Inject another player
+          bindings:
+          - controls.lt.regular
+        - label: 'Melee: Light attack'
+          bindings:
+          - controls.lt.regular
+        - label: 'Melee [H]: Heavy attack'
+          bindings:
+          - controls.lt.regular
+        - label: '[H] Underarm throw'
+          bindings:
+          - controls.lt.regular
+        - label: '[H] Orbit inventory camera'
+          bindings:
+          - controls.lt.regular
+        rb:
+        - label: Lean right
+          bindings:
+          - controls.rb.regular
+        - label: 'L4: Throwables wheel'
+          bindings:
+          - modifiers.l4.controls.rb.regular
+        rt:
+        - label: Fire weapon
+          bindings:
+          - controls.rt.regular
+        - label: Tool primary action
+          bindings:
+          - controls.rt.regular
+        - label: 'Melee: Light attack'
+          bindings:
+          - controls.rt.regular
+        - label: 'Melee [H]: Heavy attack'
+          bindings:
+          - controls.rt.regular
+        - label: '[H] Overarm throw'
+          bindings:
+          - controls.rt.regular
+        - label: 'LT + RT [H]: Melee block'
+          bindings:
+          - controls.rt.regular
+        dpad:
+        - label: '→: Inventory'
+          bindings:
+          - controls.dpad_right.regular
+        - label: '→ [H]: Loot screen'
+          bindings:
+          - controls.dpad_right.regular
+        - label: 'L4 ↑: Camera view'
+          bindings:
+          - modifiers.l4.controls.dpad_up.regular
+        - label: 'L4 ←: Toggle chat'
+          bindings:
+          - modifiers.l4.controls.dpad_left.regular
+        - label: 'L4 ↓: Equip / remove helmet'
+          bindings:
+          - modifiers.l4.controls.dpad_down.regular
+        left_stick:
+        - label: Move
+          bindings:
+          - controls.left_stick
+        - label: 'L3: Sprint toggle'
+          bindings:
+          - controls.l3.regular
+        - label: 'L3 while ADS: Scope / breath toggle'
+          bindings:
+          - controls.l3.regular
+        - label: 'EVA: Strafe forward / backward'
+          bindings:
+          - controls.left_stick
+        - label: 'EVA: Strafe left / right'
+          bindings:
+          - controls.left_stick
+        - label: 'EVA L3: Boost toggle'
+          bindings:
+          - controls.l3.regular
+        left_trackpad:
+        - label: Unassigned
+          bindings:
+          - controls.left_trackpad
+        right_stick:
+        - label: Aim / look
+          bindings:
+          - controls.right_stick
+        - label: 'EVA: Look / turn'
+          bindings:
+          - controls.right_stick
+        - label: 'R3 [H]: Melee / takedown'
+          bindings:
+          - controls.r3.regular
+        - label: 'R3: Interaction focus'
+          bindings:
+          - controls.r3.regular
+        - label: 'R3 [2]: Fire mode'
+          bindings:
+          - controls.r3.double_press
+        - label: 'Touch [2]: Flashlight'
+          bindings:
+          - controls.right_stick_touch.double_press
+        - label: 'L4 + R3: Customize weapon'
+          bindings:
+          - modifiers.l4.controls.r3.regular
+        - label: 'L4 + R3 [H]: Inspect item / weapon'
+          bindings:
+          - modifiers.l4.controls.r3.long_press
+        right_trackpad:
+        - label: '↑: Increase movement speed'
+          bindings:
+          - controls.right_trackpad.up
+        - label: '↓: Decrease movement speed'
+          bindings:
+          - controls.right_trackpad.down
+        - label: '↑: Increase tractor distance'
+          bindings:
+          - controls.right_trackpad.up
+        - label: '↓: Decrease tractor distance'
+          bindings:
+          - controls.right_trackpad.down
+        - label: '↑: Zoom in'
+          bindings:
+          - controls.right_trackpad.up
+        - label: '↓: Zoom out'
+          bindings:
+          - controls.right_trackpad.down
+        - label: 'L4 ↑: Increase hand-mining power'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↓: Decrease hand-mining power'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        a:
+        - label: Jump
+          bindings:
+          - controls.a.regular
+        - label: '[H] Climb / jump thrusters'
+          bindings:
+          - controls.a.regular
+        - label: 'EVA [H]: Strafe up / launch'
+          bindings:
+          - controls.a.regular
+        - label: 'L4: Change fire mode'
+          bindings:
+          - modifiers.l4.controls.a.regular
+        b:
+        - label: Crouch
+          bindings:
+          - controls.b.regular
+        - label: '[H] Prone'
+          bindings:
+          - controls.b.long_press
+        - label: 'EVA [H]: Strafe down'
+          bindings:
+          - controls.b.long_press
+        x:
+        - label: Reload
+          bindings:
+          - controls.x.regular
+        - label: '[H] Holster'
+          bindings:
+          - controls.x.regular
+        - label: 'L4: Refill ammo from backpack'
+          bindings:
+          - modifiers.l4.controls.x.regular
+        y:
+        - label: Interact
+          bindings:
+          - controls.y.regular
+        - label: '[2] Toggle interaction hold'
+          bindings:
+          - controls.y.double_press
+        rear:
+        - label: 'L4 [H]: Modifier layer'
+          bindings:
+          - global.l4.regular
+        - label: 'L5: Primary weapon'
+          bindings:
+          - controls.l5.regular
+        - label: 'L5 [H]: Weapon wheel'
+          bindings:
+          - controls.l5.regular
+        - label: 'R4: Switch FPS / Flight'
+          bindings:
+          - global.r4.regular
+        gyro:
+        - label: 'Touch right stick: precision gyro aim'
+          bindings:
+          - controls.gyro
   flight_base:
     title: Flight Mode — Base Controls
     mode: flight
@@ -58,8 +279,272 @@ sheets:
     - scanning
     - ground_vehicle
     - turret
-    - eva
     - camera
+    display:
+      callouts:
+        back:
+        - label: mobiGlas
+          bindings:
+          - global.back.regular
+        - label: '[H] Map'
+          bindings:
+          - global.back.long_press
+        - label: 'L4: Accept invite'
+          bindings:
+          - modifiers.l4.controls.back.regular
+        start:
+        - label: Menu
+          bindings:
+          - global.start.regular
+        - label: 'L4: Decline invite'
+          bindings:
+          - modifiers.l4.controls.start.regular
+        lb:
+        - label: Precision targeting
+          bindings:
+          - controls.lb.regular
+        - label: '[H] Maximum targeting zoom'
+          bindings:
+          - controls.lb.regular
+        - label: '[2] Toggle gimbals'
+          bindings:
+          - controls.lb.double_press
+        - label: '[2] Increase armed missile count'
+          bindings:
+          - controls.lb.double_press
+        - label: 'L4: Launch decoy burst'
+          bindings:
+          - modifiers.l4.controls.lb.regular
+        - label: 'L4 [H]: Set and launch burst'
+          bindings:
+          - modifiers.l4.controls.lb.regular
+        lt:
+        - label: Reverse thrust / ground reverse
+          bindings:
+          - controls.lt.regular
+        - label: 'Turret: Change position'
+          bindings:
+          - controls.lt.regular
+        rb:
+        - label: Fire weapons
+          bindings:
+          - controls.rb.regular
+        - label: Launch missiles
+          bindings:
+          - controls.rb.regular
+        - label: 'Quantum: Request jump'
+          bindings:
+          - controls.rb.regular
+        - label: 'Quantum [H]: Engage drive'
+          bindings:
+          - controls.rb.hold
+        - label: '[H] Activate scanning'
+          bindings:
+          - controls.rb.regular
+        - label: 'L4: Noise countermeasure'
+          bindings:
+          - modifiers.l4.controls.rb.regular
+        rt:
+        - label: Forward thrust / ground forward
+          bindings:
+          - controls.rt.regular
+        dpad:
+        - label: '↓: Landing gear'
+          bindings:
+          - controls.dpad_down.regular
+        - label: '↓ [H]: Autoland'
+          bindings:
+          - controls.dpad_down.hold
+        - label: 'L4 ↑: Camera view'
+          bindings:
+          - modifiers.l4.controls.dpad_up.regular
+        - label: 'L4 ←: Toggle chat'
+          bindings:
+          - modifiers.l4.controls.dpad_left.regular
+        - label: 'L4 ↓: Request landing'
+          bindings:
+          - modifiers.l4.controls.dpad_down.regular
+        left_stick:
+        - label: 'X: Roll left / right'
+          bindings:
+          - controls.left_stick_x
+        - label: 'Y: Strafe up / down'
+          bindings:
+          - controls.left_stick_y
+        - label: 'L3: Boost'
+          bindings:
+          - controls.l3.regular
+        - label: 'L4 X: Lateral strafe / ground steering'
+          bindings:
+          - modifiers.l4.controls.left_stick_x
+        - label: '↑: Ground vehicle horn'
+          bindings:
+          - controls.left_stick_y
+        - label: 'Turret ←: Cycle mouse mode'
+          bindings:
+          - controls.left_stick_x
+        - label: 'Turret →: Toggle stabilization'
+          bindings:
+          - controls.left_stick_x
+        - label: 'Turret L4 ←: Previous remote turret'
+          bindings:
+          - modifiers.l4.controls.left_stick_x
+        - label: 'Turret L4 →: Next remote turret'
+          bindings:
+          - modifiers.l4.controls.left_stick_x
+        left_trackpad:
+        - label: '↑: Power'
+          bindings:
+          - controls.left_trackpad.up
+        - label: '↓: Engines'
+          bindings:
+          - controls.left_trackpad.down
+        - label: '←: Shields'
+          bindings:
+          - controls.left_trackpad.left
+        - label: '→: Weapons'
+          bindings:
+          - controls.left_trackpad.right
+        - label: '●: Open / close ship ports'
+          bindings:
+          - controls.left_trackpad.center
+        - label: 'Interaction ↓: Inventory'
+          bindings:
+          - controls.left_trackpad.down
+        - label: 'Interaction ↓ [H]: Loot'
+          bindings:
+          - controls.left_trackpad.down
+        - label: 'L4 ●: Cycle aim mode'
+          bindings:
+          - modifiers.l4.controls.left_trackpad.center
+        right_stick:
+        - label: Pitch / yaw
+          bindings:
+          - controls.right_stick
+        - label: 'R3: Next weapon preset / missile'
+          bindings:
+          - controls.r3.regular
+        - label: 'R3 (scan): Narrow scanning cone'
+          bindings:
+          - controls.r3.regular
+        - label: 'L4 + R3: Freelook toggle'
+          bindings:
+          - modifiers.l4.controls.r3.regular
+        - label: 'Touch [2]: Lights'
+          bindings:
+          - controls.right_stick_touch.double_press
+        - label: 'L4 + Touch [2]: Light amplification'
+          bindings:
+          - modifiers.l4.controls.right_stick_touch.double_press
+        right_trackpad:
+        - label: '↑: Target in view'
+          bindings:
+          - controls.right_trackpad.up
+        - label: '↑ [H]: Auto-targeting'
+          bindings:
+          - controls.right_trackpad.up
+        - label: '↓: Unlock target'
+          bindings:
+          - controls.right_trackpad.down
+        - label: '←: Cycle attackers'
+          bindings:
+          - controls.right_trackpad.left
+        - label: '→: Cycle hostiles'
+          bindings:
+          - controls.right_trackpad.right
+        - label: '●: All / closest targets'
+          bindings:
+          - controls.right_trackpad.center
+        - label: 'L4 ↑: Previous weapon / missile'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↑: Increase scan angle'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↑: Zoom in'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↓: Next weapon / missile'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ↓: Decrease scan angle'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ↓: Zoom out'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ←: Pin / unpin target slot 1'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.left
+        - label: 'L4 ●: Pin / unpin target slot 2'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.center
+        - label: 'L4 →: Pin / unpin target slot 3'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.right
+        - label: 'L5 ↑: Increase speed limiter'
+          bindings:
+          - modifiers.l5.controls.right_trackpad.up
+        - label: 'L5 ↓: Decrease speed limiter'
+          bindings:
+          - modifiers.l5.controls.right_trackpad.down
+        - label: 'L5 ●: Cruise control'
+          bindings:
+          - modifiers.l5.controls.right_trackpad.center
+        a:
+        - label: '[H] Cycle NAV / Combat master mode'
+          bindings:
+          - controls.a.long_press
+        - label: 'L4: Decoupled / ground auto-braking'
+          bindings:
+          - modifiers.l4.controls.a.regular
+        - label: 'Turret L4 [H]: Recenter'
+          bindings:
+          - modifiers.l4.controls.a.regular
+        b:
+        - label: Spacebrake / release throttle trim
+          bindings:
+          - controls.b.regular
+        - label: 'Ground [H]: Brake'
+          bindings:
+          - controls.b.regular
+        x:
+        - label: Next operator mode / interaction focus
+          bindings:
+          - controls.x.regular
+        - label: '[2] Ping (hold second press to charge)'
+          bindings:
+          - controls.x.double_press
+        y:
+        - label: VTOL
+          bindings:
+          - controls.y.regular
+        - label: '[2] Toggle interaction hold'
+          bindings:
+          - controls.y.double_press
+        - label: '[H] Exit seat'
+          bindings:
+          - controls.y.long_press
+        - label: 'Turret [H]: Exit remote turret'
+          bindings:
+          - controls.y.long_press
+        rear:
+        - label: 'L4 [H]: Modifier layer'
+          bindings:
+          - global.l4.regular
+        - label: 'L5 [H]: Advanced flight layer'
+          bindings:
+          - controls.l5.regular
+        - label: 'R4: Switch FPS / Flight'
+          bindings:
+          - global.r4.regular
+        - label: 'R5: Cycle mouse mode (custom . key)'
+          bindings:
+          - controls.r5.regular
+        gyro:
+        - label: 'Touch right stick: precision gyro aim'
+          bindings:
+          - controls.right_stick_touch.regular
   flight_mining_salvage:
     title: Flight Mode — Mining and Salvage
     mode: flight
@@ -77,7 +562,235 @@ sheets:
     - salvage
     - vehicle_tractor
     - camera
-
+    display:
+      callouts:
+        back:
+        - label: mobiGlas
+          bindings:
+          - global.back.regular
+        - label: '[H] Map'
+          bindings:
+          - global.back.long_press
+        - label: 'L4: Accept invite'
+          bindings:
+          - modifiers.l4.controls.back.regular
+        start:
+        - label: Menu
+          bindings:
+          - global.start.regular
+        - label: 'L4: Decline invite'
+          bindings:
+          - modifiers.l4.controls.start.regular
+        lb:
+        - label: Cycle focused salvage modifiers
+          bindings:
+          - controls.lb.regular
+        - label: '[2] Toggle salvage gimbal'
+          bindings:
+          - controls.lb.double_press
+        lt:
+        - label: Reverse thrust / ground reverse
+          bindings:
+          - controls.lt.regular
+        rb:
+        - label: 'Mining: Activate laser'
+          bindings:
+          - controls.rb.regular
+        - label: 'Salvage: Fire focused tool'
+          bindings:
+          - controls.rb.regular
+        - label: 'Quantum: Request jump'
+          bindings:
+          - controls.rb.regular
+        - label: 'Quantum [H]: Engage drive'
+          bindings:
+          - controls.rb.hold
+        - label: '[H] Activate scanning'
+          bindings:
+          - controls.rb.regular
+        rt:
+        - label: Forward thrust / ground forward
+          bindings:
+          - controls.rt.regular
+        dpad:
+        - label: '↓: Landing gear'
+          bindings:
+          - controls.dpad_down.regular
+        - label: '↓ [H]: Autoland'
+          bindings:
+          - controls.dpad_down.hold
+        - label: 'L4 ↑: Camera view'
+          bindings:
+          - modifiers.l4.controls.dpad_up.regular
+        - label: 'L4 ←: Toggle chat'
+          bindings:
+          - modifiers.l4.controls.dpad_left.regular
+        - label: 'L4 ↓: Request landing'
+          bindings:
+          - modifiers.l4.controls.dpad_down.regular
+        left_stick:
+        - label: 'X: Roll left / right'
+          bindings:
+          - controls.left_stick_x
+        - label: 'Y: Strafe up / down'
+          bindings:
+          - controls.left_stick_y
+        - label: 'L3: Boost'
+          bindings:
+          - controls.l3.regular
+        - label: 'L4 X: Lateral strafe / ground steering'
+          bindings:
+          - modifiers.l4.controls.left_stick_x
+        left_trackpad:
+        - label: '↑: Power'
+          bindings:
+          - controls.left_trackpad.up
+        - label: '↓: Engines'
+          bindings:
+          - controls.left_trackpad.down
+        - label: '←: Shields'
+          bindings:
+          - controls.left_trackpad.left
+        - label: '→: Weapons'
+          bindings:
+          - controls.left_trackpad.right
+        - label: '●: Open / close ship ports'
+          bindings:
+          - controls.left_trackpad.center
+        - label: 'Interaction ↓: Inventory'
+          bindings:
+          - controls.left_trackpad.down
+        - label: 'Interaction ↓ [H]: Loot'
+          bindings:
+          - controls.left_trackpad.down
+        - label: 'L4 ↑: Fire fracture tool'
+          bindings:
+          - modifiers.l4.controls.left_trackpad.up
+        - label: 'L4 ↓: Fire disintegration tool'
+          bindings:
+          - modifiers.l4.controls.left_trackpad.down
+        - label: 'L4 ←: Fire left salvage tool'
+          bindings:
+          - modifiers.l4.controls.left_trackpad.left
+        - label: 'L4 →: Fire right salvage tool'
+          bindings:
+          - modifiers.l4.controls.left_trackpad.right
+        right_stick:
+        - label: Pitch / yaw
+          bindings:
+          - controls.right_stick
+        - label: 'R3: Decrease mining power / beam spacing'
+          bindings:
+          - controls.r3.regular
+        - label: 'R3: Decrease scan angle / tractor distance'
+          bindings:
+          - controls.r3.regular
+        - label: 'L4 + R3: Freelook toggle'
+          bindings:
+          - modifiers.l4.controls.r3.regular
+        - label: 'Touch [2]: Lights'
+          bindings:
+          - controls.right_stick_touch.double_press
+        - label: 'L4 + Touch [2]: Light amplification'
+          bindings:
+          - modifiers.l4.controls.right_stick_touch.double_press
+        right_trackpad:
+        - label: 'L4 ↑: Increase mining power'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↑: Increase beam spacing'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↑: Increase tractor distance'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↑: Increase scan angle'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↑: Zoom in'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.up
+        - label: 'L4 ↓: Decrease mining power'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ↓: Decrease beam spacing'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ↓: Decrease tractor distance'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ↓: Decrease scan angle'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ↓: Zoom out'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.down
+        - label: 'L4 ←: Activate mining module 1'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.left
+        - label: 'L4 ●: Activate mining module 2'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.center
+        - label: 'L4 →: Activate mining module 3'
+          bindings:
+          - modifiers.l4.controls.right_trackpad.right
+        - label: 'L5 ↑: Increase speed limiter'
+          bindings:
+          - modifiers.l5.controls.right_trackpad.up
+        - label: 'L5 ↓: Decrease speed limiter'
+          bindings:
+          - modifiers.l5.controls.right_trackpad.down
+        - label: 'L5 ●: Cruise control'
+          bindings:
+          - modifiers.l5.controls.right_trackpad.center
+        a:
+        - label: '[H] Cycle NAV / Combat master mode'
+          bindings:
+          - controls.a.long_press
+        - label: 'L4: Toggle decoupled mode'
+          bindings:
+          - modifiers.l4.controls.a.regular
+        b:
+        - label: Spacebrake / release throttle trim
+          bindings:
+          - controls.b.regular
+        x:
+        - label: Next operator mode / interaction focus
+          bindings:
+          - controls.x.regular
+        - label: '[2] Ping (hold second press to charge)'
+          bindings:
+          - controls.x.double_press
+        - label: 'L4: Switch mining laser'
+          bindings:
+          - modifiers.l4.controls.x.regular
+        y:
+        - label: VTOL
+          bindings:
+          - controls.y.regular
+        - label: '[2] Toggle interaction hold'
+          bindings:
+          - controls.y.double_press
+        - label: '[H] Exit seat'
+          bindings:
+          - controls.y.long_press
+        rear:
+        - label: 'L4 [H]: Modifier layer'
+          bindings:
+          - global.l4.regular
+        - label: 'L5 [H]: Advanced flight layer'
+          bindings:
+          - controls.l5.regular
+        - label: 'R4: Switch FPS / Flight'
+          bindings:
+          - global.r4.regular
+        - label: 'R5: Cycle mouse mode (custom . key)'
+          bindings:
+          - controls.r5.regular
+        gyro:
+        - label: 'Touch right stick: precision gyro aim'
+          bindings:
+          - controls.right_stick_touch.regular
 global:
   start:
     regular:
@@ -123,6 +836,8 @@ modes:
         uses:
         - context: fps_movement
           action: Move
+        - context: eva
+          action: Strafe forward / backward / left / right
       l3:
         regular:
           action: Sprint toggle
@@ -133,12 +848,17 @@ modes:
           - context: fps_combat
             action: Interact with scope / hold breath while ADS
             note: Left Shift is toggled by L3; press again to release it.
+          - context: eva
+            action: Boost
+            note: L3 toggles Left Shift; press again to release.
       right_stick:
         action: Aim / Look
         output: Mouse
         uses:
         - context: fps_combat
           action: Aim / Look
+        - context: eva
+          action: Look / turn
       r3:
         regular:
           action: Melee
@@ -185,8 +905,6 @@ modes:
             input: Hold
           - context: fps_tools
             action: Activate tool primary action
-          - context: fps_interaction
-            action: Activate interaction / port modification
           - context: fps_combat
             action: Block melee attacks
             input: Hold LT + RT
@@ -207,8 +925,6 @@ modes:
           - context: fps_tools
             action: Tool secondary action / inject medical pen into another player
           - context: fps_interaction
-            action: Activate interaction
-          - context: fps_interaction
             action: Orbit inventory camera
             input: Hold
       a:
@@ -221,6 +937,9 @@ modes:
             input: Tap
           - context: fps_movement
             action: Climb ledge / activate jump thrusters
+            input: Hold
+          - context: eva
+            action: Strafe up / launch from surface
             input: Hold
       b:
         regular:
@@ -235,6 +954,9 @@ modes:
           uses:
           - context: fps_movement
             action: Prone
+          - context: eva
+            action: Strafe down
+            input: Hold after Long Press
       x:
         regular:
           action: Reload / Holster
@@ -362,11 +1084,17 @@ modes:
                 action: Throwables radial
           right_trackpad:
             up:
-              action: Alt + scroll up
+              action: Increase hand-mining laser power
               output: Left Alt + Mouse Wheel Up
+              uses:
+              - context: fps_tools
+                action: Increase hand-mining laser power
             down:
-              action: Alt + scroll down
+              action: Decrease hand-mining laser power
               output: Left Alt + Mouse Wheel Down
+              uses:
+              - context: fps_tools
+                action: Decrease hand-mining laser power
           r3:
             regular:
               action: Customize weapon
@@ -404,14 +1132,14 @@ modes:
           back:
             regular:
               action: Accept invite
-              output: "["
+              output: '['
               uses:
               - context: shared
                 action: Accept invite
           start:
             regular:
               action: Decline invite
-              output: "]"
+              output: ']'
               uses:
               - context: shared
                 action: Decline invite
@@ -460,11 +1188,6 @@ modes:
             action: Forward thrust / increase throttle
           - context: ground_vehicle
             action: Drive forward
-          - context: eva
-            action: Strafe forward
-            input: Hold
-          - context: vehicle_systems
-            action: MFD up (during interaction)
       lt:
         regular:
           action: Reverse thrust
@@ -474,21 +1197,14 @@ modes:
             action: Reverse thrust / decrease throttle
           - context: ground_vehicle
             action: Drive backward
-          - context: eva
-            action: Strafe backward
-            input: Hold
           - context: turret
             action: Change turret position
-          - context: vehicle_systems
-            action: MFD down (during interaction)
       left_stick_y:
         action: Strafe up / down
         output: Space / Left Ctrl
         uses:
         - context: vehicle_movement
           action: Strafe up / down
-        - context: eva
-          action: Strafe up / down; hold up to launch from a surface
         - context: ground_vehicle
           action: Horn (stick up)
       left_stick_x:
@@ -496,8 +1212,6 @@ modes:
         output: Q / E
         uses:
         - context: vehicle_movement
-          action: Roll left / right
-        - context: eva
           action: Roll left / right
         - context: turret
           action: 'Left: cycle turret mouse mode; right: toggle gyro stabilization'
@@ -524,8 +1238,6 @@ modes:
           - context: scanning
             action: Activate scanning
             input: Hold
-          - context: vehicle_systems
-            action: Activate interaction
         hold:
           action: Engage Quantum Drive
           output: Left Mouse (held)
@@ -547,8 +1259,6 @@ modes:
             input: Hold
           - context: salvage
             action: Cycle focused salvage modifiers
-          - context: vehicle_systems
-            action: Activate interaction
         double_press:
           action: Gimbal mode toggle
           output: G
@@ -567,8 +1277,6 @@ modes:
           - context: vehicle_movement
             action: Boost
           - context: ground_vehicle
-            action: Boost
-          - context: eva
             action: Boost
       r3:
         regular:
@@ -606,9 +1314,6 @@ modes:
           - context: vehicle_movement
             action: Release throttle trim
           - context: ground_vehicle
-            action: Brake
-            input: Hold
-          - context: eva
             action: Brake
             input: Hold
       x:
@@ -649,9 +1354,6 @@ modes:
             action: Exit seat
           - context: turret
             action: Exit remote turret
-          - context: eva
-            action: Detach from surface
-            note: Y is sent after the Steam Long Press threshold.
       dpad_down:
         regular:
           action: Landing gear
@@ -748,12 +1450,8 @@ modes:
               action: Strafe left / right
             - context: ground_vehicle
               action: Steer left / right
-            - context: eva
-              action: Strafe left / right
             - context: turret
               action: Previous / next remote turret
-            - context: vehicle_systems
-              action: MFD left / right (during interaction)
           a:
             regular:
               action: Decoupled toggle
@@ -885,12 +1583,12 @@ modes:
                 action: Noise
           r3:
             regular:
-              action: Freelook
+              action: Freelook toggle
               output: Z
               uses:
               - context: camera
-                action: Freelook
-                input: Hold
+                action: Freelook toggle
+                input: Press; press again to disable
           right_stick_touch:
             double_press:
               action: LAMP
@@ -922,14 +1620,14 @@ modes:
           back:
             regular:
               action: Accept invite
-              output: "["
+              output: '['
               uses:
               - context: shared
                 action: Accept invite
           start:
             regular:
               action: Decline invite
-              output: "]"
+              output: ']'
               uses:
               - context: shared
                 action: Decline invite
