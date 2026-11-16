@@ -33,7 +33,9 @@ templates/
 scripts/
   render.py                      PNG / SVG exporter
   build_reference_sheets.py      Rebuild context-aware SVG templates
-  reference_sheets.py            Context selection and panel layout
+  reference_sheets.py            Context selection and sheet building
+  sheet_layout.py                Controller-centered callouts and legends
+  controller_geometry.py         Image-local button anchors and leader routes
   release_version.py             Release version and VDF revision updater
 
 docs/
@@ -56,7 +58,7 @@ The repository includes three context-based sheets:
 - [Flight Mode — Base Controls](../templates/steam-controller-2026-flight-base-controls.svg)
 - [Flight Mode — Mining and Salvage](../templates/steam-controller-2026-flight-mining-and-salvage.svg)
 
-Each sheet includes its relevant base and modifier actions. The controller diagram identifies physical controls; panels below it list contextual uses and output keys. The canvas grows vertically to preserve readable text. Exports default to 5120 pixels wide, with proportional height.
+Each sheet places concise action callouts around the controller, with arrows ending on the corresponding visible buttons. L4/L5 prefixes identify modifier actions. Rear controls, modifier instructions, and the gyro legend sit beneath the image. The three sheets use a 3600-pixel-wide canvas with height fitted to their callouts; PNG exports default to 5120 pixels wide, with proportional height. Each row describes one controller input. Modifier colors come from the referenced binding layer, including labels with context prefixes.
 
 Export PNGs from the repository root:
 
@@ -75,7 +77,7 @@ After editing context data, rebuild the editable SVG templates:
 python scripts/build_reference_sheets.py
 ```
 
-The templates contain all labels and can be exported without loading YAML. Supplying `--data data/mappings.yaml` to the exporter regenerates a context sheet from that data before export, including text wrapping and canvas height. Rebuilding replaces template edits, so keep reusable layout changes in `scripts/reference_sheets.py`.
+The templates contain all labels and can be exported without loading YAML. Supplying `--data data/mappings.yaml` to the exporter regenerates a context sheet from that data before export, including text wrapping and canvas height. Rebuilding replaces template edits. Keep callout drawing changes in `scripts/sheet_layout.py` and image geometry / leader routing in `scripts/controller_geometry.py`.
 
 ## Publishing a release
 
@@ -99,10 +101,12 @@ python scripts/release_version.py minor
 
 The top-level `sheets` definitions group contexts for **FPS Mode**, **Flight Mode — Base Controls**, and **Flight Mode — Mining and Salvage**. A sheet may use controls from several layers: Flight Base Controls includes L4 and L5, and the profession sheet includes base-button actions such as RB firing the mining laser. The reference PDF identifies its defaults as Alpha 4.10.2; context-dependent behavior still needs in-game verification.
 
-The renderer uses these definitions when `--data` is supplied. The template builder uses the same selection and layout code, so static templates and data-driven exports show the same actions.
+Each sheet also has a `display.callouts` section with short `label` text and references to the existing `bindings`. These presentation hints combine related contextual actions into scannable lines; they do not change physical outputs. Full `uses` descriptions and notes remain available for detailed documentation.
+
+The renderer uses these definitions when `--data` is supplied. The template builder uses the same selection and layout code, so static templates and data-driven exports show the same actions. Leader tips are transformed from source-image button coordinates; captions and bends can move independently. Rear controls have no arrows because they are not visible in the front photograph.
 
 ## Keeping documentation synchronized
 
-When changing the VDF, update the corresponding YAML entries, SVG labels, and control guide. Update the in-game settings guide when a custom key changes. Keep shared controls in the README and link to them from each guide. Run rendering commands from the repository root.
+When changing the VDF, update the corresponding YAML entries, compact display labels, and control guide, then rebuild the SVG templates. Update the in-game settings guide when a custom key changes. Keep shared controls in the README and link to them from each guide. Run rendering commands from the repository root.
 
 [Back to README](../README.md)

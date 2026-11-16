@@ -41,8 +41,8 @@ See [quick controls and input notation](../../README.md#quick-controls) for shar
 | M1 + X | Regular | Ammo backpack refill | `Left Alt + 1` |
 | M1 + LB | Regular | Consumable / healing wheel | `4` |
 | M1 + RB | Regular | Throwables radial | `G` |
-| M1 + Right Trackpad ↑ | Scroll | Alt + scroll up | Left Alt + Mouse Wheel Up |
-| M1 + Right Trackpad ↓ | Scroll | Alt + scroll down | Left Alt + Mouse Wheel Down |
+| M1 + Right Trackpad ↑ | Scroll | Increase hand-mining laser power | Left Alt + Mouse Wheel Up |
+| M1 + Right Trackpad ↓ | Scroll | Decrease hand-mining laser power | Left Alt + Mouse Wheel Down |
 | M1 + R3 | Regular | Customize weapon | `J` |
 | M1 + R3 | `[H]` | Inspect item / weapon | Letter `O` (custom bind) |
 | M1 + D-pad Up | Regular | Camera view | `F4` |

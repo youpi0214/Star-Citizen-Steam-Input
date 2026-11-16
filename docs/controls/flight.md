@@ -74,7 +74,7 @@ Holding **RB** holds the regular Left Mouse binding. Star Citizen uses that hold
 | M1 + X | Regular | Switch mining laser | Left Alt + Left Mouse |
 | M1 + LB | Regular | Decoy | `H` |
 | M1 + RB | Regular | Noise | `J` |
-| M1 + R3 | Regular | Freelook | `Z` |
+| M1 + R3 | Regular | Freelook toggle (press again to disable) | `Z` |
 | M1 + Right Stick Touch | `[2]` | LAMP | `Right Alt + L` |
 | M1 + D-pad Up | Regular | Camera view | `F4` |
 | M1 + D-pad Left | Regular | Toggle chat | `F12` |
